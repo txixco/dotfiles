@@ -1,0 +1,3 @@
+: 1603131572:0;config pull
+: 1603131583:0;config checkout
+: 1603131592:0;mv .zsh_history .zsh_history.bck
