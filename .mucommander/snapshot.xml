@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<snapshot version="0.9.3">
+<snapshot>
     <file_presenter>
         <text>
             <line_numbers>true</line_numbers>
@@ -17,11 +17,11 @@
         <window-0>
             <window_properties>
                 <single_panel_view>false</single_panel_view>
-                <x>161</x>
-                <width>1275</width>
-                <y>90</y>
+                <x>233</x>
+                <width>1120</width>
+                <y>63</y>
                 <split_orientation>vertical</split_orientation>
-                <height>720</height>
+                <height>793</height>
             </window_properties>
             <panels>
                 <left>
@@ -33,14 +33,14 @@
                         <selection>0</selection>
                         <count>1</count>
                         <tab-0>
-                            <location>file://localhost/C:\Data\Downloads\</location>
+                            <location>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/angioplastia-202108</location>
                             <locked>false</locked>
                         </tab-0>
                     </tabs>
                     <file_table>
                         <date>
                             <show>true</show>
-                            <width>110</width>
+                            <width>139</width>
                             <position>3</position>
                         </date>
                         <owner>
@@ -55,7 +55,7 @@
                         </extension>
                         <size>
                             <show>true</show>
-                            <width>48</width>
+                            <width>54</width>
                             <position>2</position>
                         </size>
                         <permissions>
@@ -86,14 +86,14 @@
                         <selection>0</selection>
                         <count>1</count>
                         <tab-0>
-                            <location>file://WUS50009/SharedFolder\HC-DunningLetter\Development\FileToProcess</location>
+                            <location>file://localhost/home/txixco/Nextcloud/Documents/josue/fotocopias</location>
                             <locked>false</locked>
                         </tab-0>
                     </tabs>
                     <file_table>
                         <date>
                             <show>true</show>
-                            <width>109</width>
+                            <width>139</width>
                             <position>3</position>
                         </date>
                         <owner>
@@ -108,12 +108,12 @@
                         </extension>
                         <size>
                             <show>true</show>
-                            <width>43</width>
+                            <width>54</width>
                             <position>2</position>
                         </size>
                         <permissions>
                             <show>true</show>
-                            <width>28</width>
+                            <width>32</width>
                             <position>4</position>
                         </permissions>
                         <name>
@@ -134,106 +134,106 @@
         </window-0>
     </windows>
     <recent_locations>
-        <location-79>file://WUS00272/c$\Users</location-79>
-        <location-77>file://WUS00272/c$\Users\automationbot\.nuget</location-77>
-        <location-78>file://WUS00272/c$\Users\automationbot</location-78>
-        <location-71>file://WUS00272/c$\Users\automationbot\.nuget\packages\HC_DunningLetter_Performer\1.0.32\lib\net45\Data</location-71>
-        <location-72>file://WUS00272/c$\Users\automationbot\.nuget\packages\HC_DunningLetter_Performer\1.0.32\lib\net45</location-72>
-        <location-70>file://WUS00272/c$\Users\automationbot\.nuget\packages\HC_DunningLetter_Performer\1.0.32\lib\net45\Data\Output</location-70>
-        <location-75>file://WUS00272/c$\Users\automationbot\.nuget\packages\HC_DunningLetter_Performer</location-75>
-        <location-76>file://WUS00272/c$\Users\automationbot\.nuget\packages</location-76>
-        <location-73>file://WUS00272/c$\Users\automationbot\.nuget\packages\HC_DunningLetter_Performer\1.0.32\lib</location-73>
-        <location-74>file://WUS00272/c$\Users\automationbot\.nuget\packages\HC_DunningLetter_Performer\1.0.32</location-74>
-        <location-68>file://WUS50009/c$\Users</location-68>
-        <location-69>file://WUS50009/c$</location-69>
-        <location-66>file://WUS50008/c$\RPA\UIPath\finance---dunning-letters\Code</location-66>
-        <location-67>file://WUS50009/c$\Users\automationbot</location-67>
-        <location-60>file://localhost/C:\Codigo\UiPath\finance---dunning-letters</location-60>
-        <location-61>file://WUS50008/c$\RPA\UIPath\application-library\code\Epicor</location-61>
-        <location-64>file://WUS50008/c$\RPA\UIPath\</location-64>
-        <location-65>file://WUS50008/c$\RPA\UIPath\finance---dunning-letters</location-65>
-        <location-62>file://WUS50008/c$\RPA\UIPath\application-library\code</location-62>
-        <location-63>file://WUS50008/c$\RPA\UIPath\application-library</location-63>
-        <location-57>file://MXOFRUEDAD1/c$\Codigo\UiPath\finance---dunning-letters\code\resources</location-57>
-        <location-58>file://MXOFRUEDAD1/c$\Codigo\UiPath\finance---dunning-letters\code\results</location-58>
-        <location-55>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\code\helpers</location-55>
-        <location-56>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\code</location-56>
-        <location-59>file://MXOFRUEDAD1/c$\Codigo\UiPath\finance---dunning-letters\code\</location-59>
-        <location-50>file://WUS50008/c$\RPA</location-50>
-        <location-53>file://localhost/C:\Data\</location-53>
-        <location-54>file://localhost/C:\Data\Documents</location-54>
-        <location-51>file://WUS50008/c$</location-51>
-        <location-52>file://localhost/C:\Data\3D Objects</location-52>
-        <location-46>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\DunningLetter_Publisher</location-46>
-        <location-47>file://WUS50009/SharedFolder\HC-DunningLetter\Development\Invoices\Test</location-47>
-        <location-44>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\HC_DunningLetter_Performer\Data</location-44>
-        <location-45>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\HC_DunningLetter_Performer</location-45>
-        <location-48>file://WUS50009/SharedFolder\HC-DunningLetter\Development\Invoices</location-48>
-        <location-49>file://localhost/C:\</location-49>
-        <location-42>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\HC_DunningLetter_Performer\Data\Input</location-42>
-        <location-43>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\HC_DunningLetter_Performer\Data\Output</location-43>
-        <location-40>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\installations\Citrix</location-40>
-        <location-41>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\installations</location-41>
-        <location-35>file://WUS50009/SharedFolder\HC-DunningLetter\Invoices\Test</location-35>
-        <location-36>file://localhost/C:\temp</location-36>
-        <location-33>file://WUS50009/SharedFolder\HC-DunningLetter\FileToProcess</location-33>
-        <location-34>file://WUS50009/SharedFolder\HC-DunningLetter\Invoices</location-34>
-        <location-39>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\DunningLetter_Publisher\Data\</location-39>
-        <location-37>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\DunningLetter_Publisher\Data\Input</location-37>
-        <location-38>file://localhost/C:\Program Files</location-38>
-        <location-31>file://WUS50009/SharedFolder\HC-DunningLetter\Processed\Old</location-31>
-        <location-32>file://WUS50009/SharedFolder\HC-DunningLetter\Processed</location-32>
-        <location-30>file://localhost/C:\Data\Documents\laboral\</location-30>
+        <location-79>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip</location-79>
+        <location-77>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210618-2/20210703</location-77>
+        <location-78>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210618-2</location-78>
+        <location-71>file://localhost/home/txixco/Nextcloud/Documents/fotocopias</location-71>
+        <location-72>file://localhost/home/txixco/Nextcloud/Documents/facturas</location-72>
+        <location-70>file://localhost/home/txixco/Nextcloud/Documents/fotocopias/Oficiales</location-70>
+        <location-75>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip/20210703/</location-75>
+        <location-76>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210629.zip</location-76>
+        <location-73>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703</location-73>
+        <location-74>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20160706.zip</location-74>
+        <location-68>file://localhost/home/txixco/Nextcloud/Documents/facturas/cfe</location-68>
+        <location-69>file://localhost/home/txixco/Nextcloud/Documents/fotocopias/Oficiales/Josue</location-69>
+        <location-66>file://localhost/home/</location-66>
+        <location-67>file://localhost/home/txixco/Nextcloud/Documents/facturas/cfe/Playa Tecolutla</location-67>
+        <location-60>file://localhost/home/txixco/datos/imagenes</location-60>
+        <location-61>file://localhost/home/txixco/datos</location-61>
+        <location-64>file://localhost/home/txixco/Nextcloud/Documents/manuales/Juegos</location-64>
+        <location-65>file://localhost/home/txixco/Nextcloud/Documents/manuales</location-65>
+        <location-62>file://localhost/home/txixco/Nextcloud/Documents/josue/dibujos</location-62>
+        <location-63>file://localhost/home/txixco/Nextcloud/Documents/josue/mami</location-63>
+        <location-57>file://localhost/media/txixco</location-57>
+        <location-58>file://localhost/media</location-58>
+        <location-55>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos</location-55>
+        <location-56>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1</location-56>
+        <location-59>file://localhost/</location-59>
+        <location-50>file://localhost/media/txixco/2.7.2-39-amd64</location-50>
+        <location-53>file://localhost/home/txixco/datos/imagenes/Lenovo-E495_full_mine</location-53>
+        <location-54>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos/imagenes</location-54>
+        <location-51>file://localhost/mnt</location-51>
+        <location-52>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos/imagenes/Lenovo-E495_full_mine</location-52>
+        <location-46>file://localhost/media/txixco/ARACELY</location-46>
+        <location-47>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos/imagenes/Lenovo_E495-full-original</location-47>
+        <location-44>file://localhost/media/txixco/AGATHA</location-44>
+        <location-45>file://localhost/home/txixco/Descargas/musica/Various - Super Mario Galaxy Original Sound Track</location-45>
+        <location-48>file://localhost/home/txixco/datos/imagenes/Lenovo_E495-full-original</location-48>
+        <location-49>file://localhost/home/txixco/Descargas/musica</location-49>
+        <location-42>file://localhost/home/txixco/Nextcloud/Documents/medico</location-42>
+        <location-43>file://localhost/media/txixco/AGATHA/usb-naranja</location-43>
+        <location-40>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes</location-40>
+        <location-41>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife</location-41>
+        <location-35>file://localhost/home/txixco/Dropbox</location-35>
+        <location-36>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703</location-36>
+        <location-33>file://localhost/home/txixco/Dropbox/Trámites/Reclamacion_Cajamar</location-33>
+        <location-34>file://localhost/home/txixco/Dropbox/Trámites</location-34>
+        <location-39>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Cirugías</location-39>
+        <location-37>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Reembolsos</location-37>
+        <location-38>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Cirugías/flebografía-202107</location-38>
+        <location-31>file://localhost/home/txixco/Nextcloud/Downloads</location-31>
+        <location-32>file://localhost/home/txixco/Descargas/Solicitud_de_Reclamacion_de_GMM_V8728408135.zip</location-32>
+        <location-30>file://localhost/home/txixco/Nextcloud/Trámites</location-30>
         <count>100</count>
-        <location-19>file://localhost/C:\Codigo\UiPath\application-libraries\Outlook_Web_Email</location-19>
-        <location-24>file://localhost/C:\Data\Downloads\certificados</location-24>
-        <location-25>file://localhost/D:\</location-25>
-        <location-22>file://MXOFRUEDAD1/c$\Codigo\UiPath\</location-22>
-        <location-23>file://MXOFRUEDAD1/c$\Codigo\UiPath\application-libraries</location-23>
-        <location-28>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\documentation</location-28>
-        <location-29>file://localhost/C:\RPA\UIpath\finance---dunning-letters\Data\</location-29>
-        <location-26>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\code\.local</location-26>
-        <location-27>file://localhost/C:\Data\Documents\laboral\Metlife</location-27>
-        <location-20>file://MXOFRUEDAD1/c$\RPA\UIpath\finance---dunning-letters\Data\</location-20>
-        <location-21>file://MXOFRUEDAD1/c$\Codigo\UiPath\finance---dunning-letters\</location-21>
-        <location-90>file://localhost/C:\Codigo\UiPath\</location-90>
-        <location-8>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\code-bck</location-8>
-        <location-9>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\code.new</location-9>
-        <location-13>file://MXOFRUEDAD1/c$\RPA\UIpath\finance---dunning-letters\</location-13>
-        <location-14>file://MXOFRUEDAD1/c$\RPA\UIpath\</location-14>
-        <location-11>file://localhost/C:\RPA\UIpath</location-11>
-        <location-99>file://WUS50009/SharedFolder\HC-DunningLetter\Development\FileToProcess</location-99>
-        <location-12>file://localhost/C:\RPA\UIpath\finance---dunning-letters</location-12>
-        <location-17>file://MXOFRUEDAD1/c$\temp\</location-17>
-        <location-18>file://localhost/C:\Codigo\</location-18>
-        <location-15>file://MXOFRUEDAD1/c$\RPA\</location-15>
-        <location-16>file://localhost/C:\Data\Downloads\backup</location-16>
-        <location-93>file://localhost/C:\Data\Downloads\</location-93>
-        <location-94>file://WUS50009/SharedFolder\HC-DunningLetter\Production\FileToProcess</location-94>
-        <location-91>file://WUS50009/SharedFolder\HC-DunningLetter\Production\Processed</location-91>
-        <location-92>file://WUS50009/SharedFolder</location-92>
-        <location-97>file://WUS50009/SharedFolder\HC-DunningLetter\Development\Processed</location-97>
-        <location-10>file://localhost/C:\RPA</location-10>
-        <location-98>file://WUS50009/SharedFolder\HC-DunningLetter\Development</location-98>
-        <location-95>file://WUS50009/SharedFolder\HC-DunningLetter\Production</location-95>
-        <location-96>file://WUS50009/SharedFolder\HC-DunningLetter</location-96>
-        <location-88>file://localhost/C:\Codigo\UiPath\application-libraries\Queue_Report\data</location-88>
-        <location-89>file://localhost/C:\Codigo\UiPath\application-libraries\Queue_Report</location-89>
-        <location-6>file://localhost/C:\Codigo\UiPath\application-libraries\Artiva</location-6>
-        <location-82>file://localhost/C:\Codigo\UiPath\learning\data</location-82>
-        <location-7>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\code-bck\.local</location-7>
-        <location-83>file://localhost/C:\Codigo\UiPath\application-libraries\Epicor</location-83>
-        <location-4>file://localhost/C:\h</location-4>
-        <location-80>file://WUS00272/c$</location-80>
-        <location-5>file://localhost/C:\Codigo\UiPath\application-libraries\Artiva\testing</location-5>
-        <location-81>file://localhost/C:\Codigo\UiPath\learning\data\output</location-81>
-        <location-2>file://localhost/C:\Codigo\UiPath\finance---dunning-letters\code\resources</location-2>
-        <location-86>file://localhost/C:\Codigo\UiPath\learning</location-86>
-        <location-3>file://localhost/C:\r</location-3>
-        <location-87>file://localhost/C:\Codigo\UiPath\application-libraries\Queue_Report\data\output</location-87>
-        <location-0>file://MXOFRUEDAD1/c$\</location-0>
-        <location-84>file://localhost/C:\Codigo\UiPath\application-libraries</location-84>
-        <location-1>file://localhost/C:\Codigo\UiPath\application-libraries\Artiva\resources</location-1>
-        <location-85>file://localhost/C:\Codigo\UiPath\application-libraries\Queue_Report\Queue_Report</location-85>
+        <location-19>file://localhost/home/txixco/series/Agents of S.H.I.E.L.D Season 7</location-19>
+        <location-24>file://localhost/home/txixco/Nextcloud/Photos/2021/06</location-24>
+        <location-25>file://localhost/home/txixco/Nextcloud/Photos/2021</location-25>
+        <location-22>file://localhost/home/txixco/series</location-22>
+        <location-23>file://localhost/home/txixco/Nextcloud/Cargas de cámara</location-23>
+        <location-28>file://localhost/home/txixco/Nextcloud/Cargas Automáticas</location-28>
+        <location-29>file://localhost/home/txixco/Nextcloud/Trámites/Reclamacion_Cajamar</location-29>
+        <location-26>file://localhost/home/txixco/Nextcloud/Photos</location-26>
+        <location-27>file://localhost/home/txixco/Nextcloud/Cargas Automáticas/Camera</location-27>
+        <location-20>file://localhost/home/txixco/series/shield</location-20>
+        <location-21>file://localhost/home/txixco/series/MARVEL Agents of S.H.I.E.L.D. (2013) Season 7 S07 (1080p AMZN WEB-DL x265 HEVC 10bit AAC 5.1 Vyndros)</location-21>
+        <location-90>file://localhost/home/txixco/Documents/medico/Metlife</location-90>
+        <location-8>file://localhost/home/txixco/Documents/ara/Impuestos</location-8>
+        <location-9>file://localhost/home/txixco/Documents/ara</location-9>
+        <location-13>file://localhost/home/txixco/Nextcloud/Photos/computadoras</location-13>
+        <location-14>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.704][Castellano][www.PCTmix.com]</location-14>
+        <location-11>file://localhost/home/txixco/Nextcloud/Photos/2021/05</location-11>
+        <location-99>file://localhost/home/txixco/Nextcloud/Documents/josue/fotocopias</location-99>
+        <location-12>file://localhost/home/txixco/Nextcloud/Photos/computadoras/toshiba</location-12>
+        <location-17>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.701][Castellano][www.PCTmix.com]</location-17>
+        <location-18>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV 720p][Cap.705][AC3 5.1 Castellano][www.PCTmix.com]</location-18>
+        <location-15>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.703][Castellano][www.PCTmix.com]</location-15>
+        <location-16>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.702][Castellano][www.PCTmix.com]</location-16>
+        <location-93>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/angioplastia-202108</location-93>
+        <location-94>file://localhost/home/txixco/Downloads</location-94>
+        <location-91>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes</location-91>
+        <location-92>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías</location-92>
+        <location-97>file://localhost/home/txixco/Nextcloud/Documents</location-97>
+        <location-10>file://localhost/home/txixco/Nextcloud/Photos/2021/04</location-10>
+        <location-98>file://localhost/home/txixco/Nextcloud/Documents/josue</location-98>
+        <location-95>file://localhost/home/txixco</location-95>
+        <location-96>file://localhost/home/txixco/Nextcloud</location-96>
+        <location-88>file://localhost/home/txixco/Documents</location-88>
+        <location-89>file://localhost/home/txixco/Documents/medico</location-89>
+        <location-6>file://localhost/home/txixco/Documents/ara/Impuestos/2021</location-6>
+        <location-82>file://localhost/home/txixco/Nextcloud/Documents/josue/escuela</location-82>
+        <location-7>file://localhost/home/txixco/Documents/ara/Impuestos/2020</location-7>
+        <location-83>file://localhost/home/txixco/Nextcloud/escuela/mexico/primaria</location-83>
+        <location-4>file://localhost/home/txixco/Documents/impuestos/</location-4>
+        <location-80>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210618.zip</location-80>
+        <location-5>file://localhost/home/txixco/Descargas/MOIA720509P55-2020-12.zip</location-5>
+        <location-81>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos</location-81>
+        <location-2>file://localhost/home/txixco/Documents/facturas/</location-2>
+        <location-86>file://localhost/home/txixco/Nextcloud/escuela</location-86>
+        <location-3>file://localhost/home/txixco/Documents/impuestos/SAT</location-3>
+        <location-87>file://localhost/home/txixco/Descargas</location-87>
+        <location-0>file://localhost/home/txixco/scripts/AutoHotKeys</location-0>
+        <location-84>file://localhost/home/txixco/Nextcloud/escuela/mexico/secundaria</location-84>
+        <location-1>file://localhost/home/txixco/scripts/</location-1>
+        <location-85>file://localhost/home/txixco/Nextcloud/escuela/mexico</location-85>
     </recent_locations>
 </snapshot>

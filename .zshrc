@@ -100,3 +100,6 @@ export MINISHIFT_PASSWORD=RDHT101cm
 # Neofetch
 neofetch
 
+# Path
+path+=('~/.local/bin')
+export PATH
