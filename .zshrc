@@ -103,7 +103,3 @@ neofetch
 # Path
 path+=('~/.local/bin')
 export PATH
-
-# For Oracle
-source ~/oraclerc
-
