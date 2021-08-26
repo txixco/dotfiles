@@ -34,7 +34,7 @@ set $right semicolon
 set $mod Mod4
 
 set $workspace1 "01: Terminales "
-set $workspace2 "02: Firefox "
+set $workspace2 "02: Navegación "
 set $workspace3 "03: Mensajerías "
 set $workspace4 "04: Workspace 4"
 set $workspace5 "05: Workspace 5"
