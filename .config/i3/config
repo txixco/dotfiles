@@ -46,15 +46,24 @@ set $workspace10 "10: Música "
 
 # Assignments
 assign [class="Firefox"] $workspace2
+assign [class="qutebrowser"] $workspace2
 assign [class="Skype"] $workspace3
 assign [class="Signal"] $workspace3
 assign [class="Spotify"] $workspace10
+
+# Automatic layout
+for_window [class="Firefox"] layout stacking
+for_window [class="qutebrowser"] layout stacking
+for_window [class="Galculator"] move scratchpad, resize set 400 200
 
 # use Mouse+Mod1 to drag floating windows to their wanted position
 floating_modifier $mod
 
 # control focused window when follows the mouse movements
 focus_follows_mouse no
+
+# start a calculator
+bindsym $mod+c exec [class="galculator"] scratchpad show#; [class="Galculator"] move position center
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -254,6 +263,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id volumeicon
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
+exec --no-startup-id galculator
 
 # Keyboard
 exec setxkbmap us dvorak-intl 
