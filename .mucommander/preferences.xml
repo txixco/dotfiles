@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<preferences version="0.9.3">
+<preferences>
     <display_compact_file_size>true</display_compact_file_size>
     <time_format>hh:mm a</time_format>
     <quit_confirmation>false</quit_confirmation>
@@ -50,6 +50,9 @@
         <icon_scale>1.0</icon_scale>
         <visible>true</visible>
     </command_bar>
+    <view_on_error>
+        <enabled>false</enabled>
+    </view_on_error>
     <shell>
         <history_size>100</history_size>
         <use_custom>false</use_custom>
@@ -72,7 +75,7 @@
         <cd_follows_symlinks>false</cd_follows_symlinks>
         <show_system_folders>true</show_system_folders>
         <use_system_file_icons>applications</use_system_file_icons>
-        <show_hidden_files>true</show_hidden_files>
+        <show_hidden_files>false</show_hidden_files>
         <show_ds_store_files>true</show_ds_store_files>
         <auto_size_columns>true</auto_size_columns>
         <show_folders_first>true</show_folders_first>

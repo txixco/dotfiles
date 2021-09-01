@@ -1,0 +1,84 @@
+2021-08-06 18:14:58.646 [FelixStartLevel] INFO  c.m.commons.runtime.OsFamily:70 - Current OS family: Linux
+2021-08-06 18:14:58.652 [FelixStartLevel] INFO  c.m.commons.runtime.OsFamily:71 - Current OS version: Unknown
+2021-08-06 18:14:58.655 [FelixStartLevel] INFO  c.m.commons.runtime.JavaVersion:90 - Current Java version: 11
+2021-08-06 18:14:58.655 [FelixStartLevel] INFO  c.m.commons.runtime.JavaVersion:91 - Current JVM architecture: amd64
+2021-08-06 18:14:58.663 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.ar.Activator$1@5ea39990
+2021-08-06 18:14:58.666 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.bzip2.Activator$1@6400251e
+2021-08-06 18:14:58.668 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.gzip.Activator$1@66c6e8c5
+2021-08-06 18:14:58.670 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.iso.Activator$1@1831c763
+2021-08-06 18:14:58.673 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.libguestfs.Activator$1@263c4e66
+2021-08-06 18:14:58.675 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.lst.Activator$1@e763b0a
+2021-08-06 18:14:58.677 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.rar.Activator$1@3c0704c1
+2021-08-06 18:14:58.680 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.sevenzip.Activator$1@62497858
+2021-08-06 18:14:58.681 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.tar.Activator$1@52855157
+2021-08-06 18:14:58.682 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.zip.Activator$1@61bc514b
+2021-08-06 18:14:58.689 [FelixStartLevel] DEBUG com.mucommander.conf.Activator:13 - starting
+2021-08-06 18:14:58.696 [FelixStartLevel] TRACE c.mucommander.commons.io.BufferPool:232 - Creating new buffer with com.mucommander.commons.io.BufferPool$ByteBufferFactory@2279dd4a size= 65536
+2021-08-06 18:14:58.709 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.dropbox.Activator$1@3bf2bc83
+2021-08-06 18:14:58.712 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.ftp.Activator$1@19d3fe6e
+2021-08-06 18:14:58.715 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.gdrive.Activator$1@12a4572c
+2021-08-06 18:14:58.796 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.http.Activator$1@1abe7224
+2021-08-06 18:14:58.796 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.http.Activator$2@70dcb04b
+2021-08-06 18:14:58.799 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.nfs.Activator$1@7e8a129f
+2021-08-06 18:14:58.804 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.ovirt.Activator$1@44a702df
+2021-08-06 18:14:58.807 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.registry.Activator$1@49471e97
+2021-08-06 18:14:58.807 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.registry.Activator$2@7b2529fd
+2021-08-06 18:14:58.807 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.registry.Activator$3@7560a2f4
+2021-08-06 18:14:58.808 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.registry.Activator$4@18a0501a
+2021-08-06 18:14:58.821 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.s3.Activator$1@6708cf31
+2021-08-06 18:14:58.824 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.sftp.Activator$1@4a3dc130
+2021-08-06 18:14:58.827 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.smb.Activator$1@dcca0e9
+2021-08-06 18:14:58.831 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.vsphere.Activator$1@4b2927a4
+2021-08-06 18:14:58.835 [FelixStartLevel] INFO  com.mucommander.text.Activator:86 - Using language set in preferences: en
+2021-08-06 18:14:58.836 [FelixStartLevel] INFO  com.mucommander.text.Activator:103 - Found exact match (language+country) for locale en
+2021-08-06 18:14:58.836 [FelixStartLevel] DEBUG com.mucommander.text.Activator:45 - Current language has been set to en
+2021-08-06 18:14:58.847 [FelixStartLevel] TRACE com.mucommander.text.Activator:217 - The key 'edit_bookmarks_dialog.location' is missing
+2021-08-06 18:14:58.987 [FelixStartLevel] DEBUG com.mucommander.Activator:80 - starting
+2021-08-06 18:14:58.988 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.Activator$2@4871bde9
+2021-08-06 18:14:58.989 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.Activator$3@3d866c42
+2021-08-06 18:14:59.009 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.smb.Activator$2@3c96d8c5
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.vsphere.Activator$2@5b7c4f45
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.gdrive.Activator$2@208d9dbe
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.dropbox.Activator$2@10878e66
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.ftp.Activator$2@1add3c43
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.registry.Activator$5@23e24e3a
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.sftp.Activator$2@6fce5795
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.s3.Activator$2@439600b4
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.ovirt.Activator$2@30da13a1
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.nfs.Activator$2@1f8181e
+2021-08-06 18:14:59.010 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.http.Activator$3@1c17854b
+2021-08-06 18:14:59.011 [FelixStartLevel] INFO  c.m.text.TranslationTracker:22 - TranslationService is registered: com.mucommander.text.Activator$1@33c10422
+2021-08-06 18:14:59.013 [FelixStartLevel] INFO  c.m.osgi.FileViewerServiceTracker:47 - FileViewerService is registered: com.mucommander.viewer.image.ImageFileViewerService@3dc362f5
+2021-08-06 18:14:59.013 [FelixStartLevel] INFO  c.m.osgi.FileViewerServiceTracker:47 - FileViewerService is registered: com.mucommander.viewer.binary.BinaryFileViewerService@310e0d31
+2021-08-06 18:14:59.013 [FelixStartLevel] INFO  c.m.osgi.FileViewerServiceTracker:47 - FileViewerService is registered: com.mucommander.viewer.pdf.PdfFileViewer@168c70e1
+2021-08-06 18:14:59.013 [FelixStartLevel] INFO  c.m.osgi.FileViewerServiceTracker:47 - FileViewerService is registered: com.mucommander.viewer.text.TextFileViewerService@48f97d92
+2021-08-06 18:14:59.014 [FelixStartLevel] INFO  c.m.osgi.FileEditorServiceTracker:50 - FileEditorService is registered: com.mucommander.viewer.text.TextFileViewerService@48f97d92
+2021-08-06 18:14:59.032 [FelixStartLevel] INFO  c.m.o.OperatingSystemServiceTracker:43 - OperatingSystemService is registered: com.mucommander.desktop.linux.Activator$1@7818bac6
+2021-08-06 18:17:11.945 [Thread-29] ERROR c.m.c.f.p.local.LocalMonitoredFile:68 - failed to register WatchService
+java.nio.file.NotDirectoryException: /home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip
+	at java.base/sun.nio.fs.LinuxWatchService$Poller.implRegister(LinuxWatchService.java:251)
+	at java.base/sun.nio.fs.AbstractPoller.processRequests(AbstractPoller.java:265)
+	at java.base/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:366)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-08-06 18:17:11.949 [Thread-29] WARN  c.m.c.f.p.local.LocalMonitoredFile:69 - fallback to monitor /home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip by polling
+2021-08-06 18:22:04.202 [Thread-45] ERROR c.m.c.f.p.local.LocalMonitoredFile:68 - failed to register WatchService
+java.nio.file.NotDirectoryException: /home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/flebografía-202107.zip
+	at java.base/sun.nio.fs.LinuxWatchService$Poller.implRegister(LinuxWatchService.java:251)
+	at java.base/sun.nio.fs.AbstractPoller.processRequests(AbstractPoller.java:265)
+	at java.base/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:366)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-08-06 18:22:04.203 [Thread-45] WARN  c.m.c.f.p.local.LocalMonitoredFile:69 - fallback to monitor /home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/flebografía-202107.zip by polling
+2021-08-06 18:22:15.352 [Thread-49] ERROR c.m.c.f.p.local.LocalMonitoredFile:68 - failed to register WatchService
+java.nio.file.NotDirectoryException: /home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip
+	at java.base/sun.nio.fs.LinuxWatchService$Poller.implRegister(LinuxWatchService.java:251)
+	at java.base/sun.nio.fs.AbstractPoller.processRequests(AbstractPoller.java:265)
+	at java.base/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:366)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-08-06 18:22:15.353 [Thread-49] WARN  c.m.c.f.p.local.LocalMonitoredFile:69 - fallback to monitor /home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip by polling
+2021-08-06 18:29:05.349 [Thread-64] ERROR c.m.c.f.p.local.LocalMonitoredFile:68 - failed to register WatchService
+java.nio.file.NotDirectoryException: /home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/flebografía-202107.zip
+	at java.base/sun.nio.fs.LinuxWatchService$Poller.implRegister(LinuxWatchService.java:251)
+	at java.base/sun.nio.fs.AbstractPoller.processRequests(AbstractPoller.java:265)
+	at java.base/sun.nio.fs.LinuxWatchService$Poller.run(LinuxWatchService.java:366)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2021-08-06 18:29:05.350 [Thread-64] WARN  c.m.c.f.p.local.LocalMonitoredFile:69 - fallback to monitor /home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/flebografía-202107.zip by polling

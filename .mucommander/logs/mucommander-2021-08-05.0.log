@@ -1,0 +1,56 @@
+2021-08-05 15:55:30.694 [FelixStartLevel] INFO  c.m.commons.runtime.OsFamily:70 - Current OS family: Linux
+2021-08-05 15:55:30.698 [FelixStartLevel] INFO  c.m.commons.runtime.OsFamily:71 - Current OS version: Unknown
+2021-08-05 15:55:30.702 [FelixStartLevel] INFO  c.m.commons.runtime.JavaVersion:90 - Current Java version: 11
+2021-08-05 15:55:30.702 [FelixStartLevel] INFO  c.m.commons.runtime.JavaVersion:91 - Current JVM architecture: amd64
+2021-08-05 15:55:30.709 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.ar.Activator$1@4ff94d30
+2021-08-05 15:55:30.711 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.bzip2.Activator$1@42305adf
+2021-08-05 15:55:30.713 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.gzip.Activator$1@661e1cd8
+2021-08-05 15:55:30.715 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.iso.Activator$1@59a7a514
+2021-08-05 15:55:30.718 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.libguestfs.Activator$1@4ff51a6f
+2021-08-05 15:55:30.720 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.lst.Activator$1@2401caca
+2021-08-05 15:55:30.723 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.rar.Activator$1@81927bf
+2021-08-05 15:55:30.725 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.sevenzip.Activator$1@31a7b745
+2021-08-05 15:55:30.727 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.tar.Activator$1@a26ed52
+2021-08-05 15:55:30.728 [FelixStartLevel] INFO  c.m.c.f.o.FileFormatServiceTracker:41 - FileFormatService is registered: com.mucommander.commons.file.archive.zip.Activator$1@2c944d71
+2021-08-05 15:55:30.735 [FelixStartLevel] DEBUG com.mucommander.conf.Activator:13 - starting
+2021-08-05 15:55:30.743 [FelixStartLevel] TRACE c.mucommander.commons.io.BufferPool:232 - Creating new buffer with com.mucommander.commons.io.BufferPool$ByteBufferFactory@1cd01049 size= 65536
+2021-08-05 15:55:30.755 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.dropbox.Activator$1@377bf122
+2021-08-05 15:55:30.758 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.ftp.Activator$1@45be3417
+2021-08-05 15:55:30.762 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.gdrive.Activator$1@6e10c02
+2021-08-05 15:55:30.808 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.http.Activator$1@435fb11
+2021-08-05 15:55:30.808 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.http.Activator$2@65252080
+2021-08-05 15:55:30.811 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.nfs.Activator$1@d76a91a
+2021-08-05 15:55:30.815 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.ovirt.Activator$1@157da4a
+2021-08-05 15:55:30.819 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.registry.Activator$1@40a4238a
+2021-08-05 15:55:30.819 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.registry.Activator$2@43d92ba5
+2021-08-05 15:55:30.819 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.registry.Activator$3@21602949
+2021-08-05 15:55:30.820 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.registry.Activator$4@303448ea
+2021-08-05 15:55:30.830 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.s3.Activator$1@3a99288c
+2021-08-05 15:55:30.834 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.sftp.Activator$1@19a98871
+2021-08-05 15:55:30.837 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.smb.Activator$1@7c5869bf
+2021-08-05 15:55:30.840 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.commons.file.protocol.vsphere.Activator$1@50dbdd2b
+2021-08-05 15:55:30.843 [FelixStartLevel] INFO  com.mucommander.text.Activator:86 - Using language set in preferences: en
+2021-08-05 15:55:30.844 [FelixStartLevel] INFO  com.mucommander.text.Activator:103 - Found exact match (language+country) for locale en
+2021-08-05 15:55:30.844 [FelixStartLevel] DEBUG com.mucommander.text.Activator:45 - Current language has been set to en
+2021-08-05 15:55:30.854 [FelixStartLevel] TRACE com.mucommander.text.Activator:217 - The key 'edit_bookmarks_dialog.location' is missing
+2021-08-05 15:55:30.950 [FelixStartLevel] DEBUG com.mucommander.Activator:80 - starting
+2021-08-05 15:55:30.951 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.Activator$2@18b50d8
+2021-08-05 15:55:30.952 [FelixStartLevel] INFO  c.m.c.f.o.FileProtocolServiceTracker:43 - FileProtocolService is registered: com.mucommander.Activator$3@68ce9b39
+2021-08-05 15:55:30.961 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.dropbox.Activator$2@41cc67ac
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.nfs.Activator$2@68c82816
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.gdrive.Activator$2@1df5f343
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.s3.Activator$2@7b19808c
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.vsphere.Activator$2@594a6944
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.sftp.Activator$2@70eb72e3
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.ovirt.Activator$2@4236f856
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.ftp.Activator$2@751c1d7c
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.smb.Activator$2@7f164ad2
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.http.Activator$3@544143b9
+2021-08-05 15:55:30.962 [FelixStartLevel] INFO  c.m.u.m.o.ProtocolPanelProviderTracker:27 - ProtocolPanelProvider is registered: com.mucommander.commons.file.protocol.registry.Activator$5@21c0e52f
+2021-08-05 15:55:30.963 [FelixStartLevel] INFO  c.m.text.TranslationTracker:22 - TranslationService is registered: com.mucommander.text.Activator$1@6ab5c88e
+2021-08-05 15:55:30.965 [FelixStartLevel] INFO  c.m.osgi.FileViewerServiceTracker:47 - FileViewerService is registered: com.mucommander.viewer.pdf.PdfFileViewer@328a42e7
+2021-08-05 15:55:30.965 [FelixStartLevel] INFO  c.m.osgi.FileViewerServiceTracker:47 - FileViewerService is registered: com.mucommander.viewer.image.ImageFileViewerService@753a8c1e
+2021-08-05 15:55:30.965 [FelixStartLevel] INFO  c.m.osgi.FileViewerServiceTracker:47 - FileViewerService is registered: com.mucommander.viewer.binary.BinaryFileViewerService@36c4c318
+2021-08-05 15:55:30.965 [FelixStartLevel] INFO  c.m.osgi.FileViewerServiceTracker:47 - FileViewerService is registered: com.mucommander.viewer.text.TextFileViewerService@5b2deebd
+2021-08-05 15:55:30.965 [FelixStartLevel] INFO  c.m.osgi.FileEditorServiceTracker:50 - FileEditorService is registered: com.mucommander.viewer.text.TextFileViewerService@5b2deebd
+2021-08-05 15:55:30.980 [FelixStartLevel] INFO  c.m.o.OperatingSystemServiceTracker:43 - OperatingSystemService is registered: com.mucommander.desktop.linux.Activator$1@231d30c2

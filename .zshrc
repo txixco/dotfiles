@@ -100,6 +100,6 @@ export MINISHIFT_PASSWORD=RDHT101cm
 # Neofetch
 neofetch
 
-# For Oracle
-source ~/oraclerc
-
+# Path
+path+=('~/.local/bin')
+export PATH
