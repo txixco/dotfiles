@@ -45,14 +45,14 @@ set $workspace9 "09: Workspace 9"
 set $workspace10 "10: Música "
 
 # Assignments
-assign [class="Firefox"] $workspace2
+assign [class="[Ff]irefox"] $workspace2
 assign [class="qutebrowser"] $workspace2
 assign [class="Skype"] $workspace3
 assign [class="Signal"] $workspace3
-assign [class="Spotify"] $workspace10
+assign [class="[Ss]potify"] $workspace10
 
 # Automatic layout
-for_window [class="Firefox"] layout stacking
+for_window [class="[Ff]irefox"] layout stacking
 for_window [class="qutebrowser"] layout stacking
 for_window [class="Galculator"] move scratchpad, resize set 400 200
 
@@ -259,11 +259,17 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Startup
 exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy"
-exec --no-startup-id nm-applet
-exec --no-startup-id volumeicon
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id compton
 exec --no-startup-id galculator
+exec --no-startup-id firefox
+exec --no-startup-id signal-desktop
+
+# Tray
+exec --no-startup-id nm-applet
+exec --no-startup-id volumeicon
+exec --no-startup-id blueberry-tray
+exec --no-startup-id nextcloud
 
 # Keyboard
 exec setxkbmap us dvorak-intl 
