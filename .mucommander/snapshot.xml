@@ -33,7 +33,60 @@
                         <selection>0</selection>
                         <count>1</count>
                         <tab-0>
-                            <location>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/angioplastia-202108</location>
+                            <location>file://localhost/home/txixco/Nextcloud</location>
+                            <locked>false</locked>
+                        </tab-0>
+                    </tabs>
+                    <file_table>
+                        <date>
+                            <show>true</show>
+                            <width>139</width>
+                            <position>3</position>
+                        </date>
+                        <owner>
+                            <show>false</show>
+                            <width>75</width>
+                            <position>5</position>
+                        </owner>
+                        <extension>
+                            <show>true</show>
+                            <width>24</width>
+                            <position>0</position>
+                        </extension>
+                        <size>
+                            <show>true</show>
+                            <width>54</width>
+                            <position>2</position>
+                        </size>
+                        <permissions>
+                            <show>true</show>
+                            <width>36</width>
+                            <position>4</position>
+                        </permissions>
+                        <name>
+                            <position>1</position>
+                        </name>
+                        <sort>
+                            <by>name</by>
+                            <order>asc</order>
+                        </sort>
+                        <group>
+                            <show>false</show>
+                            <width>75</width>
+                            <position>6</position>
+                        </group>
+                    </file_table>
+                </left>
+                <right>
+                    <tree>
+                        <visible>false</visible>
+                        <width>150</width>
+                    </tree>
+                    <tabs>
+                        <selection>0</selection>
+                        <count>1</count>
+                        <tab-0>
+                            <location>file://localhost/home/txixco/Nextcloud/Documents/manuales/electrodomesticos</location>
                             <locked>false</locked>
                         </tab-0>
                     </tabs>
@@ -76,164 +129,111 @@
                             <position>6</position>
                         </group>
                     </file_table>
-                </left>
-                <right>
-                    <tree>
-                        <visible>false</visible>
-                        <width>150</width>
-                    </tree>
-                    <tabs>
-                        <selection>0</selection>
-                        <count>1</count>
-                        <tab-0>
-                            <location>file://localhost/home/txixco/Nextcloud/Documents/josue/fotocopias</location>
-                            <locked>false</locked>
-                        </tab-0>
-                    </tabs>
-                    <file_table>
-                        <date>
-                            <show>true</show>
-                            <width>139</width>
-                            <position>3</position>
-                        </date>
-                        <owner>
-                            <show>false</show>
-                            <width>75</width>
-                            <position>5</position>
-                        </owner>
-                        <extension>
-                            <show>true</show>
-                            <width>24</width>
-                            <position>0</position>
-                        </extension>
-                        <size>
-                            <show>true</show>
-                            <width>54</width>
-                            <position>2</position>
-                        </size>
-                        <permissions>
-                            <show>true</show>
-                            <width>32</width>
-                            <position>4</position>
-                        </permissions>
-                        <name>
-                            <position>1</position>
-                        </name>
-                        <sort>
-                            <by>name</by>
-                            <order>asc</order>
-                        </sort>
-                        <group>
-                            <show>false</show>
-                            <width>75</width>
-                            <position>6</position>
-                        </group>
-                    </file_table>
                 </right>
             </panels>
         </window-0>
     </windows>
     <recent_locations>
-        <location-79>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip</location-79>
-        <location-77>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210618-2/20210703</location-77>
-        <location-78>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210618-2</location-78>
-        <location-71>file://localhost/home/txixco/Nextcloud/Documents/fotocopias</location-71>
-        <location-72>file://localhost/home/txixco/Nextcloud/Documents/facturas</location-72>
-        <location-70>file://localhost/home/txixco/Nextcloud/Documents/fotocopias/Oficiales</location-70>
-        <location-75>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip/20210703/</location-75>
-        <location-76>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210629.zip</location-76>
-        <location-73>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703</location-73>
-        <location-74>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20160706.zip</location-74>
-        <location-68>file://localhost/home/txixco/Nextcloud/Documents/facturas/cfe</location-68>
-        <location-69>file://localhost/home/txixco/Nextcloud/Documents/fotocopias/Oficiales/Josue</location-69>
-        <location-66>file://localhost/home/</location-66>
-        <location-67>file://localhost/home/txixco/Nextcloud/Documents/facturas/cfe/Playa Tecolutla</location-67>
-        <location-60>file://localhost/home/txixco/datos/imagenes</location-60>
-        <location-61>file://localhost/home/txixco/datos</location-61>
-        <location-64>file://localhost/home/txixco/Nextcloud/Documents/manuales/Juegos</location-64>
-        <location-65>file://localhost/home/txixco/Nextcloud/Documents/manuales</location-65>
-        <location-62>file://localhost/home/txixco/Nextcloud/Documents/josue/dibujos</location-62>
-        <location-63>file://localhost/home/txixco/Nextcloud/Documents/josue/mami</location-63>
-        <location-57>file://localhost/media/txixco</location-57>
-        <location-58>file://localhost/media</location-58>
-        <location-55>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos</location-55>
-        <location-56>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1</location-56>
-        <location-59>file://localhost/</location-59>
-        <location-50>file://localhost/media/txixco/2.7.2-39-amd64</location-50>
-        <location-53>file://localhost/home/txixco/datos/imagenes/Lenovo-E495_full_mine</location-53>
-        <location-54>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos/imagenes</location-54>
-        <location-51>file://localhost/mnt</location-51>
-        <location-52>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos/imagenes/Lenovo-E495_full_mine</location-52>
-        <location-46>file://localhost/media/txixco/ARACELY</location-46>
-        <location-47>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos/imagenes/Lenovo_E495-full-original</location-47>
-        <location-44>file://localhost/media/txixco/AGATHA</location-44>
-        <location-45>file://localhost/home/txixco/Descargas/musica/Various - Super Mario Galaxy Original Sound Track</location-45>
-        <location-48>file://localhost/home/txixco/datos/imagenes/Lenovo_E495-full-original</location-48>
-        <location-49>file://localhost/home/txixco/Descargas/musica</location-49>
-        <location-42>file://localhost/home/txixco/Nextcloud/Documents/medico</location-42>
-        <location-43>file://localhost/media/txixco/AGATHA/usb-naranja</location-43>
-        <location-40>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes</location-40>
-        <location-41>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife</location-41>
-        <location-35>file://localhost/home/txixco/Dropbox</location-35>
-        <location-36>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703</location-36>
-        <location-33>file://localhost/home/txixco/Dropbox/Trámites/Reclamacion_Cajamar</location-33>
-        <location-34>file://localhost/home/txixco/Dropbox/Trámites</location-34>
-        <location-39>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Cirugías</location-39>
-        <location-37>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Reembolsos</location-37>
-        <location-38>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Cirugías/flebografía-202107</location-38>
-        <location-31>file://localhost/home/txixco/Nextcloud/Downloads</location-31>
-        <location-32>file://localhost/home/txixco/Descargas/Solicitud_de_Reclamacion_de_GMM_V8728408135.zip</location-32>
-        <location-30>file://localhost/home/txixco/Nextcloud/Trámites</location-30>
+        <location-79>file://localhost/home/txixco/Documents</location-79>
+        <location-77>file://localhost/home/txixco/Nextcloud/escuela</location-77>
+        <location-78>file://localhost/home/txixco/Descargas</location-78>
+        <location-71>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210618.zip</location-71>
+        <location-72>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos</location-72>
+        <location-70>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip</location-70>
+        <location-75>file://localhost/home/txixco/Nextcloud/escuela/mexico/secundaria</location-75>
+        <location-76>file://localhost/home/txixco/Nextcloud/escuela/mexico</location-76>
+        <location-73>file://localhost/home/txixco/Nextcloud/Documents/josue/escuela</location-73>
+        <location-74>file://localhost/home/txixco/Nextcloud/escuela/mexico/primaria</location-74>
+        <location-68>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210618-2/20210703</location-68>
+        <location-69>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210618-2</location-69>
+        <location-66>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703.zip/20210703/</location-66>
+        <location-67>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210629.zip</location-67>
+        <location-60>file://localhost/home/txixco/Nextcloud/Documents/facturas/cfe/Playa Tecolutla</location-60>
+        <location-61>file://localhost/home/txixco/Nextcloud/Documents/facturas/cfe</location-61>
+        <location-64>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703</location-64>
+        <location-65>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20160706.zip</location-65>
+        <location-62>file://localhost/home/txixco/Nextcloud/Documents/fotocopias/Oficiales/Josue</location-62>
+        <location-63>file://localhost/home/txixco/Nextcloud/Documents/facturas</location-63>
+        <location-57>file://localhost/home/txixco/Nextcloud/Documents/josue/mami</location-57>
+        <location-58>file://localhost/home/txixco/Nextcloud/Documents/manuales/Juegos</location-58>
+        <location-55>file://localhost/home/txixco/datos</location-55>
+        <location-56>file://localhost/home/txixco/Nextcloud/Documents/josue/dibujos</location-56>
+        <location-59>file://localhost/home/</location-59>
+        <location-50>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1</location-50>
+        <location-53>file://localhost/</location-53>
+        <location-54>file://localhost/home/txixco/datos/imagenes</location-54>
+        <location-51>file://localhost/media/txixco</location-51>
+        <location-52>file://localhost/media</location-52>
+        <location-46>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos/imagenes/Lenovo-E495_full_mine</location-46>
+        <location-47>file://localhost/home/txixco/datos/imagenes/Lenovo-E495_full_mine</location-47>
+        <location-44>file://localhost/media/txixco/2.7.2-39-amd64</location-44>
+        <location-45>file://localhost/mnt</location-45>
+        <location-48>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos/imagenes</location-48>
+        <location-49>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos</location-49>
+        <location-42>file://localhost/home/txixco/datos/imagenes/Lenovo_E495-full-original</location-42>
+        <location-43>file://localhost/home/txixco/Descargas/musica</location-43>
+        <location-40>file://localhost/media/txixco/ARACELY</location-40>
+        <location-41>file://localhost/media/txixco/dd3100c5-0d14-4259-ab52-dbdf9347a9f1/datos/imagenes/Lenovo_E495-full-original</location-41>
+        <location-35>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife</location-35>
+        <location-36>file://localhost/home/txixco/Nextcloud/Documents/medico</location-36>
+        <location-33>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Cirugías</location-33>
+        <location-34>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes</location-34>
+        <location-39>file://localhost/home/txixco/Descargas/musica/Various - Super Mario Galaxy Original Sound Track</location-39>
+        <location-37>file://localhost/media/txixco/AGATHA/usb-naranja</location-37>
+        <location-38>file://localhost/media/txixco/AGATHA</location-38>
+        <location-31>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Reembolsos</location-31>
+        <location-32>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Cirugías/flebografía-202107</location-32>
+        <location-30>file://localhost/home/txixco/Nextcloud/Documents/medico/Metlife/Solicitudes/Reembolsos/20210703</location-30>
         <count>100</count>
-        <location-19>file://localhost/home/txixco/series/Agents of S.H.I.E.L.D Season 7</location-19>
-        <location-24>file://localhost/home/txixco/Nextcloud/Photos/2021/06</location-24>
-        <location-25>file://localhost/home/txixco/Nextcloud/Photos/2021</location-25>
-        <location-22>file://localhost/home/txixco/series</location-22>
-        <location-23>file://localhost/home/txixco/Nextcloud/Cargas de cámara</location-23>
-        <location-28>file://localhost/home/txixco/Nextcloud/Cargas Automáticas</location-28>
-        <location-29>file://localhost/home/txixco/Nextcloud/Trámites/Reclamacion_Cajamar</location-29>
-        <location-26>file://localhost/home/txixco/Nextcloud/Photos</location-26>
-        <location-27>file://localhost/home/txixco/Nextcloud/Cargas Automáticas/Camera</location-27>
-        <location-20>file://localhost/home/txixco/series/shield</location-20>
-        <location-21>file://localhost/home/txixco/series/MARVEL Agents of S.H.I.E.L.D. (2013) Season 7 S07 (1080p AMZN WEB-DL x265 HEVC 10bit AAC 5.1 Vyndros)</location-21>
-        <location-90>file://localhost/home/txixco/Documents/medico/Metlife</location-90>
-        <location-8>file://localhost/home/txixco/Documents/ara/Impuestos</location-8>
-        <location-9>file://localhost/home/txixco/Documents/ara</location-9>
-        <location-13>file://localhost/home/txixco/Nextcloud/Photos/computadoras</location-13>
-        <location-14>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.704][Castellano][www.PCTmix.com]</location-14>
-        <location-11>file://localhost/home/txixco/Nextcloud/Photos/2021/05</location-11>
-        <location-99>file://localhost/home/txixco/Nextcloud/Documents/josue/fotocopias</location-99>
-        <location-12>file://localhost/home/txixco/Nextcloud/Photos/computadoras/toshiba</location-12>
-        <location-17>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.701][Castellano][www.PCTmix.com]</location-17>
-        <location-18>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV 720p][Cap.705][AC3 5.1 Castellano][www.PCTmix.com]</location-18>
-        <location-15>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.703][Castellano][www.PCTmix.com]</location-15>
-        <location-16>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.702][Castellano][www.PCTmix.com]</location-16>
-        <location-93>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/angioplastia-202108</location-93>
-        <location-94>file://localhost/home/txixco/Downloads</location-94>
-        <location-91>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes</location-91>
-        <location-92>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías</location-92>
-        <location-97>file://localhost/home/txixco/Nextcloud/Documents</location-97>
-        <location-10>file://localhost/home/txixco/Nextcloud/Photos/2021/04</location-10>
-        <location-98>file://localhost/home/txixco/Nextcloud/Documents/josue</location-98>
-        <location-95>file://localhost/home/txixco</location-95>
-        <location-96>file://localhost/home/txixco/Nextcloud</location-96>
-        <location-88>file://localhost/home/txixco/Documents</location-88>
-        <location-89>file://localhost/home/txixco/Documents/medico</location-89>
-        <location-6>file://localhost/home/txixco/Documents/ara/Impuestos/2021</location-6>
-        <location-82>file://localhost/home/txixco/Nextcloud/Documents/josue/escuela</location-82>
-        <location-7>file://localhost/home/txixco/Documents/ara/Impuestos/2020</location-7>
-        <location-83>file://localhost/home/txixco/Nextcloud/escuela/mexico/primaria</location-83>
-        <location-4>file://localhost/home/txixco/Documents/impuestos/</location-4>
-        <location-80>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos/20210618.zip</location-80>
-        <location-5>file://localhost/home/txixco/Descargas/MOIA720509P55-2020-12.zip</location-5>
-        <location-81>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Reembolsos</location-81>
-        <location-2>file://localhost/home/txixco/Documents/facturas/</location-2>
-        <location-86>file://localhost/home/txixco/Nextcloud/escuela</location-86>
-        <location-3>file://localhost/home/txixco/Documents/impuestos/SAT</location-3>
-        <location-87>file://localhost/home/txixco/Descargas</location-87>
-        <location-0>file://localhost/home/txixco/scripts/AutoHotKeys</location-0>
-        <location-84>file://localhost/home/txixco/Nextcloud/escuela/mexico/secundaria</location-84>
-        <location-1>file://localhost/home/txixco/scripts/</location-1>
-        <location-85>file://localhost/home/txixco/Nextcloud/escuela/mexico</location-85>
+        <location-19>file://localhost/home/txixco/Nextcloud/Photos/2021</location-19>
+        <location-24>file://localhost/home/txixco/Nextcloud/Trámites</location-24>
+        <location-25>file://localhost/home/txixco/Nextcloud/Downloads</location-25>
+        <location-22>file://localhost/home/txixco/Nextcloud/Cargas Automáticas</location-22>
+        <location-23>file://localhost/home/txixco/Nextcloud/Trámites/Reclamacion_Cajamar</location-23>
+        <location-28>file://localhost/home/txixco/Dropbox/Trámites</location-28>
+        <location-29>file://localhost/home/txixco/Dropbox</location-29>
+        <location-26>file://localhost/home/txixco/Descargas/Solicitud_de_Reclamacion_de_GMM_V8728408135.zip</location-26>
+        <location-27>file://localhost/home/txixco/Dropbox/Trámites/Reclamacion_Cajamar</location-27>
+        <location-20>file://localhost/home/txixco/Nextcloud/Photos</location-20>
+        <location-21>file://localhost/home/txixco/Nextcloud/Cargas Automáticas/Camera</location-21>
+        <location-90>file://localhost/home/txixco/Nextcloud/Documents/josue/fotocopias</location-90>
+        <location-8>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.704][Castellano][www.PCTmix.com]</location-8>
+        <location-9>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.703][Castellano][www.PCTmix.com]</location-9>
+        <location-13>file://localhost/home/txixco/series/Agents of S.H.I.E.L.D Season 7</location-13>
+        <location-14>file://localhost/home/txixco/series/shield</location-14>
+        <location-11>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.701][Castellano][www.PCTmix.com]</location-11>
+        <location-99>file://localhost/home/txixco/Nextcloud/Documents/manuales/electrodomesticos</location-99>
+        <location-12>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV 720p][Cap.705][AC3 5.1 Castellano][www.PCTmix.com]</location-12>
+        <location-17>file://localhost/home/txixco/Nextcloud/Cargas de cámara</location-17>
+        <location-18>file://localhost/home/txixco/Nextcloud/Photos/2021/06</location-18>
+        <location-15>file://localhost/home/txixco/series/MARVEL Agents of S.H.I.E.L.D. (2013) Season 7 S07 (1080p AMZN WEB-DL x265 HEVC 10bit AAC 5.1 Vyndros)</location-15>
+        <location-16>file://localhost/home/txixco/series</location-16>
+        <location-93>file://localhost/home/txixco/Nextcloud/Manuales/electrodomesticos</location-93>
+        <location-94>file://localhost/home/txixco/Nextcloud/Documents/cocina</location-94>
+        <location-91>file://localhost/home/txixco/Nextcloud/Documents/josue/</location-91>
+        <location-92>file://localhost/home/txixco</location-92>
+        <location-97>file://localhost/home/txixco/Nextcloud/Documents/manuales</location-97>
+        <location-10>file://localhost/home/txixco/series/Marvels Agents of S.H.I.E.L.D - Temporada 7 [HDTV][Cap.702][Castellano][www.PCTmix.com]</location-10>
+        <location-98>file://localhost/home/txixco/Nextcloud</location-98>
+        <location-95>file://localhost/home/txixco/Nextcloud/Documents</location-95>
+        <location-96>file://localhost/home/txixco/Nextcloud/Manuales</location-96>
+        <location-88>file://localhost/home/txixco/Nextcloud/Documents/fotocopias</location-88>
+        <location-89>file://localhost/home/txixco/Documents/medico/Metlife/</location-89>
+        <location-6>file://localhost/home/txixco/Nextcloud/Photos/computadoras/toshiba</location-6>
+        <location-82>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/angioplastia-202108</location-82>
+        <location-7>file://localhost/home/txixco/Nextcloud/Photos/computadoras</location-7>
+        <location-83>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/Cirugías/</location-83>
+        <location-4>file://localhost/home/txixco/Nextcloud/Photos/2021/04</location-4>
+        <location-80>file://localhost/home/txixco/Documents/medico</location-80>
+        <location-5>file://localhost/home/txixco/Nextcloud/Photos/2021/05</location-5>
+        <location-81>file://localhost/home/txixco/Downloads</location-81>
+        <location-2>file://localhost/home/txixco/Documents/ara/Impuestos</location-2>
+        <location-86>file://localhost/home/txixco/Nextcloud/Documents/fotocopias/Oficiales/Ara</location-86>
+        <location-3>file://localhost/home/txixco/Documents/ara</location-3>
+        <location-87>file://localhost/home/txixco/Nextcloud/Documents/fotocopias/Oficiales</location-87>
+        <location-0>file://localhost/home/txixco/Documents/ara/Impuestos/2021</location-0>
+        <location-84>file://localhost/home/txixco/Documents/medico/Metlife/Solicitudes/</location-84>
+        <location-1>file://localhost/home/txixco/Documents/ara/Impuestos/2020</location-1>
+        <location-85>file://localhost/home/txixco/Nextcloud/Documents/fotocopias/Oficiales/Mexicano</location-85>
     </recent_locations>
 </snapshot>
