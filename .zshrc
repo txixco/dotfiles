@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$HOME/scripts:$PATH
+export PATH=$HOME/.local/bin:/usr/local/bin:$HOME/scripts:$PATH
 
 # Path to your oh-my-zsh installation.
   export ZSH=$HOME/.oh-my-zsh
@@ -103,3 +103,7 @@ neofetch
 # Path
 path+=('~/.local/bin')
 export PATH
+
+# Use vi keybindings
+bindkey -v
+

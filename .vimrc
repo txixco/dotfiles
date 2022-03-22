@@ -58,6 +58,10 @@ set backspace=2
 set incsearch
 set hlsearch
 
+if has('gui running')
+    set guifont=FreeMono\ 12
+endif
+
 " Keys
 nnoremap <C-F4> :bw<CR>
 nnoremap <F6> :buffers<CR>:buffer<Space>
