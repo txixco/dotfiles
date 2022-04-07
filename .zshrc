@@ -104,6 +104,3 @@ neofetch
 path+=('~/.local/bin')
 export PATH
 
-# Use vi keybindings
-bindkey -v
-
