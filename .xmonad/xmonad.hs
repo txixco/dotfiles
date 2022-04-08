@@ -1,17 +1,21 @@
 -- Imports
 
-import XMonad
 import Data.Monoid
-import System.Exit
+import Data.Ratio
+
+import XMonad
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
+import XMonad.Actions.FloatKeys
 
 import Graphics.X11.ExtraTypes.XF86 (xF86XK_AudioLowerVolume, xF86XK_AudioRaiseVolume, xF86XK_AudioMute)
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
+
+import System.Exit
 
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
@@ -21,6 +25,20 @@ myMenu         = "rofi -modi run,drun -show drun -lines 3"
 myPowerMenu    = "rofi -modi p:rofi-power-menu -show p -font 'Inconsolata Medium 12'"
 myBar          = "xmobar ~/.config/xmobarrc"
 myFilesManager = "nemo"
+
+openUrlOnRead  = "~/scripts/openurl.sh -k -e "
+
+altMask        = mod1Mask
+
+--toggleFloat    = withFocused (\windowId -> do
+--                                 { floats <- gets (W.floating . windowset);
+--                                   if windowId `M.member` floats
+--                                   then withFocused $ windows . W.sink
+--                                   else do
+--                                        keysMoveWindowTo (x, y) (gx1, gy1) windowId
+--                                        keysResizeWindow (dx, dy) (gx2, gy2) windowId
+--                                 }
+--                             ) 
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -71,18 +89,30 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
    , ((0, xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 0 +5%")
 
     -- launch the menus
-    , ((mod1Mask,           xK_space ), spawn myMenu)
-    , ((modm,               xK_s     ), spawn  myPowerMenu)
+    , ((altMask,               xK_space ), spawn myMenu)
+    , ((altMask .|. shiftMask, xK_space ), spawn myPowerMenu)
 
     -- launch gmrun
     , ((modm,               xK_r     ), spawn "gmrun")
 
     -- launch some other programs
-    , ((modm,                xK_m     ), spawn "mucommander")
-    , ((modm,                xK_e     ), spawn myFilesManager)
+    , ((modm,                xK_m    ), spawn "mucommander")
+    , ((modm,                xK_e    ), spawn myFilesManager)
 
     -- close focused window
-    , ((modm .|. shiftMask, xK_c     ), kill)
+    , ((modm .|. shiftMask,  xK_c    ), kill)
+
+    -- set the window floating
+    , ((controlMask .|. modm, xK_w ), withFocused (\windowId -> do 
+		keysResizeWindow (400, -50) (1%2, 1%2) windowId
+	        keysMoveWindowTo (0, 0) (-1%5, -1%33) windowId
+	    ))
+
+    -- set the window floating in read mode
+    , ((altMask .|. modm, xK_w ), withFocused (\windowId -> do 
+	        keysMoveWindowTo (0, 0) (-1%2, -1%30) windowId
+		keysResizeWindow (-50, -50) (1%2, 1%2) windowId
+	    ))
 
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
@@ -142,14 +172,17 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_q     ), spawn "xmonad --recompile; xmonad --restart")
 
     -- Restart xmobar
-    , ((modm .|. mod1Mask , xK_q     ), spawn "killall xmobar; xmonad --restart")
+    , ((modm .|. altMask , xK_q      ), spawn "killall xmobar; xmonad --restart")
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
+
+    -- Open Feedly
+    --
+    , ((modm .|. shiftMask, xK_f     ), spawn (openUrlOnRead ++ "http://feedly.com/"))
     ]
     ++
 
-    --
     -- mod-[1..9], Switch to workspace N
     -- mod-shift-[1..9], Move client to workspace N
     --
@@ -230,7 +263,9 @@ myManageHook = composeAll
     [ className =? "MPlayer"        --> doFloat
     , className =? "Gimp"           --> doFloat
     , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore ]
+    , resource  =? "Navigator"      --> doShift "\62057"
+    , resource  =? "kdesktop"       --> doIgnore
+    , stringProperty "WM_WINDOW_ROLE" =? "browser-window" --> doShift "\61574" ]
 
 ------------------------------------------------------------------------
 -- Event handling
@@ -265,6 +300,8 @@ myStartupHook = do
     spawnOnce "nm-applet &"
     spawnOnce "volumeicon &"
     spawnOnce "setxkbmap us dvorak-intl &"
+--    spawnOnce "&"
+--    spawnOnce "&"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
