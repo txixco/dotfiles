@@ -25,20 +25,9 @@ myMenu         = "rofi -modi run,drun -show drun -lines 3"
 myPowerMenu    = "rofi -modi p:rofi-power-menu -show p -font 'Inconsolata Medium 12'"
 myBar          = "xmobar ~/.config/xmobarrc"
 myFilesManager = "nemo"
+myEditor       = "nvim-qt "
 
 openUrlOnRead  = "~/scripts/openurl.sh -k -e "
-
-altMask        = mod1Mask
-
---toggleFloat    = withFocused (\windowId -> do
---                                 { floats <- gets (W.floating . windowset);
---                                   if windowId `M.member` floats
---                                   then withFocused $ windows . W.sink
---                                   else do
---                                        keysMoveWindowTo (x, y) (gx1, gy1) windowId
---                                        keysResizeWindow (dx, dy) (gx2, gy2) windowId
---                                 }
---                             ) 
 
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
@@ -58,6 +47,7 @@ myBorderWidth   = 1
 -- "windows key" is usually mod4Mask.
 --
 myModMask       = mod4Mask
+altMask        = mod1Mask
 
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
@@ -68,7 +58,7 @@ myModMask       = mod4Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = [ "\61728","\62057","\61574","4","5","6","7","8","\61884"]
+myWorkspaces    = [ "\61728","\61574","\62057","4","5","6","7","8","\61884"]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -98,6 +88,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch some other programs
     , ((modm,                xK_m    ), spawn "mucommander")
     , ((modm,                xK_e    ), spawn myFilesManager)
+    , ((modm .|. altMask,    xK_b    ), spawn "~/scripts/hotkeys.sh -s")
 
     -- close focused window
     , ((modm .|. shiftMask,  xK_c    ), kill)
@@ -173,6 +164,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Restart xmobar
     , ((modm .|. altMask , xK_q      ), spawn "killall xmobar; xmonad --restart")
+
+    -- Edit xmonad.hs
+    , ((modm .|. controlMask , xK_q  ), spawn (myEditor ++ "~/.xmonad/xmonad.hs"))
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
