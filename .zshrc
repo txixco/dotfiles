@@ -104,6 +104,8 @@ neofetch
 path+=('~/.local/bin')
 export PATH
 
-# Use vi keybindings
-bindkey -v
+# Path for LaTeX
+export MANPATH="$MANPATH:/usr/local/texlive/2022/texmf-dist/doc/man"
+export INFOPATH="$INFOPATH:/usr/local/texlive/2022/texmf-dist/doc/info"
+export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
 
