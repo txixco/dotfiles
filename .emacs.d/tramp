@@ -1,6 +1,22 @@
-;; -*- emacs-lisp -*- <13/08/27 13:01:34 c:/Users/frueda/AppData/Roaming/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <22/02/13 15:12:41 /home/txixco/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
 ;; You can delete it, forcing Tramp to reapply the checks.
 
-((["sftp" "frueda" "txixco.tuxgeek.com" nil nil]
-  nil))
+(((tramp-file-name "sudo" "root" nil "moises" nil nil nil)
+  ("uname" "Linux 5.4.0-99-generic")
+  ("locale" "LC_ALL=en_US.utf8")
+  ("test" "test")
+  ("remote-path"
+   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("remote-shell" "/bin/sh")
+  ("file-exists" "test -e")
+  ("case-insensitive" nil)
+  ("readlink" "\\readlink")
+  ("stat" nil)
+  ("perl-file-spec" t)
+  ("perl-cwd-realpath" t)
+  ("perl" "\\perl")
+  ("id" "/bin/id")
+  ("gid-integer" 0)
+  ("gid-string" "root")
+  ("uid-integer" 0)))
