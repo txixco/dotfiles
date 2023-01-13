@@ -260,9 +260,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # Startup
 exec --no-startup-id xautolock -time 10 -locker "i3lock-fancy"
 exec --no-startup-id nitrogen --restore
-exec --no-startup-id compton
+exec --no-startup-id compton -b
 exec --no-startup-id galculator
-exec --no-startup-id firefox
 exec --no-startup-id signal-desktop
 
 # Tray

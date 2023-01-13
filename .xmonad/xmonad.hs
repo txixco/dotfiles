@@ -87,6 +87,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch some other programs
     , ((modm,                xK_m    ), spawn "mucommander")
+    , ((modm,		     xK_d    ), spawn "doublecmd")
     , ((modm,                xK_e    ), spawn myFilesManager)
     , ((modm .|. altMask,    xK_b    ), spawn "~/scripts/hotkeys.sh -s")
 
