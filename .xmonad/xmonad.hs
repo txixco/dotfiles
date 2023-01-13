@@ -71,7 +71,7 @@ myFocusedBorderColor = "#ff0000"
 myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- launch a terminal
-    [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
+    [ ((modm, xK_Return), spawn $ XMonad.terminal conf)
 
     -- volume key bindings
    , ((0, xF86XK_AudioMute), spawn "pactl set-sink- 0 toggle")
