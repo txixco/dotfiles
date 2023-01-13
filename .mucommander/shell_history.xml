@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<history version="0.9.7-1">
-    <command>rename -n &apos;s/Marvels Agents of S.H.I.E.L.D - .*Cap.(705).*.avi/Marvels Agents of S.H.I.E.L.D - $1.avi/g&apos; *.avi</command>
-</history>

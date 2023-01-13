@@ -20,7 +20,7 @@ import System.Exit
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
-myTerminal     = "gnome-terminal"
+myTerminal     = "terminator"
 myMenu         = "rofi -modi run,drun -show drun -lines 3"
 myPowerMenu    = "rofi -modi p:rofi-power-menu -show p -font 'Inconsolata Medium 12'"
 myBar          = "xmobar ~/.config/xmobarrc"
