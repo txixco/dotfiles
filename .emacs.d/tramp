@@ -1,22 +1,31 @@
-;; -*- emacs-lisp -*- <22/02/13 15:12:41 /home/txixco/.emacs.d/tramp>
+;; -*- emacs-lisp -*- <22/09/24 09:35:50 /home/txixco/.emacs.d/tramp>
 ;; Tramp connection history.  Don't change this file.
-;; You can delete it, forcing Tramp to reapply the checks.
+;; Run `M-x tramp-cleanup-all-connections' instead.
 
 (((tramp-file-name "sudo" "root" nil "moises" nil nil nil)
-  ("uname" "Linux 5.4.0-99-generic")
+  ("null-device" "/dev/null")
+  ("uname" "Linux 5.19.9-200.fc36.x86_64")
   ("locale" "LC_ALL=en_US.utf8")
   ("test" "test")
   ("remote-path"
-   ("/bin" "/usr/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+   ("/usr/bin" "/bin" "/sbin" "/usr/sbin" "/usr/local/bin" "/usr/local/sbin"))
+  ("pipe-buf" 4096)
   ("remote-shell" "/bin/sh")
   ("file-exists" "test -e")
-  ("case-insensitive" nil)
-  ("readlink" "\\readlink")
-  ("stat" nil)
   ("perl-file-spec" t)
   ("perl-cwd-realpath" t)
   ("perl" "\\perl")
-  ("id" "/bin/id")
+  ("case-insensitive" nil)
+  ("readlink" "\\readlink")
+  ("stat" "env QUOTING_STYLE=locale \\stat")
+  ("id" "/usr/bin/id")
   ("gid-integer" 0)
   ("gid-string" "root")
-  ("uid-integer" 0)))
+  ("uid-string" "root")
+  ("uid-integer" 0)
+  ("tmpdir" "/sudo:root@moises:/tmp")
+  ("touch-t" t)
+  ("touch" "\\touch")
+  ("bzr" nil)
+  ("git" "\\git")
+  ("hg" nil)))
