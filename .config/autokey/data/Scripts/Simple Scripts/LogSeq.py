@@ -1,0 +1,1 @@
+system.exec_command(command="~/Applications/Logseq-linux-x64-0.8.16_6c8c73bda99077bfbdf3e181bf0ea92c.AppImage", getOutput=False)

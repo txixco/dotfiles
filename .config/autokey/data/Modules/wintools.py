@@ -2,7 +2,8 @@ from autokey.scripting import System, Window, GtkDialog
 
 # Constants
 
-BROWSER = "surf -k {url}"
+BROWSER = "qutebrowser --target window {url}"
+#BROWSER = "surf -k {url}"
 #BROWSER = "firefox --new-window {url}"
 #BROWSER = "uzbl -u {url}"
 

@@ -1,8 +1,8 @@
 {
     "type": "phrase",
-    "description": "First phrase",
+    "description": "Smile",
     "modes": [
-        2
+        1
     ],
     "usageCount": 0,
     "prompt": false,
@@ -10,19 +10,22 @@
     "matchCase": false,
     "showInTrayMenu": false,
     "abbreviation": {
-        "abbreviations": [],
+        "abbreviations": [
+            ":)",
+            ":-)"
+        ],
         "backspace": true,
-        "ignoreCase": false,
-        "immediate": false,
+        "ignoreCase": true,
+        "immediate": true,
         "triggerInside": false,
-        "wordChars": "[\\w]"
+        "wordChars": "[^\\t]"
     },
     "hotkey": {
         "modifiers": [],
         "hotKey": null
     },
     "filter": {
-        "regex": ".* - gedit",
+        "regex": "signal.Signal",
         "isRecursive": false
     },
     "sendMode": "kb"

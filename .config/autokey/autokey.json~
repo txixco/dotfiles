@@ -1,6 +1,6 @@
 {
     "version": "0.95.10",
-    "userCodeDir": "/home/frueda/.config/autokey/data/Modules",
+    "userCodeDir": "/home/txixco/.config/autokey/data/Modules",
     "settings": {
         "isFirstRun": true,
         "serviceRunning": true,
@@ -12,17 +12,17 @@
         "interfaceType": "XRecord",
         "undoUsingBackspace": true,
         "windowDefaultSize": [
-            1120,
-            737
+            1598,
+            875
         ],
-        "hPanePosition": 280,
+        "hPanePosition": 399,
         "columnWidths": [
             150,
             50,
             100
         ],
         "showToolbar": true,
-        "notificationIcon": "autokey-status",
+        "notificationIcon": "autokey-status-dark",
         "workAroundApps": ".*VirtualBox.*|krdc.Krdc",
         "triggerItemByInitial": true,
         "disabledModifiers": [

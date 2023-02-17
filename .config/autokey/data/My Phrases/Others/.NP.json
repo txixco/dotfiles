@@ -1,19 +1,23 @@
 {
     "type": "phrase",
-    "description": "Second phrase",
-    "modes": [],
-    "usageCount": 0,
+    "description": "NP",
+    "modes": [
+        1
+    ],
+    "usageCount": 1,
     "prompt": false,
-    "omitTrigger": false,
-    "matchCase": false,
+    "omitTrigger": true,
+    "matchCase": true,
     "showInTrayMenu": false,
     "abbreviation": {
-        "abbreviations": [],
+        "abbreviations": [
+            "np"
+        ],
         "backspace": true,
-        "ignoreCase": false,
+        "ignoreCase": true,
         "immediate": false,
         "triggerInside": false,
-        "wordChars": "[\\w]"
+        "wordChars": "[^\\t]"
     },
     "hotkey": {
         "modifiers": [],

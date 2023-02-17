@@ -1,30 +1,31 @@
 {
-    "type": "script",
-    "description": "Biblia",
-    "store": {},
+    "type": "phrase",
+    "description": "IMSS",
     "modes": [
-        3
+        1
     ],
-    "usageCount": 6,
+    "usageCount": 0,
     "prompt": false,
     "omitTrigger": false,
+    "matchCase": false,
     "showInTrayMenu": false,
     "abbreviation": {
-        "abbreviations": [],
+        "abbreviations": [
+            "#imss"
+        ],
         "backspace": true,
         "ignoreCase": false,
-        "immediate": false,
+        "immediate": true,
         "triggerInside": false,
         "wordChars": "[\\w]"
     },
     "hotkey": {
-        "modifiers": [
-            "<super>"
-        ],
-        "hotKey": "b"
+        "modifiers": [],
+        "hotKey": null
     },
     "filter": {
         "regex": null,
         "isRecursive": false
-    }
+    },
+    "sendMode": "kb"
 }

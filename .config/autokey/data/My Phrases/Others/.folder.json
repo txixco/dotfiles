@@ -1,11 +1,8 @@
 {
-    "type": "script",
-    "description": "Feedly",
-    "store": {},
+    "type": "folder",
+    "title": "Others",
     "modes": [],
     "usageCount": 0,
-    "prompt": false,
-    "omitTrigger": false,
     "showInTrayMenu": false,
     "abbreviation": {
         "abbreviations": [],
