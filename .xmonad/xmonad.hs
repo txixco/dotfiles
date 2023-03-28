@@ -4,11 +4,12 @@ import Data.Monoid
 import Data.Ratio
 
 import XMonad
+import XMonad.Actions.FloatKeys
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
-import XMonad.Actions.FloatKeys
+import XMonad.Util.NamedScratchpad
 
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.ThreeColumns
@@ -20,12 +21,26 @@ import qualified Data.Map        as M
 
 import System.Exit
 
+scratchpads = [
+-- run htop in xterm, find it by title, use default floating window placement
+    NS "htop" "xterm -e htop" (title =? "htop") defaultFloating ,
+
+-- run copyq, find it by class name, place it in the floating window
+-- 1/6 of screen width from the left, 1/6 of screen height
+-- from the top, 2/3 of screen width by 2/3 of screen height
+    NS "copyq" "copyq" (className =? "copyq")
+        (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
+
+-- run gvim, find by role, don't float
+    NS "notes" "gvim --role notes ~/notes.txt" (role =? "notes") nonFloating
+  ] where role = stringProperty "WM_WINDOW_ROLE"
+
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
 myTerminal     = "terminator"
 myMenu         = "rofi -modi run,drun -show drun -lines 3"
-myPowerMenu    = "rofi -modi p:rofi-power-menu -show p -font 'Inconsolata Medium 12'"
+myPowerMenu    = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Inconsolata Medium 12'"
 myBar          = "xmobar ~/.config/xmobarrc"
 myFilesManager = "nemo"
 myEditor       = "emacs"
@@ -66,7 +81,7 @@ chatIcon     = "\61574"
 browserIcon  = "\62057"
 musicIcon    = "\61884"
 
-myWorkspaces = [ termIcon,chatIcon,browserIcon,"4","5","6","7","8",musicIcon]
+myWorkspaces = [ termIcon,chatIcon,browserIcon,"4","5","6","7","8",musicIcon ]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -81,7 +96,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
-    -- volume key bindings
+    -- some scratchpads
+  , ((modm .|. controlMask .|. shiftMask, xK_t), namedScratchpadAction scratchpads "htop")
+  , ((modm, xK_Escape), namedScratchpadAction scratchpads "copyq")
+
+     -- volume key bindings
    , ((0, xF86XK_AudioMute), spawn "pactl set-sink- 0 toggle")
    , ((0, xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume 0 -5%")
    , ((0, xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 0 +5%")
@@ -102,16 +121,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. shiftMask,  xK_c    ), kill)
 
     -- set the window floating
-    , ((controlMask .|. modm, xK_w ), withFocused (\windowId -> do 
-		keysResizeWindow (400, -50) (1%2, 1%2) windowId
-	        keysMoveWindowTo (0, 0) (-1%5, -1%33) windowId
-	    ))
+    , ((altMask .|. modm, xK_w ), withFocused $ (\w -> windows $ W.float w $ W.RationalRect (1/6) (1/6) (2/3) (2/3)))
 
     -- set the window floating in read mode
-    , ((altMask .|. modm, xK_w ), withFocused (\windowId -> do 
-	        keysMoveWindowTo (0, 0) (-1%2, -1%30) windowId
-		keysResizeWindow (-50, -50) (1%2, 1%2) windowId
-	    ))
+    , ((controlMask .|. modm, xK_w ), withFocused (\windowId -> do 
+                keysResizeWindow (0, 0) (-1%33, -1%33) windowId
+                keysMoveWindowTo (800, 450) (1%2, 1%2) windowId
+            ))
 
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
@@ -240,7 +256,7 @@ altLayout = Full ||| my3col ||| tiled -- See comments on defLayout
     my3col    = ThreeColMid nmaster delta ratio
     tiled   = Tall nmaster delta ratio
     nmaster = 1
-    ratio   = 60/100
+    ratio   = 50/100
     delta   = 5/100
 
 defLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
@@ -273,14 +289,17 @@ defLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "MPlayer"        --> doFloat
-    , className =? "Gimp"           --> doFloat
-    , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "kdesktop"       --> doIgnore
-    , className =? "Signal"          --> doShift chatIcon
-    , className =? "Skype"          --> doShift chatIcon
-    , resource  =? "Navigator"      --> doShift browserIcon
-    , className =? "Spotify"        --> doShift musicIcon ]
+    [ className =? "MPlayer"          --> doFloat
+    , className =? "Gimp"             --> doFloat
+    , className =? "gnome-calculator" --> doFloat
+    , className =? "gnome-screenshot" --> doFloat
+    , resource  =? "desktop_window"   --> doIgnore
+    , resource  =? "kdesktop"         --> doIgnore
+    , className =? "Signal"           --> doShift chatIcon
+    , className =? "Skype"            --> doShift chatIcon
+    , resource  =? "Navigator"        --> doShift browserIcon
+    , className =? "Spotify"          --> doShift musicIcon
+    , namedScratchpadManageHook scratchpads ]
 
 ------------------------------------------------------------------------
 -- Event handling
@@ -311,12 +330,14 @@ myEventHook = mempty
 -- By default, do nothing.
 myStartupHook = do
     spawnOnce "nitrogen --set-zoom-fill --random ~/fondos/NG &"
+    spawnOnce "skypeforlinux &"
+    spawnOnce "flatpak run --command=signal-desktop org.signal.Signal &"
+    spawnOnce "firefox &"
     spawnOnce "autokey-gtk &"
     spawnOnce "compton &"
     spawnOnce "nm-applet &"
     spawnOnce "volumeicon &"
-    spawnOnce "skypeforlinux&"
-    spawnOnce "flatpak run --command=signal-desktop org.signal.Signal &"
+    spawnOnce "spotify &"
     spawnOnce "setxkbmap us dvorak-intl &"
 
 ------------------------------------------------------------------------
