@@ -4,7 +4,7 @@
     "modes": [
         1
     ],
-    "usageCount": 3,
+    "usageCount": 4,
     "prompt": false,
     "omitTrigger": true,
     "matchCase": false,
@@ -17,7 +17,7 @@
         "ignoreCase": true,
         "immediate": false,
         "triggerInside": false,
-        "wordChars": "[^\\t]"
+        "wordChars": "[\\w]"
     },
     "hotkey": {
         "modifiers": [],
