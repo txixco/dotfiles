@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doublecmd>
+  <History>
+    <Navigation>
+      <Item>/home/txixco/</Item>
+      <Item>/home/txixco/Documents/</Item>
+      <Item>/home/txixco/Downloads/</Item>
+      <Item>/home/txixco/Downloads/zelda-ot/</Item>
+      <Item>/home/txixco/Documents/josue/</Item>
+      <Item>/home/txixco/Documents/josue/escuela/</Item>
+      <Item>/home/txixco/Documents/josue/escuela/boletas/</Item>
+      <Item>/home/txixco/Documents/manuales/</Item>
+      <Item>/home/txixco/Documents/manuales/electrodomesticos/</Item>
+      <Item>/home/txixco/Documents/manuales/hogar/</Item>
+      <Item>/home/txixco/ebooks/comics/</Item>
+      <Item>/home/txixco/Applications/</Item>
+      <Item>/home/txixco/Documents/manuales/electronica/red/</Item>
+      <Item>/home/txixco/Documents/manuales/electronica/</Item>
+      <Item>/home/txixco/Documents/manuales/coches/</Item>
+      <Item>/home/txixco/Documents/facturas/mantenimiento/2023/</Item>
+      <Item>/home/txixco/Documents/facturas/mantenimiento/</Item>
+      <Item>/home/txixco/Documents/facturas/</Item>
+      <Item>/home/</Item>
+      <Item>/</Item>
+      <Item>/run/media/txixco/DDADD/Escuela/FC y E/</Item>
+      <Item>/run/media/txixco/DDADD/Escuela/</Item>
+      <Item>/run/media/txixco/DDADD/</Item>
+      <Item>/home/joshurm/</Item>
+      <Item>/home/joshurm/Documentos/</Item>
+      <Item>/home/joshurm/Documentos/Modelos o Animaciones 3D/</Item>
+      <Item>/home/txixco/Descargas/</Item>
+      <Item>/home/txixco/Documents/josue/medico/</Item>
+      <Item>/home/txixco/Documents/josue/fotocopias/</Item>
+      <Item>/home/txixco/Joplin/</Item>
+      <Item>/home/txixco/Nextcloud2/</Item>
+      <Item>/home/txixco/datos/</Item>
+      <Item>/home/txixco/datos/laboral/</Item>
+      <Item>/home/txixco/Nextcloud/</Item>
+      <Item>/home/txixco/Nueva Carpeta/</Item>
+      <Item>/home/txixco/laboral/</Item>
+      <Item>/home/txixco/laboral/Documents/</Item>
+      <Item>/home/txixco/laboral/Documents/notas/</Item>
+      <Item>/home/txixco/laboral/Documents/notas/logseq/</Item>
+      <Item>/run/user/1000/doc/21d0c5b1/laboral/logseq/</Item>
+      <Item>/run/user/1000/doc/21d0c5b1/laboral/</Item>
+      <Item>/run/user/1000/doc/21d0c5b1/</Item>
+      <Item>/run/user/1000/doc/</Item>
+      <Item>/run/user/1000/</Item>
+      <Item>/run/user/</Item>
+      <Item>/run/</Item>
+      <Item>/usr/</Item>
+      <Item>/home/txixco/laboral/Documents/notas/logseq/apuntes/</Item>
+      <Item>/home/txixco/laboral/Documents/notas/logseq/apuntes/laboral/</Item>
+      <Item>/home/txixco/laboral/Documents/notas/logseq/apuntes/laboral/pages/</Item>
+    </Navigation>
+    <CommandLine>
+      <Item>renumerar.py</Item>
+      <Item>renumerar.py -e jpg </Item>
+      <Item>mtp://Huami_Amazfit_Pace_08132a18/Almacenamiento%20interno</Item>
+      <Item>wget https://www.dailymotion.com/video/x7tkgm9</Item>
+      <Item>https://www.dailymotion.com/video/x7tmnyy</Item>
+    </CommandLine>
+    <FileMask>
+      <Item>*.*</Item>
+    </FileMask>
+    <SearchText/>
+    <SearchTextPath/>
+    <ReplaceText/>
+    <ReplaceTextPath/>
+    <CreateDirectories>
+      <Item>red</Item>
+      <Item>Getting the Interview.md</Item>
+      <Item>tmp</Item>
+      <Item>Paseo_Gigante</Item>
+      <Item>fran</Item>
+      <Item>ara</Item>
+      <Item>josué</Item>
+      <Item>común</Item>
+      <Item>mochila</Item>
+      <Item>Veracruz</Item>
+      <Item>202208</Item>
+      <Item>202207</Item>
+      <Item>latex</Item>
+      <Item>zeldaoot</Item>
+      <Item>concurso</Item>
+    </CreateDirectories>
+    <RenameNameMask>
+      <Item>factura-1</Item>
+      <Item>[N] - Template</Item>
+      <Item>Izta-Popo-14-[C]</Item>
+    </RenameNameMask>
+    <RenameExtMask>
+      <Item>[E]</Item>
+    </RenameExtMask>
+    <SearchDirectories/>
+    <SearchExcludeFiles/>
+    <SearchExcludeDirectories/>
+  </History>
+</doublecmd>
