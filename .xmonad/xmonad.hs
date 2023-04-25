@@ -22,6 +22,9 @@ import qualified Data.Map        as M
 import System.Exit
 
 scratchpads = [
+-- run the preferred term, find it by title, use default floating window placement
+    NS "term" (myTerminal ++ " -T scratch") (title =? "scratch") defaultFloating ,
+
 -- run htop in xterm, find it by title, use default floating window placement
     NS "htop" "xterm -e htop" (title =? "htop") defaultFloating ,
 
@@ -97,7 +100,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
     -- some scratchpads
-  , ((modm .|. controlMask .|. shiftMask, xK_t), namedScratchpadAction scratchpads "htop")
+  , ((modm .|. controlMask .|. shiftMask, xK_t), namedScratchpadAction scratchpads "term")
+  , ((modm .|. controlMask .|. shiftMask, xK_h), namedScratchpadAction scratchpads "htop")
   , ((modm, xK_Escape), namedScratchpadAction scratchpads "copyq")
 
      -- volume key bindings
@@ -268,7 +272,7 @@ defLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
      nmaster = 1
 
      -- Default proportion of screen occupied by master pane
-     ratio   = 60/100
+     ratio   = 50/100
 
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
@@ -329,16 +333,16 @@ myEventHook = mempty
 --
 -- By default, do nothing.
 myStartupHook = do
-    spawnOnce "nitrogen --set-zoom-fill --random ~/fondos/NG &"
-    spawnOnce "skypeforlinux &"
-    spawnOnce "flatpak run --command=signal-desktop org.signal.Signal &"
-    spawnOnce "firefox &"
-    spawnOnce "autokey-gtk &"
-    spawnOnce "compton &"
-    spawnOnce "nm-applet &"
-    spawnOnce "volumeicon &"
-    spawnOnce "spotify &"
-    spawnOnce "setxkbmap us dvorak-intl &"
+    spawnOnce "nitrogen --set-zoom-fill --random ~/fondos/NG"
+    spawnOnce "flatpak run com.skype.Client"
+    spawnOnce "flatpak run org.signal.Signal"
+    spawnOnce "firefox"
+    spawnOnce "autokey-gtk"
+    spawnOnce "compton"
+    spawnOnce "nm-applet"
+    spawnOnce "volumeicon"
+    spawnOnce "spotify"
+    spawnOnce "setxkbmap us dvorak-intl"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
