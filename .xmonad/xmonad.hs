@@ -25,6 +25,12 @@ scratchpads = [
 -- run the preferred term, find it by title, use default floating window placement
     NS "term" (myTerminal ++ " -T scratch") (title =? "scratch") defaultFloating ,
 
+-- run Gnome System Monitor, find it by class name, place it in the floating window
+-- 1/6 of screen width from the left, 1/6 of screen height
+-- from the top, 2/3 of screen width by 2/3 of screen height
+    NS "monitor" "gnome-system-monitor" (className =? "Gnome-system-monitor")
+        (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
+
 -- run htop in xterm, find it by title, use default floating window placement
     NS "htop" "xterm -e htop" (title =? "htop") defaultFloating ,
 
@@ -101,6 +107,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- some scratchpads
   , ((modm .|. controlMask .|. shiftMask, xK_t), namedScratchpadAction scratchpads "term")
+  , ((modm .|. controlMask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "monitor")
   , ((modm .|. controlMask .|. shiftMask, xK_h), namedScratchpadAction scratchpads "htop")
   , ((modm, xK_Escape), namedScratchpadAction scratchpads "copyq")
 
