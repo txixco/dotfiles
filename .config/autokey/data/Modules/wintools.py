@@ -21,13 +21,13 @@ class WinTools:
         
         # Calculate the geometry
         command = "xrandr | grep '*' | awk '{print $1}'"
-        (scrwidth, scrheight) = map(int, (self.system.exec_command(command)).split("x"))
-        width = scrwidth * width_percent / 100
-        height = scrheight * 0.90
+        (scr_width, scr_height) = map(int, (self.system.exec_command(command)).split("x"))
+        width = scr_width * width_percent / 100
+        height = scr_height * 0.90
 
-        shift = scrwidth * shift_percent / 100
-        x = (scrwidth / 2) - (width / 2) - shift
-        y = (scrheight / 2) - (height / 2)
+        shift = scr_width * shift_percent / 100
+        x = (scr_width / 2) - (width / 2) - shift
+        y = (scr_height / 2) - (height / 2)
         
         # Wait and resize/move
         self.window.wait_for_exist(title, 10)
