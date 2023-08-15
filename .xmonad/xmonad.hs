@@ -37,7 +37,7 @@ scratchpads = [
 -- run copyq, find it by class name, place it in the floating window
 -- 1/6 of screen width from the left, 1/6 of screen height
 -- from the top, 2/3 of screen width by 2/3 of screen height
-    NS "copyq" "copyq" (className =? "copyq")
+    NS "copyq" "copyq show" (className =? "copyq")
         (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
 
 -- run gvim, find by role, don't float
@@ -89,8 +89,9 @@ termIcon     = "\61728"
 chatIcon     = "\61574"
 browserIcon  = "\62057"
 musicIcon    = "\61884"
+syncIcon     = "\62193"
 
-myWorkspaces = [ termIcon,chatIcon,browserIcon,"4","5","6","7","8",musicIcon ]
+myWorkspaces = [ termIcon,chatIcon,browserIcon,"4","5","6","7",syncIcon,musicIcon ]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -111,6 +112,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , ((modm .|. controlMask .|. shiftMask, xK_h), namedScratchpadAction scratchpads "htop")
   , ((modm, xK_Escape), namedScratchpadAction scratchpads "copyq")
 
+     -- screen capturing
+   , ((modm, xK_Print), spawn "flameshot gui")
      -- volume key bindings
    , ((0, xF86XK_AudioMute), spawn "pactl set-sink- 0 toggle")
    , ((0, xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume 0 -5%")
@@ -126,7 +129,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch some other programs
     , ((modm .|. shiftMask,  xK_e ), spawn "doublecmd")
     , ((modm,                xK_e ), spawn myFilesManager)
-    , ((modm .|. altMask,    xK_b ), spawn "~/scripts/hotkeys.sh -s")
 
     -- close focused window
     , ((modm .|. shiftMask,  xK_c    ), kill)
@@ -310,6 +312,7 @@ myManageHook = composeAll
     , className =? "Skype"            --> doShift chatIcon
     , resource  =? "Navigator"        --> doShift browserIcon
     , className =? "Spotify"          --> doShift musicIcon
+    , className =? "Nextcloud"        --> doShift syncIcon
     , namedScratchpadManageHook scratchpads ]
 
 ------------------------------------------------------------------------
@@ -341,15 +344,18 @@ myEventHook = mempty
 -- By default, do nothing.
 myStartupHook = do
     spawnOnce "nitrogen --set-zoom-fill --random ~/fondos/NG"
-    spawnOnce "skypeforlinux"
+    spawnOnce "flatpak run com.skype.Client"
     spawnOnce "flatpak run org.signal.Signal"
     spawnOnce "firefox"
     spawnOnce "autokey-gtk"
+    spawnOnce "copyq"
     spawnOnce "compton"
     spawnOnce "nm-applet"
     spawnOnce "volumeicon"
     spawnOnce "spotify"
     spawnOnce "setxkbmap us dvorak-intl"
+    spawnOnce "syncthing"
+    spawnOnce "nextcloud"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
