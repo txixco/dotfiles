@@ -4,11 +4,15 @@ import Data.Monoid
 import Data.Ratio
 
 import XMonad
+import XMonad.Actions.FloatKeys
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
-import XMonad.Actions.FloatKeys
+import XMonad.Util.NamedScratchpad
+
+import XMonad.Layout.PerWorkspace
+import XMonad.Layout.ThreeColumns
 
 import Graphics.X11.ExtraTypes.XF86 (xF86XK_AudioLowerVolume, xF86XK_AudioRaiseVolume, xF86XK_AudioMute)
 
@@ -17,15 +21,38 @@ import qualified Data.Map        as M
 
 import System.Exit
 
+scratchpads = [
+-- run the preferred term, find it by title, use default floating window placement
+    NS "term" (myTerminal ++ " -T scratch") (title =? "scratch") defaultFloating ,
+
+-- run Gnome System Monitor, find it by class name, place it in the floating window
+-- 1/6 of screen width from the left, 1/6 of screen height
+-- from the top, 2/3 of screen width by 2/3 of screen height
+    NS "monitor" "gnome-system-monitor" (className =? "Gnome-system-monitor")
+        (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
+
+-- run htop in xterm, find it by title, use default floating window placement
+    NS "htop" "xterm -e htop" (title =? "htop") defaultFloating ,
+
+-- run copyq, find it by class name, place it in the floating window
+-- 1/6 of screen width from the left, 1/6 of screen height
+-- from the top, 2/3 of screen width by 2/3 of screen height
+    NS "copyq" "copyq show" (className =? "copyq")
+        (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
+
+-- run gvim, find by role, don't float
+    NS "notes" "gvim --role notes ~/notes.txt" (role =? "notes") nonFloating
+  ] where role = stringProperty "WM_WINDOW_ROLE"
+
 -- The preferred terminal program, which is used in a binding below and by
 -- certain contrib modules.
 --
 myTerminal     = "terminator"
 myMenu         = "rofi -modi run,drun -show drun -lines 3"
-myPowerMenu    = "rofi -modi p:rofi-power-menu -show p -font 'Inconsolata Medium 12'"
+myPowerMenu    = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Inconsolata Medium 12'"
 myBar          = "xmobar ~/.config/xmobarrc"
 myFilesManager = "nemo"
-myEditor       = "nvim-qt "
+myEditor       = "emacs"
 
 openUrlOnRead  = "~/scripts/openurl.sh -k -e "
 
@@ -46,8 +73,8 @@ myBorderWidth   = 1
 -- ("right alt"), which does not conflict with emacs keybindings. The
 -- "windows key" is usually mod4Mask.
 --
-myModMask       = mod4Mask
-altMask        = mod1Mask
+myModMask = mod4Mask
+altMask   = mod1Mask
 
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
@@ -58,7 +85,13 @@ altMask        = mod1Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-myWorkspaces    = [ "\61728","\61574","\62057","4","5","6","7","8","\61884"]
+termIcon     = "\61728"
+chatIcon     = "\61574"
+browserIcon  = "\62057"
+musicIcon    = "\61884"
+syncIcon     = "\62193"
+
+myWorkspaces = [ termIcon,chatIcon,browserIcon,"4","5","6","7",syncIcon,musicIcon ]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -73,7 +106,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch a terminal
     [ ((modm .|. shiftMask, xK_Return), spawn $ XMonad.terminal conf)
 
-    -- volume key bindings
+    -- some scratchpads
+  , ((modm .|. controlMask .|. shiftMask, xK_t), namedScratchpadAction scratchpads "term")
+  , ((modm .|. controlMask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "monitor")
+  , ((modm .|. controlMask .|. shiftMask, xK_h), namedScratchpadAction scratchpads "htop")
+  , ((modm, xK_Escape), namedScratchpadAction scratchpads "copyq")
+
+     -- screen capturing
+   , ((modm, xK_Print), spawn "flameshot gui")
+     -- volume key bindings
    , ((0, xF86XK_AudioMute), spawn "pactl set-sink- 0 toggle")
    , ((0, xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume 0 -5%")
    , ((0, xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 0 +5%")
@@ -83,28 +124,23 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((altMask .|. shiftMask, xK_space ), spawn myPowerMenu)
 
     -- launch gmrun
-    , ((modm,               xK_r     ), spawn "gmrun")
+    , ((modm,               xK_r ), spawn "gmrun")
 
     -- launch some other programs
-    , ((modm,                xK_m    ), spawn "mucommander")
-    , ((modm,		     xK_d    ), spawn "doublecmd")
-    , ((modm,                xK_e    ), spawn myFilesManager)
-    , ((modm .|. altMask,    xK_b    ), spawn "~/scripts/hotkeys.sh -s")
+    , ((modm .|. shiftMask,  xK_e ), spawn "doublecmd")
+    , ((modm,                xK_e ), spawn myFilesManager)
 
     -- close focused window
     , ((modm .|. shiftMask,  xK_c    ), kill)
 
     -- set the window floating
-    , ((controlMask .|. modm, xK_w ), withFocused (\windowId -> do 
-		keysResizeWindow (400, -50) (1%2, 1%2) windowId
-	        keysMoveWindowTo (0, 0) (-1%5, -1%33) windowId
-	    ))
+    , ((altMask .|. modm, xK_w ), withFocused $ (\w -> windows $ W.float w $ W.RationalRect (1/6) (1/6) (2/3) (2/3)))
 
     -- set the window floating in read mode
-    , ((altMask .|. modm, xK_w ), withFocused (\windowId -> do 
-	        keysMoveWindowTo (0, 0) (-1%2, -1%30) windowId
-		keysResizeWindow (-50, -50) (1%2, 1%2) windowId
-	    ))
+    , ((controlMask .|. modm, xK_w ), withFocused (\windowId -> do 
+                keysResizeWindow (0, 0) (-1%33, -1%33) windowId
+                keysMoveWindowTo (800, 450) (1%2, 1%2) windowId
+            ))
 
      -- Rotate through the available layout algorithms
     , ((modm,               xK_space ), sendMessage NextLayout)
@@ -120,6 +156,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Move focus to the next window
     , ((modm,               xK_j     ), windows W.focusDown)
+
+    -- Move focus to the previous window
+    , ((modm .|. shiftMask, xK_Tab   ), windows W.focusDown)
 
     -- Move focus to the previous window
     , ((modm,               xK_k     ), windows W.focusUp  )
@@ -167,7 +206,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm .|. altMask , xK_q      ), spawn "killall xmobar; xmonad --restart")
 
     -- Edit xmonad.hs
-    , ((modm .|. controlMask , xK_q  ), spawn (myEditor ++ "~/.xmonad/xmonad.hs"))
+    , ((modm .|. controlMask , xK_q  ), spawn (myEditor ++ " ~/.xmonad/xmonad.hs"))
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
@@ -225,7 +264,15 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
+altLayout = Full ||| my3col ||| tiled -- See comments on defLayout
+  where 
+    my3col    = ThreeColMid nmaster delta ratio
+    tiled   = Tall nmaster delta ratio
+    nmaster = 1
+    ratio   = 50/100
+    delta   = 5/100
+
+defLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
   where
      -- default tiling algorithm partitions the screen into two panes
      tiled   = Tall nmaster delta ratio
@@ -234,7 +281,7 @@ myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
      nmaster = 1
 
      -- Default proportion of screen occupied by master pane
-     ratio   = 1/2
+     ratio   = 50/100
 
      -- Percent of screen to increment by when resizing panes
      delta   = 3/100
@@ -255,12 +302,18 @@ myLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
 -- 'className' and 'resource' are used below.
 --
 myManageHook = composeAll
-    [ className =? "MPlayer"        --> doFloat
-    , className =? "Gimp"           --> doFloat
-    , resource  =? "desktop_window" --> doIgnore
-    , resource  =? "Navigator"      --> doShift "\62057"
-    , resource  =? "kdesktop"       --> doIgnore
-    , stringProperty "WM_WINDOW_ROLE" =? "browser-window" --> doShift "\61574" ]
+    [ className =? "MPlayer"          --> doFloat
+    , className =? "Gimp"             --> doFloat
+    , className =? "gnome-calculator" --> doFloat
+    , className =? "gnome-screenshot" --> doFloat
+    , resource  =? "desktop_window"   --> doIgnore
+    , resource  =? "kdesktop"         --> doIgnore
+    , className =? "Signal"           --> doShift chatIcon
+    , className =? "Skype"            --> doShift chatIcon
+    , resource  =? "Navigator"        --> doShift browserIcon
+    , className =? "Spotify"          --> doShift musicIcon
+    , className =? "Nextcloud"        --> doShift syncIcon
+    , namedScratchpadManageHook scratchpads ]
 
 ------------------------------------------------------------------------
 -- Event handling
@@ -290,13 +343,19 @@ myEventHook = mempty
 --
 -- By default, do nothing.
 myStartupHook = do
-    spawnOnce "nitrogen --restore &"
-    spawnOnce "compton &"
-    spawnOnce "nm-applet &"
-    spawnOnce "volumeicon &"
-    spawnOnce "setxkbmap us dvorak-intl &"
---    spawnOnce "&"
---    spawnOnce "&"
+    spawnOnce "nitrogen --set-zoom-fill --random ~/fondos/NG"
+    spawnOnce "flatpak run com.skype.Client"
+    spawnOnce "flatpak run org.signal.Signal"
+    spawnOnce "firefox"
+    spawnOnce "autokey-gtk"
+    spawnOnce "copyq"
+    spawnOnce "compton"
+    spawnOnce "nm-applet"
+    spawnOnce "volumeicon"
+    spawnOnce "spotify"
+    spawnOnce "setxkbmap us dvorak-intl"
+    spawnOnce "syncthing"
+    spawnOnce "nextcloud"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
@@ -328,7 +387,7 @@ defaults = def {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = myLayout,
+        layoutHook         = onWorkspace browserIcon altLayout $ defLayout,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
         startupHook        = myStartupHook

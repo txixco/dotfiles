@@ -33,24 +33,25 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(current-language-environment "UTF-8")
- '(custom-enabled-themes (quote (misterioso)))
+ '(custom-enabled-themes '(misterioso))
  '(custom-safe-themes
-   (quote
-    ("3805a89afc4703132666650ca9f375ce445621cb8fde9c415ed59dcbd93733dd" "9962040a8c85f07b5030a9342763e34fa2e349570043fbde78e8ac56eb38c9d3" default)))
+   '("3805a89afc4703132666650ca9f375ce445621cb8fde9c415ed59dcbd93733dd" "9962040a8c85f07b5030a9342763e34fa2e349570043fbde78e8ac56eb38c9d3" default))
+ '(display-line-numbers-type 'relative)
  '(exec-path
-   (quote
-    ("C:/Program Files/Aspell/bin/" "c:/Program Files (x86)/Common Files/Oracle/Java/javapath" "C:/ProgramData/Oracle/Java/javapath" "C:/windows/system32" "C:/windows" "C:/windows/System32/Wbem" "C:/windows/System32/WindowsPowerShell/v1.0/" "C:/Program Files/Cloud Foundry" "C:/Program Files/Git/cmd" "C:/Program Files/PuTTY/" "C:/Program Files/TortoiseGit/bin" "C:/Thanga/apache-maven-3.5.4/bin" "C:/Program Files/Java/jdk1.8.0_181/bin" "C:/Thanga/apache-maven-3.5.4/bin" "C:/Users/Thanga01/Downloads/spring-boot-cli-2.0.4.RELEASE-bin/spring-2.0.4.RELEASE/bin" "." "C:/Program Files/Microsoft VS Code/bin" "C:/Program Files/WinMerge" "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/Scripts/" "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/" "C:/Users/frueda/AppData/Local/Microsoft/WindowsApps" "C:/Users/frueda/AppData/Local/atom/bin" "C:/Users/frueda/AppData/Local/Pandoc/" "C:/Program Files/Salesforce CLI/bin" "c:/Programs/emacs/libexec/emacs/26.1/x86_64-w64-mingw32" "C:/Programs")))
+   '("C:/Program Files/Aspell/bin/" "c:/Program Files (x86)/Common Files/Oracle/Java/javapath" "C:/ProgramData/Oracle/Java/javapath" "C:/windows/system32" "C:/windows" "C:/windows/System32/Wbem" "C:/windows/System32/WindowsPowerShell/v1.0/" "C:/Program Files/Cloud Foundry" "C:/Program Files/Git/cmd" "C:/Program Files/PuTTY/" "C:/Program Files/TortoiseGit/bin" "C:/Thanga/apache-maven-3.5.4/bin" "C:/Program Files/Java/jdk1.8.0_181/bin" "C:/Thanga/apache-maven-3.5.4/bin" "C:/Users/Thanga01/Downloads/spring-boot-cli-2.0.4.RELEASE-bin/spring-2.0.4.RELEASE/bin" "." "C:/Program Files/Microsoft VS Code/bin" "C:/Program Files/WinMerge" "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/Scripts/" "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/" "C:/Users/frueda/AppData/Local/Microsoft/WindowsApps" "C:/Users/frueda/AppData/Local/atom/bin" "C:/Users/frueda/AppData/Local/Pandoc/" "C:/Program Files/Salesforce CLI/bin" "c:/Programs/emacs/libexec/emacs/26.1/x86_64-w64-mingw32" "C:/Programs"))
  '(fill-column 80)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
- '(safe-local-variable-values (quote ((TeX-master . "ejb"))))
+ '(package-selected-packages '(haskell-tng-mode haskell-mode org evil))
+ '(safe-local-variable-values '((TeX-master . "ejb")))
  '(save-place t nil (saveplace))
- '(scroll-bar-mode (quote right))
- '(show-paren-mode t)
+ '(scroll-bar-mode 'right)
  '(tab-width 4)
- '(text-mode-hook (quote (turn-on-auto-fill text-mode-hook-identify)))
- '(tool-bar-style (quote image)))
+ '(text-mode-hook '(turn-on-auto-fill text-mode-hook-identify))
+ '(tool-bar-style 'image)
+ '(warning-suppress-log-types '((comp) (comp) (comp)))
+ '(warning-suppress-types '((comp) (comp))))
 (setq-default abbrev-mode t)
 (cond ((file-exists-p "~/.abbrev_defs")
        (read-abbrev-file "~/.abbrev_defs")))
@@ -244,3 +245,7 @@
 (add-to-list 'load-path "~/.emacs.d/evil")
 (require 'evil)
 (evil-mode 1)
+
+;; Haskell
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(add-hook 'haskell-mode-hook #'hindent-mode)
