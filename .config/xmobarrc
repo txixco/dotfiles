@@ -15,7 +15,7 @@ Config { font = "xft:Font Awesome 5 Brands:size=10,Font Awesome 5 Free Solid:siz
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
-       , commands = [ Run Weather "MMMX" ["-t","<station>: <tempC>C",
+       , commands = [ Run Weather "LEMD" ["-t","<station>: <tempC>C",
                                           "-L","18","-H","25",
                                           "--normal","green",
                                           "--high","red",
@@ -25,6 +25,14 @@ Config { font = "xft:Font Awesome 5 Brands:size=10,Font Awesome 5 Free Solid:siz
                                           "--normal","green","--high","red"] 10
                     , Run Network "eth1" ["-L","0","-H","32",
                                           "--normal","green","--high","red"] 10
+                    , Run Battery ["-t", "<acstatus>: <left>% - <timeleft>",
+                                   "--",
+                                   --"-c", "charge_full",
+                                   "-O", "AC",
+                                   "-o", "Bat",
+                                   "-h", "green",
+                                   "-l", "red"
+                                   ] 10
                     , Run Cpu ["-L","3","-H","50",
                                "--normal","green","--high","red"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
@@ -34,6 +42,6 @@ Config { font = "xft:Font Awesome 5 Brands:size=10,Font Awesome 5 Free Solid:siz
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% | %cpu% | %memory% }\
-                    \{ <fc=#ee9a00>%date%</fc>| %MMMX%" 
+       , template = "%StdinReader% | %cpu% | %memory% | %battery% }\
+                    \{ <fc=#ee9a00>%date%</fc>| %LEMD%" 
        }
