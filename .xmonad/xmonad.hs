@@ -50,6 +50,7 @@ scratchpads = [
 myTerminal     = "terminator"
 myMenu         = "rofi -modi run,drun -show drun -lines 3"
 myPowerMenu    = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Inconsolata Medium 12'"
+myWindowsMenu  = "rofi -show window"
 myBar          = "xmobar ~/.config/xmobarrc"
 myFilesManager = "nemo"
 myEditor       = "emacs"
@@ -114,14 +115,22 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
      -- screen capturing
    , ((modm, xK_Print), spawn "flameshot gui")
+
      -- volume key bindings
    , ((0, xF86XK_AudioMute), spawn "pactl set-sink- 0 toggle")
    , ((0, xF86XK_AudioLowerVolume), spawn "pactl set-sink-volume 0 -5%")
    , ((0, xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 0 +5%")
 
+     -- Other multimedia keys
+   , ((modm, xK_Up), spawn "playerctl play-pause")
+   , ((modm, xK_Down), spawn "playerctl stop")
+   , ((modm, xK_Right), spawn "playerctl next")
+   , ((modm, xK_Left), spawn "playerctl previous")
+
     -- launch the menus
     , ((altMask,               xK_space ), spawn myMenu)
     , ((altMask .|. shiftMask, xK_space ), spawn myPowerMenu)
+    , ((altMask,               xK_Tab ), spawn myWindowsMenu)
 
     -- launch gmrun
     , ((modm,               xK_r ), spawn "gmrun")
@@ -264,9 +273,9 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-altLayout = Full ||| my3col ||| tiled -- See comments on defLayout
+altLayout = Full ||| my3col -- See comments on defLayout
   where 
-    my3col    = ThreeColMid nmaster delta ratio
+    my3col  = ThreeColMid nmaster delta ratio
     tiled   = Tall nmaster delta ratio
     nmaster = 1
     ratio   = 50/100
@@ -343,7 +352,7 @@ myEventHook = mempty
 --
 -- By default, do nothing.
 myStartupHook = do
-    spawnOnce "nitrogen --set-zoom-fill --random ~/fondos/NG"
+    spawnOnce "nitrogen --set-centered --random ~/fondos/NG"
     spawnOnce "flatpak run com.skype.Client"
     spawnOnce "flatpak run org.signal.Signal"
     spawnOnce "firefox"
