@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.0.10" ConfigVersion="13">
+<doublecmd DCVersion="1.0.11" ConfigVersion="13">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -153,10 +153,10 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>0</Left>
-      <Top>0</Top>
-      <Width>1598</Width>
-      <Height>844</Height>
+      <Left>240</Left>
+      <Top>62</Top>
+      <Width>1120</Width>
+      <Height>765</Height>
       <PixelsPerInch>96</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>50</Splitter>
@@ -198,52 +198,26 @@
                   <Path Filename="..">/home/txixco/Downloads/</Path>
                   <Path Filename="Downloads">/home/txixco/</Path>
                   <Path Filename="lyrics.pdf">/home/txixco/Downloads/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Documents/</Path>
-                  <Path Filename="signal-desktop-keyring.gpg">/home/txixco/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="doublecmd">/usr/lib64/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/lib64/</Path>
-                  <Path Filename="lib64">/usr/</Path>
+                  <Path Filename="Imágenes">/home/txixco/</Path>
+                  <Path Filename="..">/home/txixco/Imágenes/</Path>
+                  <Path Filename="fondos">/home/txixco/</Path>
+                  <Path Filename="..">/home/txixco/fondos/</Path>
+                  <Path Filename="fondos">/home/txixco/</Path>
+                  <Path Filename="..">/home/txixco/fondos/</Path>
+                  <Path Filename="Downloads">/home/txixco/</Path>
+                  <Path Filename="josuruedamolina_20230627031558_152.pdf">/home/txixco/Downloads/</Path>
+                  <Path Filename="Downloads">/home/txixco/</Path>
+                  <Path Filename="..">/home/txixco/Downloads/</Path>
+                  <Path Filename="Downloads">/home/txixco/</Path>
                   <Path Filename="txixco">/home/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="imagenes">/home/txixco/Documents/TFC-LaTeX/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="Religious Sacred Desktop High Quality Nice Wallpapers Widescreen.jpg">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="Documents">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Downloads/</Path>
-                  <Path Filename="Nextcloud2">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Nextcloud2/</Path>
-                  <Path Filename="Nueva Carpeta">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Nueva Carpeta/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Downloads/</Path>
                   <Path Filename="Downloads">/home/txixco/</Path>
                   <Path Filename="lyrics.pdf">/home/txixco/Downloads/</Path>
+                  <Path Filename="Descargas">/home/txixco/</Path>
+                  <Path Filename="Documentacion.pdf">/home/txixco/Descargas/</Path>
                   <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Active="True" Filename="lyrics.pdf">/home/txixco/Downloads/</Path>
-                  <Path Filename="..">/home/txixco/Downloads/zelda-ot/</Path>
+                  <Path Filename="Documentacion.pdf">/home/txixco/Downloads/</Path>
+                  <Path Filename="Downloads">/home/txixco/</Path>
+                  <Path Filename="Part_1_Interview_Success_Journal.pdf">/home/txixco/Downloads/</Path>
                 </Paths>
               </Entry>
             </History>
@@ -254,7 +228,7 @@
         </Tab>
       </Left>
       <Right>
-        <ActiveTab>1</ActiveTab>
+        <ActiveTab>0</ActiveTab>
         <Tab>
           <FileView Type="columns">
             <History>
@@ -273,30 +247,34 @@
                   <Path Filename="txixco">/home/</Path>
                   <Path Filename="series">/home/txixco/</Path>
                   <Path Filename="DrWho">/home/txixco/series/</Path>
-                  <Path Active="True" Filename="doctor-who-2005-s11e01-lat-720p.mkv">/home/txixco/series/DrWho/</Path>
-                  <Path Filename="..">/home/txixco/Fotos/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="doublecmd">/usr/lib64/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/lib64/</Path>
-                  <Path Filename="lib64">/usr/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="ebooks">/home/txixco/</Path>
-                  <Path Filename="comics">/home/txixco/ebooks/</Path>
-                  <Path Active="True" Filename="Asterix_Obelix">/home/txixco/ebooks/comics/</Path>
-                  <Path Filename="..">/home/txixco/Applications/</Path>
+                  <Path Filename="doctor-who-2005-s11e01-lat-720p.mkv">/home/txixco/series/DrWho/</Path>
+                  <Path Filename="..">/home/txixco/series/</Path>
+                  <Path Filename="datos">/home/txixco/</Path>
+                  <Path Filename="laboral">/home/txixco/datos/</Path>
+                  <Path Filename="Pictures">/home/txixco/datos/laboral/</Path>
+                  <Path Filename="Fondos">/home/txixco/datos/laboral/Pictures/</Path>
+                  <Path Filename="Madrid">/home/txixco/datos/laboral/Pictures/Fondos/</Path>
+                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/Fondos/Madrid/</Path>
+                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/Fondos/</Path>
+                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/</Path>
+                  <Path Filename="Pictures">/home/txixco/datos/laboral/</Path>
+                  <Path Filename="laboral">/home/txixco/datos/</Path>
+                  <Path Filename="datos">/home/txixco/</Path>
+                  <Path Filename="ebooks">/home/txixco/datos/</Path>
+                  <Path Filename="..">/home/txixco/datos/ebooks/</Path>
+                  <Path Filename="Notas">/home/txixco/datos/</Path>
+                  <Path Filename="Nextcloud">/home/txixco/</Path>
+                  <Path Filename="Documents">/home/txixco/Nextcloud/</Path>
+                  <Path Filename="manuales">/home/txixco/Nextcloud/Documents/</Path>
+                  <Path Filename="electronica">/home/txixco/Nextcloud/Documents/manuales/</Path>
+                  <Path Filename="Placa madre">/home/txixco/Nextcloud/Documents/manuales/electronica/</Path>
+                  <Path Filename="E11864_PRIME_Z270-K_UM_web.pdf">/home/txixco/Nextcloud/Documents/manuales/electronica/Placa madre/</Path>
+                  <Path Filename="Placa madre">/home/txixco/Nextcloud/Documents/manuales/electronica/</Path>
+                  <Path Filename="electronica">/home/txixco/Nextcloud/Documents/manuales/</Path>
+                  <Path Filename="manuales">/home/txixco/Nextcloud/Documents/</Path>
+                  <Path Filename="Documents">/home/txixco/Nextcloud/</Path>
+                  <Path Filename="Documents">/home/txixco/</Path>
+                  <Path Filename="..">/home/txixco/Documents/</Path>
                 </Paths>
               </Entry>
             </History>
