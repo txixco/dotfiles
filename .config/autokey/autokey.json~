@@ -1,5 +1,5 @@
 {
-    "version": "0.95.10",
+    "version": "0.96.0",
     "userCodeDir": "/home/txixco/.config/autokey/data/Modules",
     "settings": {
         "isFirstRun": true,
@@ -28,7 +28,10 @@
         "disabledModifiers": [
             "<capslock>"
         ],
-        "scriptGlobals": {}
+        "scriptGlobals": {},
+        "gtkTheme": "classic",
+        "gtkExpandedRows": [],
+        "pathLastOpen": "0"
     },
     "folders": [],
     "toggleServiceHotkey": {

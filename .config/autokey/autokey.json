@@ -1,5 +1,5 @@
 {
-    "version": "0.95.10",
+    "version": "0.96.0",
     "userCodeDir": "/home/txixco/.config/autokey/data/Modules",
     "settings": {
         "isFirstRun": true,
@@ -12,10 +12,10 @@
         "interfaceType": "XRecord",
         "undoUsingBackspace": true,
         "windowDefaultSize": [
-            1364,
-            749
+            1918,
+            1061
         ],
-        "hPanePosition": 361,
+        "hPanePosition": 508,
         "columnWidths": [
             150,
             50,
@@ -28,7 +28,14 @@
         "disabledModifiers": [
             "<capslock>"
         ],
-        "scriptGlobals": {}
+        "scriptGlobals": {},
+        "gtkTheme": "classic",
+        "gtkExpandedRows": [
+            "4",
+            "4:0",
+            "4:1"
+        ],
+        "pathLastOpen": "4:1:2"
     },
     "folders": [],
     "toggleServiceHotkey": {
