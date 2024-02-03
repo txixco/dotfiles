@@ -21,7 +21,8 @@ import qualified Data.Map        as M
 
 import System.Exit
 
-scratchpads = [
+scratchpads = 
+  [
 -- run the preferred term, find it by title, use default floating window placement
     NS "term" (myTerminal ++ " -T scratch") (title =? "scratch") defaultFloating ,
 
@@ -40,8 +41,15 @@ scratchpads = [
     NS "copyq" "copyq show" (className =? "copyq")
         (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
 
--- run gvim, find by role, don't float
-    NS "notes" "gvim --role notes ~/notes.txt" (role =? "notes") nonFloating
+-- open Oryx in Qutebrowser, find it by title, place it fullscreen
+    NS "oryx" "qutebrowser -R --target window https://configure.zsa.io/ergodox-ez/layouts/P5DJE/latest/0" (title =? "Oryx: The ZSA Keyboard Configurator - qutebrowser") 
+        (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
+
+-- run tzclock, find by class name, place it in a floating window
+    NS "tzclock" "tzclock" (className =? "Tzclock") nonFloating ,
+
+-- run the editor app, find by title, don't float
+    NS "notes" myEditor (title =? "notes") nonFloating
   ] where role = stringProperty "WM_WINDOW_ROLE"
 
 -- The preferred terminal program, which is used in a binding below and by
@@ -110,7 +118,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- some scratchpads
   , ((modm .|. controlMask .|. shiftMask, xK_t), namedScratchpadAction scratchpads "term")
   , ((modm .|. controlMask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "monitor")
+  , ((modm .|. controlMask .|. shiftMask, xK_c), namedScratchpadAction scratchpads "tzclock")
   , ((modm .|. controlMask .|. shiftMask, xK_h), namedScratchpadAction scratchpads "htop")
+  , ((modm .|. controlMask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "notes")
+  , ((modm .|. controlMask .|. shiftMask, xK_o), namedScratchpadAction scratchpads "oryx")
   , ((modm, xK_Escape), namedScratchpadAction scratchpads "copyq")
 
      -- screen capturing
@@ -352,7 +363,7 @@ myEventHook = mempty
 --
 -- By default, do nothing.
 myStartupHook = do
-    spawnOnce "nitrogen --set-centered --random ~/fondos/NG"
+    spawnOnce "nitrogen --set-auto --random ~/fondos/NG"
     spawnOnce "flatpak run com.skype.Client"
     spawnOnce "flatpak run org.signal.Signal"
     spawnOnce "firefox"
@@ -362,7 +373,8 @@ myStartupHook = do
     spawnOnce "nm-applet"
     spawnOnce "volumeicon"
     spawnOnce "spotify"
-    spawnOnce "setxkbmap us dvorak-intl"
+    spawnOnce "setxkbmap us intl"
+    --spawnOnce "setxkbmap us dvorak-intl"
     spawnOnce "syncthing"
     spawnOnce "nextcloud"
 
