@@ -363,7 +363,7 @@ myEventHook = mempty
 --
 -- By default, do nothing.
 myStartupHook = do
-    spawnOnce "nitrogen --set-auto --random ~/fondos/NG"
+    spawnOnce "nitrogen --set-auto --random ~/fondos/NASA"
     spawnOnce "skypeforlinux"
     --spawnOnce "flatpak run com.skype.Client"
     spawnOnce "flatpak run org.signal.Signal"
