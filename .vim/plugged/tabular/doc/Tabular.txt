@@ -94,7 +94,7 @@ A format specifier is either l, r, or c, followed by one or more digits.  If
 the letter is l, the field will be left aligned, similarly for r and right
 aligning and c and center aligning.  The number following the letter is the
 number of spaces padding to insert before the start of the next field.
-ultiple format specifiers can be added to the same command - each field will
+Multiple format specifiers can be added to the same command - each field will
 be printed with the next format specifier in the list; when they all have been
 used the first will be used again, and so on.  So, the last command right
 aligned every field, then inserted 0 spaces of padding before the next field.
@@ -171,7 +171,7 @@ Tabular.vim in the same directory as TabularMaps.vim.  For more information,
 and some suggested best practices, check out the |tabular-scripting| section.
 
 Lastly, we'll approach the case where tabular cannot achieve your desired goal
-just by splitting lines appart, trimming whitespace, padding with whitespace,
+just by splitting lines apart, trimming whitespace, padding with whitespace,
 and rejoining the lines.  As an example, consider the multiple_spaces command
 from TabularMaps.vim.  The goal is to split using two or more spaces as a
 field delimiter, and join fields back together, properly lined up, with only

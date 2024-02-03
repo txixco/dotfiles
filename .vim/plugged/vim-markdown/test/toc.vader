@@ -117,7 +117,7 @@ Prevent list vs Setex confusion:
 
 ---
 
-ixed tests.
+Mixed tests.
 
 setex h1 before atx
 ===================
@@ -175,10 +175,6 @@ Given markdown;
 ### header 3
 
 Execute (Toc cursor on the current header):
-  normal! 4G
-  :Toc
-  AssertEqual line('.'), 2
-  :lclose
   normal! G
   :Toc
   AssertEqual line('.'), 3

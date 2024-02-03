@@ -81,6 +81,7 @@ let s:yellow = s:colors.yellow
 let s:dark_yellow = s:colors.dark_yellow
 let s:blue = s:colors.blue
 let s:purple = s:colors.purple
+let s:blue_purple = s:colors.blue_purple
 let s:cyan = s:colors.cyan
 let s:white = s:colors.white
 let s:black = s:colors.black
@@ -92,6 +93,7 @@ let s:visual_grey = s:colors.visual_grey
 let s:menu_grey = s:colors.menu_grey
 let s:special_grey = s:colors.special_grey
 let s:vertsplit = s:colors.vertsplit
+let s:white_mask_3 = s:colors.white_mask_3
 
 " }}}
 
@@ -150,7 +152,7 @@ call s:h("DiffDelete", { "bg": s:red, "fg": s:black }) " diff mode: Deleted line
 call s:h("DiffText", { "bg": s:black, "fg": s:yellow }) " diff mode: Changed text within a changed line
 call s:h("ErrorMsg", { "fg": s:red }) " error messages on the command line
 call s:h("VertSplit", { "fg": s:vertsplit }) " the column separating vertically split windows
-call s:h("Folded", { "fg": s:comment_grey }) " line used for closed folds
+call s:h("Folded", { "bg": s:cursor_grey, "fg": s:comment_grey }) " line used for closed folds
 call s:h("FoldColumn", {}) " 'foldcolumn'
 call s:h("SignColumn", {}) " column where signs are displayed
 call s:h("IncSearch", { "fg": s:yellow, "bg": s:comment_grey }) " 'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -313,6 +315,8 @@ call s:h("jsonSemicolonError", { "fg": s:red, "gui": "reverse" })
 
 " Markdown
 call s:h("markdownCode", { "fg": s:green })
+call s:h("markdownLinkReference", { "fg": s:comment_grey })
+call s:h("markdownJekyllFrontMatter", { "fg": s:comment_grey })
 call s:h("markdownCodeBlock", { "fg": s:green })
 call s:h("markdownCodeDelimiter", { "fg": s:green })
 call s:h("markdownHeadingDelimiter", { "fg": s:red })
@@ -429,6 +433,35 @@ call s:h("xmlEndTag", { "fg": s:red })
 call s:h("xmlTag", { "fg": s:red })
 call s:h("xmlTagName", { "fg": s:red })
 
+" PHP
+call s:h("phpInclude", { "fg": s:purple })
+call s:h("phpClass", { "fg": s:yellow })
+call s:h("phpClasses", { "fg": s:yellow })
+call s:h("phpFunction", { "fg": s:blue })
+call s:h("phpType", { "fg": s:purple })
+call s:h("phpKeyword", { "fg": s:purple })
+call s:h("phpVarSelector", { "fg": s:white })
+call s:h("phpIdentifier", { "fg": s:white })
+call s:h("phpMethod", { "fg": s:blue })
+call s:h("phpBoolean", { "fg": s:blue })
+call s:h("phpParent", { "fg": s:white })
+call s:h("phpOperator", { "fg": s:purple })
+call s:h("phpRegion", { "fg": s:purple })
+call s:h("phpUseNamespaceSeparator", { "fg": s:white })
+call s:h("phpClassNamespaceSeparator", { "fg": s:white })
+call s:h("phpDocTags", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
+call s:h("phpDocParam", { "fg": s:purple, "gui": "italic", "cterm": "italic" })
+
+" Dart
+call s:h("dartLibrary", { "fg": s:purple})
+call s:h("dartTypedef", { "fg": s:purple})
+call s:h("dartClassDecl", { "fg": s:purple})
+call s:h("dartCoreType", { "fg": s:purple})
+call s:h("dartStorageClass", { "fg": s:purple})
+call s:h("dartOperator", { "fg": s:purple})
+call s:h("dartMetadata", { "fg": s:purple})
+call s:h("dartKeyword", { "fg": s:purple})
+
 " }}}
 
 " Plugin Highlighting {{{
@@ -451,6 +484,96 @@ call s:h("NeomakeInfoSign", { "fg": s:blue })
 " tpope/vim-fugitive
 call s:h("diffAdded", { "fg": s:green })
 call s:h("diffRemoved", { "fg": s:red })
+
+" liuchengxu/vista.vim
+call s:h("VistaBracket", { "fg": s:purple })
+call s:h("VistaChildrenNr", { "fg": s:dark_yellow })
+call s:h("VistaScope", { "fg": s:blue_purple })
+call s:h("VistaTag", { "fg": s:purple })
+call s:h("VistaPrefix", { "fg": s:blue_purple })
+call s:h("VistaParenthesis", { "fg": s:purple })
+call s:h("VistaColon", { "fg": s:cyan })
+call s:h("VistaIcon", { "fg": s:cyan })
+call s:h("VistaLineNr", { "fg": s:comment_grey })
+call s:h("VistaArgs", { "fg": s:comment_grey })
+call s:h("VistaKind", { "fg": s:comment_grey })
+call s:h("VistaScopeKind", { "fg": s:yellow })
+
+" termdebug
+call s:h("debugBreakpoint", { "fg": s:blue_purple })
+call s:h("debugPC", { "bg": s:blue_purple, "fg": s:black })
+
+" davidhalter/jedi-vim
+call s:h("jediFunction", { "bg": s:white_mask_3, "fg": s:white })
+call s:h("jediFat", { "bg": s:white_mask_3, "fg": s:blue , "gui": "bold,underline" })
+
+" nvim-treesitter
+
+if has("nvim")
+  call s:h("@annotation", { "fg": s:yellow })
+  call s:h("@attribute", { "fg": s:light_red })
+  call s:h("@boolean", { "fg": s:red, "gui": "italic" })
+  call s:h("@character", { "fg": s:green })
+  call s:h("@character.special", { "fg": s:blue_purple })
+  call s:h("@comment", { "fg": s:comment_grey })
+  call s:h("@conditional", { "fg": s:purple })
+  call s:h("@constant", { "fg": s:cyan })
+  call s:h("@constant.builtin", { "fg": s:yellow })
+  call s:h("@constant.macro", { "fg": s:dark_yellow })
+  call s:h("@constructor", { "fg": s:white })
+  call s:h("@define", { "fg": s:purple })
+  call s:h("@exception", { "fg": s:purple })
+  call s:h("@field", { "fg": s:cyan })
+  call s:h("@float", { "fg": s:dark_yellow })
+  call s:h("@function", { "fg": s:blue })
+  call s:h("@function.builtin", { "fg": s:cyan })
+  call s:h("@function.call", { "fg": s:blue })
+  call s:h("@function.macro", { "fg": s:purple, "gui": "italic" })
+  call s:h("@include", { "fg": s:blue })
+  call s:h("@keyword", { "fg": s:red, "gui": "italic" })
+  call s:h("@keyword.function", { "fg": s:blue_purple, "gui": "italic" })
+  call s:h("@keyword.operator", { "fg": s:white })
+  call s:h("@keyword.return", { "fg": s:red })
+  call s:h("@label", { "fg": s:purple })
+  call s:h("@method", { "fg": s:blue })
+  call s:h("@method.call", { "fg": s:blue })
+  call s:h("@namespace", { "fg": s:blue_purple })
+  call s:h("@number", { "fg": s:dark_yellow })
+  call s:h("@operator", { "fg": s:white })
+  call s:h("@parameter", { "fg": s:white, "gui": "italic" })
+  call s:h("@parameter.reference", { "fg": s:menu_grey })
+  call s:h("@property", { "fg": s:cyan })
+  call s:h("@punctuation.bracket", { "fg": s:white })
+  call s:h("@punctuation.delimiter", { "fg": s:white })
+  call s:h("@punctuation.special", { "fg": s:white })
+  call s:h("@repeat", { "fg": s:purple })
+  call s:h("@storageclass", { "fg": s:yellow, "gui": "italic" })
+  call s:h("@string", { "fg": s:green })
+  call s:h("@string.escape", { "fg": s:visual_grey })
+  call s:h("@string.regex", { "fg": s:white })
+  call s:h("@string.special", { "fg": s:menu_grey })
+  call s:h("@symbol", { "fg": s:red })
+  call s:h("@tag", { "fg": s:light_red })
+  call s:h("@tag.attribute", { "fg": s:green })
+  call s:h("@tag.delimiter", { "fg": s:white })
+  call s:h("@text.danger", { "fg": s:dark_yellow })
+  call s:h("@text.emphasis", { "gui": "italic" })
+  call s:h("@text.environment", { "fg": s:light_red })
+  call s:h("@text.environment.name", { "fg": s:cyan })
+  call s:h("@text.literal", { "fg": s:yellow })
+  call s:h("@text.reference", { "fg": s:cyan })
+  call s:h("@text.strike", { "gui": "strikethrough" })
+  call s:h("@text.strong", { "gui": "bold" })
+  call s:h("@text.title", { "fg": s:yellow, "gui": "bold" })
+  call s:h("@text.underline", { "gui": "underline" })
+  call s:h("@text.warning", { "fg": s:yellow })
+  call s:h("@text.todo", { "fg": s:purple })
+  call s:h("@type", { "fg": s:yellow })
+  call s:h("@type.builtin", { "fg": s:dark_yellow })
+  call s:h("@type.qualifier", { "fg": s:yellow })
+  call s:h("@variable", { "fg": s:white })
+  call s:h("@variable.builtin", { "fg": s:dark_yellow })
+endif
 
 " }}}
 
@@ -480,7 +603,7 @@ hi link gitcommitUnmergedArrow gitcommitUnmergedFile
 
 " }}}
 
-" Neovim terminal colors {{{
+" Setup Terminal Colors {{{
 
 if has("nvim")
   let g:terminal_color_0 =  s:black.gui
@@ -501,6 +624,25 @@ if has("nvim")
   let g:terminal_color_15 = s:comment_grey.gui
   let g:terminal_color_background = g:terminal_color_0
   let g:terminal_color_foreground = g:terminal_color_7
+elseif has('terminal')
+  let g:terminal_ansi_colors = [
+    \ s:black.gui,
+    \ s:red.gui,
+    \ s:green.gui,
+    \ s:yellow.gui,
+    \ s:blue.gui,
+    \ s:purple.gui,
+    \ s:cyan.gui,
+    \ s:white.gui,
+    \ s:visual_grey.gui,
+    \ s:dark_red.gui,
+    \ s:green.gui,
+    \ s:dark_yellow.gui,
+    \ s:blue.gui,
+    \ s:purple.gui,
+    \ s:cyan.gui,
+    \ s:white.gui
+    \ ]
 endif
 
 " }}}
