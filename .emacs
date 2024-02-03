@@ -10,9 +10,6 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
-
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -40,12 +37,13 @@
  '(custom-safe-themes
    '("3805a89afc4703132666650ca9f375ce445621cb8fde9c415ed59dcbd93733dd" "9962040a8c85f07b5030a9342763e34fa2e349570043fbde78e8ac56eb38c9d3" default))
  '(display-line-numbers-type 'relative)
+ '(exec-path
+   '("C:/Program Files/Aspell/bin/" "c:/Program Files (x86)/Common Files/Oracle/Java/javapath" "C:/ProgramData/Oracle/Java/javapath" "C:/windows/system32" "C:/windows" "C:/windows/System32/Wbem" "C:/windows/System32/WindowsPowerShell/v1.0/" "C:/Program Files/Cloud Foundry" "C:/Program Files/Git/cmd" "C:/Program Files/PuTTY/" "C:/Program Files/TortoiseGit/bin" "C:/Thanga/apache-maven-3.5.4/bin" "C:/Program Files/Java/jdk1.8.0_181/bin" "C:/Thanga/apache-maven-3.5.4/bin" "C:/Users/Thanga01/Downloads/spring-boot-cli-2.0.4.RELEASE-bin/spring-2.0.4.RELEASE/bin" "." "C:/Program Files/Microsoft VS Code/bin" "C:/Program Files/WinMerge" "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/Scripts/" "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/" "C:/Users/frueda/AppData/Local/Microsoft/WindowsApps" "C:/Users/frueda/AppData/Local/atom/bin" "C:/Users/frueda/AppData/Local/Pandoc/" "C:/Program Files/Salesforce CLI/bin" "c:/Programs/emacs/libexec/emacs/26.1/x86_64-w64-mingw32" "C:/Programs"))
  '(fill-column 80)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
- '(package-selected-packages
-   '(exec-path-from-shell eglot haskell-tng-mode haskell-mode org evil))
+ '(package-selected-packages '(haskell-tng-mode haskell-mode org evil))
  '(safe-local-variable-values '((TeX-master . "ejb")))
  '(save-place t nil (saveplace))
  '(scroll-bar-mode 'right)
@@ -174,7 +172,7 @@
 (defun fn-LaTeX-mode-hook ()
   (load-file "~/.emacs.d/latex.el"))
 
-(setq default-directory "~/Documentos")
+(setq default-directory "~/Documents")
 
 ; recentf mode
 (require 'recentf)
@@ -249,17 +247,5 @@
 (evil-mode 1)
 
 ;; Haskell
-(use-package eglot
-  :ensure t
-  :config
-  (add-hook 'haskell-mode-hook 'eglot-ensure)
-  :config
-  (setq-default eglot-workspace-configuration
-                '((haskell
-                   (plugin
-                    (stan
-                     (globalOn . :json-false))))))  ;; disable stan
-  :custom
-  (eglot-autoshutdown t)  ;; shutdown language server after closing last file
-  (eglot-confirm-server-initiated-edits nil)  ;; allow edits without confirmation
- )
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+(add-hook 'haskell-mode-hook #'hindent-mode)
