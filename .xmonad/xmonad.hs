@@ -5,6 +5,7 @@ import Data.Ratio
 
 import XMonad
 import XMonad.Actions.FloatKeys
+import XMonad.Actions.CycleWindows
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.DynamicLog
 import XMonad.Util.Run
@@ -13,8 +14,10 @@ import XMonad.Util.NamedScratchpad
 
 import XMonad.Layout.PerWorkspace
 import XMonad.Layout.ThreeColumns
+import XMonad.Layout.Spacing
 
-import Graphics.X11.ExtraTypes.XF86 (xF86XK_AudioLowerVolume, xF86XK_AudioRaiseVolume, xF86XK_AudioMute)
+import Graphics.X11.ExtraTypes.XF86 (xF86XK_AudioLowerVolume, xF86XK_AudioRaiseVolume, xF86XK_AudioMute, xF86XK_AudioPlay, xF86XK_AudioStop, xF86XK_AudioNext, xF86XK_AudioPrev)
+  
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map        as M
@@ -65,6 +68,11 @@ myEditor       = "emacs"
 
 openUrlOnRead  = "~/scripts/openurl.sh -k -e "
 
+-- Get the hostname
+hostname = do
+  hnFile <- readFile "/etc/hostname"
+  return $ lines hnFile !! 0
+
 -- Whether focus follows the mouse pointer.
 myFocusFollowsMouse :: Bool
 myFocusFollowsMouse = True
@@ -94,11 +102,11 @@ altMask   = mod1Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-termIcon     = "\61728"
-chatIcon     = "\61574"
-browserIcon  = "\62057"
-musicIcon    = "\61884"
-syncIcon     = "\62193"
+termIcon     = "\xf120"
+chatIcon     = "\xf086"
+browserIcon  = "\xf269"
+musicIcon    = "\xf1bc"
+syncIcon     = "\xf021"
 
 myWorkspaces = [ termIcon,chatIcon,browserIcon,"4","5","6","7",syncIcon,musicIcon ]
 
@@ -133,6 +141,11 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
    , ((0, xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 0 +5%")
 
      -- Other multimedia keys
+   , ((0, xF86XK_AudioPlay), spawn "playerctl play-pause")
+   , ((0, xF86XK_AudioStop), spawn "playerctl stop")
+   , ((0, xF86XK_AudioNext), spawn "playerctl next")
+   , ((0, xF86XK_AudioPrev), spawn "playerctl previous")
+
    , ((modm, xK_Up), spawn "playerctl play-pause")
    , ((modm, xK_Down), spawn "playerctl stop")
    , ((modm, xK_Right), spawn "playerctl next")
@@ -141,7 +154,6 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch the menus
     , ((altMask,               xK_space ), spawn myMenu)
     , ((altMask .|. shiftMask, xK_space ), spawn myPowerMenu)
-    , ((altMask,               xK_Tab ), spawn myWindowsMenu)
 
     -- launch gmrun
     , ((modm,               xK_r ), spawn "gmrun")
@@ -172,7 +184,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm,               xK_n     ), refresh)
 
     -- Move focus to the next window
-    , ((modm,               xK_Tab   ), windows W.focusDown)
+    , ((modm,            xK_Tab ), cycleRecentWindows [xK_Super_L] xK_Tab xK_Tab)
 
     -- Move focus to the next window
     , ((modm,               xK_j     ), windows W.focusDown)
@@ -227,6 +239,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
 
     -- Edit xmonad.hs
     , ((modm .|. controlMask , xK_q  ), spawn (myEditor ++ " ~/.xmonad/xmonad.hs"))
+
+    -- Edit xmobarrc
+    , ((modm .|. controlMask .|. altMask, xK_q  ), spawn (myEditor ++ " ~/.config/xmobarrc"))
 
     -- Run xmessage with a summary of the default keybindings (useful for beginners)
     , ((modm .|. shiftMask, xK_slash ), spawn ("echo \"" ++ help ++ "\" | xmessage -file -"))
@@ -410,7 +425,8 @@ defaults = def {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = onWorkspace browserIcon altLayout $ defLayout,
+        -- layoutHook         = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ onWorkspace browserIcon altLayout $ defLayout,
+        layoutHook         = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ defLayout,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
         startupHook        = myStartupHook

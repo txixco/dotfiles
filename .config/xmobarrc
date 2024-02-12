@@ -1,17 +1,18 @@
-Config { font = "xft:Font Awesome 5 Brands:size=10,Font Awesome 5 Free Solid:size=10,FreeMono Regular:size=10:antialias=true:hinting=true"
-       , additionalFonts = []
+Config { font = "FreeMono Bold 9"
+       , additionalFonts = [ "Font Awesome 5 Brands 9",
+                             "Font Awesome 5 Free Solid 9"]
        , borderColor = "black"
-       , border = TopB
-       , bgColor = "black"
-       , fgColor = "white"
-       , alpha = 255
+       , border = NoBorder
+       , bgColor = "#3B4252"
+       , fgColor = "#E5E9F0"
+       , alpha = 200
        , position = Top
-       , textOffset = -1
-       , iconOffset = -1
+--       , textOffset = -1
+--       , iconOffset = -1
        , lowerOnStart = False
        , hideOnStart = False
        , pickBroadest = False
-       , persistent = False
+       , persistent = True
        , iconRoot = "."
        , allDesktops = True
        , overrideRedirect = True
@@ -33,15 +34,16 @@ Config { font = "xft:Font Awesome 5 Brands:size=10,Font Awesome 5 Free Solid:siz
                                    "-h", "green",
                                    "-l", "red"
                                    ] 10
-                    , Run Cpu ["-L","3","-H","50",
+                    , Run Cpu ["-t", "\xf2db <total>%", "-L","3","-H","50",
                                "--normal","green","--high","red"] 10
-                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+                    , Run Memory ["-t","\xf233 <usedratio>%"] 10
                     , Run Swap [] 10
-                    , Run Com "uname" ["-s","-r"] "" 36000
+                    --, Run Com "uname" ["-s","-r"] "" 36000
+                    , Run Com "uname" ["-n"] "hostname" 36000
                     , Run Date "%a %b %_d %Y %H:%M" "LANG=es_ES date" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% | %cpu% | %memory% | %battery% }\
+       , template = "%StdinReader% | %hostname% | %cpu% | %memory% | %battery% }\
                     \{ <fc=#ee9a00>%date%</fc>| %LEMD%" 
        }
