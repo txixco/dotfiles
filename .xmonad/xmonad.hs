@@ -379,6 +379,7 @@ myEventHook = mempty
 -- By default, do nothing.
 myStartupHook = do
     spawnOnce "/usr/libexec/polkit-gnome-authentication-agent-1"
+    spawnOnce "dunst"
     spawnOnce "nitrogen --set-zoom-fill --random ~/fondos/NASA"
     spawnOnce "skypeforlinux"
     --spawnOnce "flatpak run com.skype.Client"
