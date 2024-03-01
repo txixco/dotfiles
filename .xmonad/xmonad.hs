@@ -107,8 +107,10 @@ chatIcon     = "\xf086"
 browserIcon  = "\xf269"
 musicIcon    = "\xf1bc"
 syncIcon     = "\xf021"
+noteIcon     = "\xf249"
+documentIcon = "\xf15c"
 
-myWorkspaces = [ termIcon,chatIcon,browserIcon,"4","5","6","7",syncIcon,musicIcon ]
+myWorkspaces = [ termIcon,chatIcon,browserIcon,documentIcon,"5","6",noteIcon,syncIcon,musicIcon ]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -258,15 +260,15 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     [((m .|. modm, k), windows $ f i)
         | (i, k) <- zip (XMonad.workspaces conf) [xK_1 .. xK_9]
         , (f, m) <- [(W.greedyView, 0), (W.shift, shiftMask)]]
-    ++
+    -- ++
 
     --
     -- mod-{w,e,r}, Switch to physical/Xinerama screens 1, 2, or 3
     -- mod-shift-{w,e,r}, Move client to screen 1, 2, or 3
     --
-    [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
-        | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
-        , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
+    -- [((m .|. modm, key), screenWorkspace sc >>= flip whenJust (windows . f))
+    --     | (key, sc) <- zip [xK_w, xK_e, xK_r] [0..]
+    --     , (f, m) <- [(W.view, 0), (W.shift, shiftMask)]]
 
 
 ------------------------------------------------------------------------
@@ -348,6 +350,7 @@ myManageHook = composeAll
     , resource  =? "Navigator"        --> doShift browserIcon
     , className =? "Spotify"          --> doShift musicIcon
     , className =? "Nextcloud"        --> doShift syncIcon
+    , className =? "Joplin"           --> doShift noteIcon
     , namedScratchpadManageHook scratchpads ]
 
 ------------------------------------------------------------------------
@@ -393,7 +396,7 @@ myStartupHook = do
     spawnOnce "flatpak run com.spotify.Client"
     spawnOnce "setxkbmap us intl"
     --spawnOnce "setxkbmap us dvorak-intl"
-    spawnOnce "syncthing"
+    spawnOnce "syncthing --no-browser"
     spawnOnce "nextcloud"
 
 ------------------------------------------------------------------------
