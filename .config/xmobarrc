@@ -9,7 +9,7 @@ Config { font = "FreeMono Bold 9"
        , position = Top
 --       , textOffset = -1
 --       , iconOffset = -1
-       , lowerOnStart = False
+       , lowerOnStart = True
        , hideOnStart = False
        , pickBroadest = False
        , persistent = True
@@ -40,7 +40,8 @@ Config { font = "FreeMono Bold 9"
                     , Run Swap [] 10
                     --, Run Com "uname" ["-s","-r"] "" 36000
                     , Run Com "uname" ["-n"] "hostname" 36000
-                    , Run Date "%a %b %_d %Y %H:%M" "LANG=es_ES date" 10
+                    , Run Com "date" ["+%a %b %_d %Y %H:%M"] "date" 10
+                    --, Run Date "%a %b %_d %Y %H:%M" "LANG=es_ES date" 10
                     ]
        , sepChar = "%"
        , alignSep = "}{"

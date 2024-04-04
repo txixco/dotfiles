@@ -8,6 +8,7 @@ import XMonad.Actions.FloatKeys
 import XMonad.Actions.CycleWindows
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.DynamicLog
+import XMonad.Hooks.ManageHelpers
 import XMonad.Util.Run
 import XMonad.Util.SpawnOnce
 import XMonad.Util.NamedScratchpad
@@ -228,7 +229,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- Use this binding with avoidStruts from Hooks.ManageDocks.
     -- See also the statusBar function from Hooks.DynamicLog.
     --
-    -- , ((modm              , xK_b     ), sendMessage ToggleStruts)
+    , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
@@ -301,7 +302,7 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-altLayout = Full ||| my3col -- See comments on defLayout
+altLayout = avoidStruts (my3col ||| Full) -- See comments on defLayout
   where 
     my3col  = ThreeColMid nmaster delta ratio
     tiled   = Tall nmaster delta ratio
@@ -340,6 +341,7 @@ defLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
 --
 myManageHook = composeAll
     [ className =? "MPlayer"          --> doFloat
+    , className =? "Vlc"              --> doFloat
     , className =? "Gimp"             --> doFloat
     , className =? "gnome-calculator" --> doFloat
     , className =? "gnome-screenshot" --> doFloat
@@ -351,6 +353,7 @@ myManageHook = composeAll
     , className =? "Spotify"          --> doShift musicIcon
     , className =? "Nextcloud"        --> doShift syncIcon
     , className =? "Joplin"           --> doShift noteIcon
+    , isFullscreen                    --> doFullFloat
     , namedScratchpadManageHook scratchpads ]
 
 ------------------------------------------------------------------------
@@ -387,6 +390,7 @@ myStartupHook = do
     spawnOnce "skypeforlinux"
     --spawnOnce "flatpak run com.skype.Client"
     spawnOnce "flatpak run org.signal.Signal"
+    spawnOnce "doublecmd"
     spawnOnce "firefox"
     spawnOnce "autokey-gtk"
     spawnOnce "copyq"
@@ -429,8 +433,8 @@ defaults = def {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        -- layoutHook         = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ onWorkspace browserIcon altLayout $ defLayout,
-        layoutHook         = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ defLayout,
+        layoutHook         = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ onWorkspace browserIcon altLayout $ defLayout,
+        -- layoutHook         = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ defLayout,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,
         startupHook        = myStartupHook
