@@ -25,6 +25,8 @@ import qualified Data.Map        as M
 
 import System.Exit
 
+import MachineConfig
+
 scratchpads = 
   [
 -- run the preferred term, find it by title, use default floating window placement
@@ -65,7 +67,6 @@ myPowerMenu    = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Incon
 myWindowsMenu  = "rofi -show window"
 myBar          = "xmobar ~/.config/xmobarrc"
 myFilesManager = "nemo"
-myEditor       = "emacs"
 
 openUrlOnRead  = "~/scripts/openurl.sh -k -e "
 
@@ -386,12 +387,12 @@ myEventHook = mempty
 myStartupHook = do
     spawnOnce "/usr/libexec/polkit-gnome-authentication-agent-1"
     spawnOnce "dunst"
-    spawnOnce "nitrogen --set-zoom-fill --random ~/fondos/NASA"
+    spawnOnce "nitrogen --set-zoom-fill --random " ++ wallpapers
     spawnOnce "skypeforlinux"
     --spawnOnce "flatpak run com.skype.Client"
     spawnOnce "flatpak run org.signal.Signal"
     spawnOnce "doublecmd"
-    spawnOnce "firefox"
+    spawnOnce myBrowser
     spawnOnce "autokey-gtk"
     spawnOnce "copyq"
     spawnOnce "compton"
