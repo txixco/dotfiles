@@ -25,7 +25,7 @@ import qualified Data.Map        as M
 
 import System.Exit
 
-import MachineConfig
+import MyVariables
 
 scratchpads = 
   [
@@ -57,16 +57,6 @@ scratchpads =
 -- run the editor app, find by title, don't float
     NS "notes" myEditor (title =? "notes") nonFloating
   ] where role = stringProperty "WM_WINDOW_ROLE"
-
--- The preferred terminal program, which is used in a binding below and by
--- certain contrib modules.
---
-myTerminal     = "terminator"
-myMenu         = "rofi -modi run,drun -show drun -lines 3"
-myPowerMenu    = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Inconsolata Medium 12'"
-myWindowsMenu  = "rofi -show window"
-myBar          = "xmobar ~/.config/xmobarrc"
-myFilesManager = "nemo"
 
 openUrlOnRead  = "~/scripts/openurl.sh -k -e "
 
@@ -387,7 +377,7 @@ myEventHook = mempty
 myStartupHook = do
     spawnOnce "/usr/libexec/polkit-gnome-authentication-agent-1"
     spawnOnce "dunst"
-    spawnOnce "nitrogen --set-zoom-fill --random " ++ wallpapers
+    spawnOnce myWallpaper
     spawnOnce "skypeforlinux"
     --spawnOnce "flatpak run com.skype.Client"
     spawnOnce "flatpak run org.signal.Signal"
