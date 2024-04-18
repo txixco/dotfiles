@@ -340,12 +340,13 @@ myManageHook = composeAll
     , resource  =? "kdesktop"         --> doIgnore
     , className =? "Signal"           --> doShift chatIcon
     , className =? "Skype"            --> doShift chatIcon
-    , resource  =? "Navigator"        --> doShift browserIcon
+    , role      =? "browser"          --> doShift browserIcon
     , className =? "Spotify"          --> doShift musicIcon
     , className =? "Nextcloud"        --> doShift syncIcon
     , className =? "Joplin"           --> doShift noteIcon
     , isFullscreen                    --> doFullFloat
     , namedScratchpadManageHook scratchpads ]
+    where role = stringProperty "WM_WINDOW_ROLE"
 
 ------------------------------------------------------------------------
 -- Event handling
