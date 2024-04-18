@@ -379,11 +379,11 @@ myStartupHook = do
     spawnOnce "/usr/libexec/polkit-gnome-authentication-agent-1"
     spawnOnce "dunst"
     spawnOnce myWallpaper
+    spawnOnce myBrowser
     spawnOnce "skypeforlinux"
     --spawnOnce "flatpak run com.skype.Client"
     spawnOnce "flatpak run org.signal.Signal"
     spawnOnce "doublecmd"
-    spawnOnce myBrowser
     spawnOnce "autokey-gtk"
     spawnOnce "copyq"
     spawnOnce "compton"
