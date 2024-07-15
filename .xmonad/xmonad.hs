@@ -54,8 +54,9 @@ scratchpads =
 -- run tzclock, find by class name, place it in a floating window
     NS "tzclock" "tzclock" (className =? "Tzclock") nonFloating ,
 
--- run the editor app, find by title, don't float
-    NS "notes" myEditor (title =? "notes") nonFloating
+-- run Joplin in the terminal
+    NS "joplin" (myTerminal ++ " -e joplin -T Joplin") (title =? "Joplin")
+       (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
   ] where role = stringProperty "WM_WINDOW_ROLE"
 
 openUrlOnRead  = "~/scripts/openurl.sh -k -e "
@@ -122,7 +123,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , ((modm .|. controlMask .|. shiftMask, xK_m), namedScratchpadAction scratchpads "monitor")
   , ((modm .|. controlMask .|. shiftMask, xK_c), namedScratchpadAction scratchpads "tzclock")
   , ((modm .|. controlMask .|. shiftMask, xK_h), namedScratchpadAction scratchpads "htop")
-  , ((modm .|. controlMask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "notes")
+  , ((modm .|. controlMask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "joplin")
   , ((modm .|. controlMask .|. shiftMask, xK_o), namedScratchpadAction scratchpads "oryx")
   , ((modm, xK_Escape), namedScratchpadAction scratchpads "copyq")
 
@@ -380,8 +381,8 @@ myStartupHook = do
     spawnOnce "dunst"
     spawnOnce myWallpaper
     spawnOnce myBrowser
-    spawnOnce "skypeforlinux"
-    --spawnOnce "flatpak run com.skype.Client"
+    --spawnOnce "skypeforlinux"
+    spawnOnce "flatpak run com.skype.Client"
     spawnOnce "flatpak run org.signal.Signal"
     spawnOnce "doublecmd"
     spawnOnce "autokey-gtk"
