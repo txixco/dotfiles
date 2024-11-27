@@ -1,0 +1,2 @@
+output = clipboard.get_content()
+keyboard.send_keys(output) 
