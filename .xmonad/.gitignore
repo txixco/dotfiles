@@ -1,4 +1,4 @@
 *
 !.gitignore
 !xmonad.hs
-
+!lib/MyVariables-template.hs
