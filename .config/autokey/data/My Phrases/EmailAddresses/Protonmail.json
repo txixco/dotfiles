@@ -1,0 +1,31 @@
+{
+    "type": "phrase",
+    "description": "Protonmail",
+    "modes": [
+        1
+    ],
+    "usageCount": 0,
+    "prompt": false,
+    "omitTrigger": true,
+    "matchCase": true,
+    "showInTrayMenu": false,
+    "abbreviation": {
+        "abbreviations": [
+            "@proton"
+        ],
+        "backspace": true,
+        "ignoreCase": true,
+        "immediate": false,
+        "triggerInside": false,
+        "wordChars": "[^ \\n]"
+    },
+    "hotkey": {
+        "modifiers": [],
+        "hotKey": null
+    },
+    "filter": {
+        "regex": null,
+        "isRecursive": false
+    },
+    "sendMode": "<ctrl>+v"
+}
