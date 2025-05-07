@@ -17,7 +17,7 @@ import XMonad.Layout.PerWorkspace
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.Spacing
 
-import Graphics.X11.ExtraTypes.XF86 (xF86XK_AudioLowerVolume, xF86XK_AudioRaiseVolume, xF86XK_AudioMute, xF86XK_AudioPlay, xF86XK_AudioStop, xF86XK_AudioNext, xF86XK_AudioPrev)
+import Graphics.X11.ExtraTypes.XF86 (xF86XK_AudioLowerVolume, xF86XK_AudioRaiseVolume, xF86XK_AudioMute, xF86XK_AudioPlay, xF86XK_AudioStop, xF86XK_AudioNext, xF86XK_AudioPrev, xF86XK_HomePage)
   
 
 import qualified XMonad.StackSet as W
@@ -141,6 +141,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
    , ((0, xF86XK_AudioNext), spawn "playerctl next")
    , ((0, xF86XK_AudioPrev), spawn "playerctl previous")
 
+   , ((0, xF86XK_HomePage), spawn "qutebrowser")
+
    , ((modm, xK_Up), spawn "playerctl play-pause")
    , ((modm, xK_Down), spawn "playerctl stop")
    , ((modm, xK_Right), spawn "playerctl next")
@@ -153,7 +155,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     -- launch gmrun
     , ((modm,               xK_r ), spawn "gmrun")
 
-    -- launch some other programs
+    -- launch file managers
     , ((modm .|. shiftMask,  xK_e ), spawn "doublecmd")
     , ((modm,                xK_e ), spawn myFilesManager)
 
