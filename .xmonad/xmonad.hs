@@ -389,8 +389,7 @@ myStartupHook = do
     spawnOnce "dunst"
     spawnOnce myWallpaper
     spawnOnce myBrowser
-    --spawnOnce "skypeforlinux"
-    spawnOnce "flatpak run com.skype.Client"
+    spawnOnce "teams-for-linux"
     spawnOnce "flatpak run org.signal.Signal"
     spawnOnce "doublecmd"
     spawnOnce "autokey-gtk"
