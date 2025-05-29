@@ -95,15 +95,17 @@ altMask   = mod1Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-termIcon     = "\xf120"
-chatIcon     = "\xf086"
-browserIcon  = "\xf269"
-musicIcon    = "\xf1bc"
-syncIcon     = "\xf021"
-noteIcon     = "\xf249"
+termIcon            = "\xf120"
+chatIcon             = "\xf086"
+browserIcon     = "\xf269"
 documentIcon = "\xf15c"
+codingIcon        = "\xf121"
+remoteIcon       = "\xe066"
+noteIcon             = "\xf249"
+syncIcon             = "\xf021"
+musicIcon          = "\xf1bc"
 
-myWorkspaces = [ termIcon,chatIcon,browserIcon,documentIcon,"5","6",noteIcon,syncIcon,musicIcon ]
+myWorkspaces = [ termIcon,chatIcon,browserIcon,documentIcon,codingIcon,remoteIcon,noteIcon,syncIcon,musicIcon ]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
@@ -299,9 +301,15 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 altLayout = avoidStruts (my3col ||| Full) -- See comments on defLayout
   where 
     my3col  = ThreeColMid nmaster delta ratio
-    tiled   = Tall nmaster delta ratio
     nmaster = 1
-    ratio   = 50/100
+    ratio   = 60/100
+    delta   = 5/100
+
+partyLayout = avoidStruts (tiled ||| Full)
+  where
+    tiled = Tall nmaster delta ratio
+    nmaster = 1
+    ratio   = 75/100
     delta   = 5/100
 
 defLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
@@ -342,7 +350,7 @@ myManageHook = composeAll
     , resource  =? "desktop_window"   --> doIgnore
     , resource  =? "kdesktop"         --> doIgnore
     , className =? "Signal"           --> doShift chatIcon
-    , className =? "Skype"            --> doShift chatIcon
+    , className =? "teams-for-linux"            --> doShift chatIcon
     , role      =? "browser"          --> doShift browserIcon
     , className =? "Spotify"          --> doShift musicIcon
     , className =? "Nextcloud"        --> doShift syncIcon
@@ -383,8 +391,7 @@ myStartupHook = do
     spawnOnce "dunst"
     spawnOnce myWallpaper
     spawnOnce myBrowser
-    --spawnOnce "skypeforlinux"
-    spawnOnce "flatpak run com.skype.Client"
+    spawnOnce "teams-for-linux"
     spawnOnce "flatpak run org.signal.Signal"
     spawnOnce "doublecmd"
     spawnOnce "autokey-gtk"
@@ -428,7 +435,7 @@ defaults = def {
         mouseBindings      = myMouseBindings,
 
       -- hooks, layouts
-        layoutHook         = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ onWorkspace browserIcon altLayout $ defLayout,
+        layoutHook         = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ onWorkspace browserIcon altLayout $ onWorkspace remoteIcon partyLayout $ defLayout,
         -- layoutHook         = spacingRaw True (Border 0 5 5 5) True (Border 5 5 5 5) True $ defLayout,
         manageHook         = myManageHook,
         handleEventHook    = myEventHook,

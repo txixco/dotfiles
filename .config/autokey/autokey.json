@@ -12,8 +12,13 @@
         "interfaceType": "XRecord",
         "undoUsingBackspace": true,
         "windowDefaultSize": [
+<<<<<<< HEAD
             943,
             1046
+=======
+            1920,
+            1016
+>>>>>>> 7cebfa9c1a002dd8cc68c7099fe4cea7f07400f8
         ],
         "hPanePosition": 249,
         "columnWidths": [
@@ -32,6 +37,7 @@
         "gtkTheme": "classic",
         "gtkExpandedRows": [
             "4",
+<<<<<<< HEAD
             "2",
             "2:5",
             "2:0",
@@ -41,6 +47,17 @@
             "2:4"
         ],
         "pathLastOpen": "2:2:0"
+=======
+            "4:1",
+            "4:0",
+            "1",
+            "2",
+            "2:1",
+            "2:0",
+            "2:2"
+        ],
+        "pathLastOpen": "4:1:3"
+>>>>>>> 7cebfa9c1a002dd8cc68c7099fe4cea7f07400f8
     },
     "folders": [],
     "toggleServiceHotkey": {
