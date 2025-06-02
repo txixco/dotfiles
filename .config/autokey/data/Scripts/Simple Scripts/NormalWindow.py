@@ -1,3 +1,3 @@
 from wintools import WinTools
 
-WinTools(window.mediator).center_window(width_percent=60)
+WinTools(window.mediator).center_window(width_percent=70)
