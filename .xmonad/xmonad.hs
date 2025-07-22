@@ -400,8 +400,8 @@ myStartupHook = do
     spawnOnce "nm-applet"
     spawnOnce "volumeicon"
     spawnOnce "flatpak run com.spotify.Client"
-    spawnOnce "setxkbmap us intl"
-    --spawnOnce "setxkbmap us dvorak-intl"
+    --spawnOnce "setxkbmap us intl"
+    spawnOnce "setxkbmap us dvorak-intl"
     spawnOnce "syncthing --no-browser"
     spawnOnce "nextcloud"
 
