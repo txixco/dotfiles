@@ -392,7 +392,6 @@ myEventHook = mempty
 myStartupHook = do
     spawnOnce "/usr/libexec/polkit-gnome-authentication-agent-1"
     spawnOnce "dunst"
-    spawnOnce "xscreensaver -no-splash"
     spawnOnce myWallpaper
     spawnOnce myBrowser
     spawnOnce "teams-for-linux"
