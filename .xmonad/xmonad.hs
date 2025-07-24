@@ -228,7 +228,10 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
    -- Lock the screen
-   , ((0, xK_Scroll_Lock), spawn "i3lock -i ~/fondos/lockscreen.png")
+   , ((0, xK_Scroll_Lock), spawn "xset s activate")
+
+   -- Suspend the screen
+   , ((0, xK_Pause), spawn "systemctl suspend")
 
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
@@ -392,6 +395,7 @@ myEventHook = mempty
 myStartupHook = do
     spawnOnce "/usr/libexec/polkit-gnome-authentication-agent-1"
     spawnOnce "dunst"
+    spawnOnce "xss-lock -- i3lock -n -i fondos/lockscreen.png"
     spawnOnce myWallpaper
     spawnOnce myBrowser
     spawnOnce "teams-for-linux"
