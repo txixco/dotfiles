@@ -17,7 +17,7 @@ import XMonad.Layout.PerWorkspace
 import XMonad.Layout.ThreeColumns
 import XMonad.Layout.Spacing
 
-import Graphics.X11.ExtraTypes.XF86 (xF86XK_AudioLowerVolume, xF86XK_AudioRaiseVolume, xF86XK_AudioMute, xF86XK_AudioPlay, xF86XK_AudioStop, xF86XK_AudioNext, xF86XK_AudioPrev, xF86XK_HomePage)
+import Graphics.X11.ExtraTypes.XF86 (xF86XK_AudioLowerVolume, xF86XK_AudioRaiseVolume, xF86XK_AudioMute, xF86XK_AudioPlay, xF86XK_AudioStop, xF86XK_AudioNext, xF86XK_AudioPrev, xF86XK_HomePage, xF86XK_Sleep)
   
 
 import qualified XMonad.StackSet as W
@@ -227,6 +227,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
     --
     , ((modm              , xK_b     ), sendMessage ToggleStruts)
 
+   -- Lock the screen
+   , ((0, xK_Scroll_Lock), spawn "i3lock -i ~/fondos/lockscreen.png")
+
     -- Quit xmonad
     , ((modm .|. shiftMask, xK_q     ), io (exitWith ExitSuccess))
 
@@ -389,6 +392,7 @@ myEventHook = mempty
 myStartupHook = do
     spawnOnce "/usr/libexec/polkit-gnome-authentication-agent-1"
     spawnOnce "dunst"
+    spawnOnce "xscreensaver -no-splash"
     spawnOnce myWallpaper
     spawnOnce myBrowser
     spawnOnce "teams-for-linux"
