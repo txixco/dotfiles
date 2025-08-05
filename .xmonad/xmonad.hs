@@ -60,11 +60,8 @@ scratchpads =
         (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
 
 -- run tzclock, find by class name, place it in a floating window
-    NS "tzclock" "tzclock" (className =? "Tzclock") nonFloating ,
+    NS "tzclock" "tzclock" (className =? "Tzclock") nonFloating
 
--- run Joplin in the terminal
-    NS "joplin2" (myTerminal ++ " -e joplin -T Joplin") (title =? "Joplin")
-       (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
   ] where role = stringProperty "WM_WINDOW_ROLE"
 
 openUrlOnRead  = "~/scripts/openurl.sh -k -e "
