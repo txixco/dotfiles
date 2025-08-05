@@ -47,6 +47,14 @@ scratchpads =
     NS "copyq" "copyq show" (className =? "copyq")
         (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
 
+-- run Signal, find it by class name, place it in the floating window
+    NS "signal" "flatpak run org.signal.Signal" (className =? "Signal")
+        (customFloating $ W.RationalRect (1/8) (1/20) (3/4) (9/10)) ,
+
+-- run Joplin, find it by title, place it in the floating window
+    NS "joplin" "AppImageLauncher Applications/Joplin-3.3.13_f976441bdaafb47b7149cbbd3f05faa4.appimage" (title =? "Joplin")
+        (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
+
 -- open Oryx in Qutebrowser, find it by title, place it fullscreen
     NS "oryx" "qutebrowser -R --target window https://configure.zsa.io/ergodox-ez/layouts/P5DJE/latest/0" (title =? "Oryx: The ZSA Keyboard Configurator - qutebrowser") 
         (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
@@ -55,7 +63,7 @@ scratchpads =
     NS "tzclock" "tzclock" (className =? "Tzclock") nonFloating ,
 
 -- run Joplin in the terminal
-    NS "joplin" (myTerminal ++ " -e joplin -T Joplin") (title =? "Joplin")
+    NS "joplin2" (myTerminal ++ " -e joplin -T Joplin") (title =? "Joplin")
        (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3))
   ] where role = stringProperty "WM_WINDOW_ROLE"
 
@@ -127,6 +135,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , ((modm .|. controlMask .|. shiftMask, xK_h), namedScratchpadAction scratchpads "htop")
   , ((modm .|. controlMask .|. shiftMask, xK_n), namedScratchpadAction scratchpads "joplin")
   , ((modm .|. controlMask .|. shiftMask, xK_o), namedScratchpadAction scratchpads "oryx")
+  , ((modm .|. controlMask .|. shiftMask, xK_s), namedScratchpadAction scratchpads "signal")
   , ((modm, xK_Escape), namedScratchpadAction scratchpads "copyq")
 
      -- screen capturing
@@ -230,6 +239,9 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
    -- Lock the screen
    , ((0, xK_Scroll_Lock), spawn "xset s activate")
 
+   -- Hibernate
+   , ((shiftMask, xK_Pause), spawn "systemctl hibernate")
+   
    -- Suspend the screen
    , ((0, xK_Pause), spawn "systemctl suspend")
 
@@ -410,7 +422,8 @@ myStartupHook = do
     --spawnOnce "setxkbmap us intl"
     spawnOnce "setxkbmap us dvorak-intl"
     spawnOnce "syncthing --no-browser"
-    spawnOnce "nextcloud"
+    spawnOnce "AppImageLauncher Applications/Joplin-3.3.13_f976441bdaafb47b7149cbbd3f05faa4.appimage"
+    spawnOnce "AppImageLauncher Applications/Nextcloud-3.16.6-x86_64_cfce2811a7899f3f3f121ef1d4c635d5.appimage"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
