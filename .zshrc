@@ -97,8 +97,8 @@ source $ZSH/oh-my-zsh.sh
 export MINISHIFT_USERNAME=txixco
 export MINISHIFT_PASSWORD=RDHT101cm
 
-# Neofetch
-neofetch
+# Fastfetch
+fastfetch
 
 # Path
 path+=('~/.local/bin')
@@ -109,10 +109,8 @@ export MANPATH="$MANPATH:/usr/local/texlive/2022/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/usr/local/texlive/2022/texmf-dist/doc/info"
 export PATH=/usr/local/texlive/2022/bin/x86_64-linux:$PATH
 
-
-
-
 [ -f "/home/txixco/.ghcup/env" ] && . "/home/txixco/.ghcup/env" # ghcup-env
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
