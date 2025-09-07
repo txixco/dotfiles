@@ -351,7 +351,7 @@ myManageHook = composeAll
     , resource  =? "kdesktop"         --> doIgnore
     , className =? "Signal"           --> doShift chatIcon
     -- , className =? "teams-for-linux"            --> doShift chatIcon
-    , role      =? "browser"          --> doShift browserIcon
+    , role      =? "browser" <&&> className /=? "Microsoft-edge"          --> doShift browserIcon
     , className =? "Spotify"          --> doShift musicIcon
     , className =? "Nextcloud"        --> doShift syncIcon
     , className =? "Joplin"           --> doShift noteIcon
