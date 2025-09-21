@@ -52,7 +52,7 @@ scratchpads =
         (customFloating $ W.RationalRect (1/8) (1/20) (3/4) (9/10)) ,
 
 -- run Joplin, find it by title, place it in the floating window
-    NS "joplin" "AppImageLauncher Applications/Joplin-3.3.13_f976441bdaafb47b7149cbbd3f05faa4.appimage" (title =? "Joplin")
+    NS "joplin" "AppImageLauncher Applications/Joplin_6baee6ea4250a283954085a8a39b6aad.appimage" (title =? "Joplin")
         (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
 
 -- open Oryx in Qutebrowser, find it by title, place it fullscreen
@@ -419,8 +419,8 @@ myStartupHook = do
     spawnOnce "setxkbmap us intl"
     --spawnOnce "setxkbmap us dvorak-intl"
     spawnOnce "syncthing --no-browser"
-    spawnOnce "AppImageLauncher Applications/Joplin-3.3.13_f976441bdaafb47b7149cbbd3f05faa4.appimage"
-    spawnOnce "AppImageLauncher Applications/Nextcloud-3.16.6-x86_64_cfce2811a7899f3f3f121ef1d4c635d5.appimage"
+    spawnOnce "AppImageLauncher Applications/Joplin_6baee6ea4250a283954085a8a39b6aad.AppImage"
+    spawnOnce "nextcloud"
 
 ------------------------------------------------------------------------
 -- Now run xmonad with all the defaults we set up.
