@@ -136,7 +136,7 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
   , ((modm, xK_Escape), namedScratchpadAction scratchpads "copyq")
 
      -- screen capturing
-   , ((modm, xK_Print), spawn "flameshot gui")
+   , ((0, xK_Print), spawn "flameshot gui")
 
      -- volume key bindings
    , ((0, xF86XK_AudioMute), spawn "pactl set-sink- 0 toggle")
