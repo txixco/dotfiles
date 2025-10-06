@@ -149,12 +149,13 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
    , ((0, xF86XK_AudioNext), spawn "playerctl next")
    , ((0, xF86XK_AudioPrev), spawn "playerctl previous")
 
-   , ((0, xF86XK_HomePage), spawn "qutebrowser")
-
    , ((modm, xK_Up), spawn "playerctl play-pause")
    , ((modm, xK_Down), spawn "playerctl stop")
    , ((modm, xK_Right), spawn "playerctl next")
    , ((modm, xK_Left), spawn "playerctl previous")
+
+   , ((modm, xF86XK_AudioPlay), spawn "~/scripts/audio-device-switch.sh")
+   , ((0, xF86XK_HomePage), spawn "qutebrowser")
 
     -- launch the menus
     , ((altMask,               xK_space ), spawn myMenu)
