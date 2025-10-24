@@ -43,7 +43,7 @@
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
  '(make-backup-files nil)
- '(package-selected-packages '(haskell-tng-mode haskell-mode org evil))
+ '(package-selected-packages '(rust-mode haskell-tng-mode haskell-mode org evil))
  '(safe-local-variable-values '((TeX-master . "ejb")))
  '(save-place t nil (saveplace))
  '(scroll-bar-mode 'right)

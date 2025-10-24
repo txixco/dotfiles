@@ -52,7 +52,7 @@ scratchpads =
         (customFloating $ W.RationalRect (1/8) (1/20) (3/4) (9/10)) ,
 
 -- run Joplin, find it by title, place it in the floating window
-    NS "joplin" "AppImageLauncher Applications/Joplin_6baee6ea4250a283954085a8a39b6aad.appimage" (title =? "Joplin")
+    NS "joplin" "AppImageLauncher Applications/Joplin.AppImage" (title =? "Joplin")
         (customFloating $ W.RationalRect (1/6) (1/6) (2/3) (2/3)) ,
 
 -- open Oryx in Qutebrowser, find it by title, place it fullscreen
@@ -90,6 +90,7 @@ myBorderWidth   = 1
 --
 myModMask = mod4Mask
 altMask   = mod1Mask
+altGrMask  = mod5Mask
 
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
@@ -158,8 +159,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
    , ((0, xF86XK_HomePage), spawn "qutebrowser")
 
     -- launch the menus
-    , ((altMask,               xK_space ), spawn myMenu)
-    , ((altMask .|. shiftMask, xK_space ), spawn myPowerMenu)
+    , ((altGrMask,               xK_space ), spawn myMenu)
+    , ((altGrMask .|. shiftMask, xK_space ), spawn myPowerMenu)
 
     -- launch gmrun
     , ((modm,               xK_r ), spawn "gmrun")
@@ -314,12 +315,14 @@ myMouseBindings (XConfig {XMonad.modMask = modm}) = M.fromList $
 -- The available layouts.  Note that each layout is separated by |||,
 -- which denotes layout choice.
 --
-altLayout = avoidStruts (my3col ||| Full) -- See comments on defLayout
+altLayout = avoidStruts (my3col ||| read ||| Full) -- See comments on defLayout
   where 
-    my3col  = ThreeColMid nmaster delta ratio
-    nmaster = 1
-    ratio   = 60/100
-    delta   = 5/100
+    my3col      = ThreeColMid nmaster delta ratio
+    read        = ThreeColMid nmaster delta readRatio
+    nmaster     = 1
+    ratio       = 60/100
+    readRatio   = 45/100
+    delta       = 5/100
 
 partyLayout = avoidStruts (tiled ||| Full)
   where
@@ -420,7 +423,7 @@ myStartupHook = do
     spawnOnce "setxkbmap us intl"
     --spawnOnce "setxkbmap us dvorak-intl"
     spawnOnce "syncthing --no-browser"
-    spawnOnce "AppImageLauncher Applications/Joplin_6baee6ea4250a283954085a8a39b6aad.AppImage"
+    spawnOnce "AppImageLauncher Applications/Joplin.AppImage"
     spawnOnce "nextcloud"
 
 ------------------------------------------------------------------------
