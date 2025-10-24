@@ -90,6 +90,7 @@ myBorderWidth   = 1
 --
 myModMask = mod4Mask
 altMask   = mod1Mask
+altGrMask  = mod5Mask
 
 -- The default number of workspaces (virtual screens) and their names.
 -- By default we use numeric strings, but any string may be used as a
@@ -158,8 +159,8 @@ myKeys conf@(XConfig {XMonad.modMask = modm}) = M.fromList $
    , ((0, xF86XK_HomePage), spawn "qutebrowser")
 
     -- launch the menus
-    , ((altMask,               xK_space ), spawn myMenu)
-    , ((altMask .|. shiftMask, xK_space ), spawn myPowerMenu)
+    , ((altGrMask,               xK_space ), spawn myMenu)
+    , ((altGrMask .|. shiftMask, xK_space ), spawn myPowerMenu)
 
     -- launch gmrun
     , ((modm,               xK_r ), spawn "gmrun")
