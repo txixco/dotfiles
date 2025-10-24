@@ -7,3 +7,5 @@ alias cfgaa="config add -A"
 alias cfgco="config checkout"
 alias cfgcm="config commit -m"
 alias cfgcam="config commit -am"
+
+alias shutdown="sudo shutdown"
