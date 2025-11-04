@@ -328,7 +328,7 @@ partyLayout = avoidStruts (tiled ||| Full)
   where
     tiled = Tall nmaster delta ratio
     nmaster = 1
-    ratio   = 75/100
+    ratio   = 80/100
     delta   = 5/100
 
 defLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
