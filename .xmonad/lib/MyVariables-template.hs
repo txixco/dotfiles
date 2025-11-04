@@ -6,6 +6,6 @@ myPowerMenu    = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Incon
 myWindowsMenu  = "rofi -show window"
 myBar          = "xmobar ~/.config/xmobarrc"
 myFilesManager = "nemo"
-myEditor       = "emacs"
+myEditor       = "nvim-qt"
 myWallpaper    = "nitrogen --set-zoom-fill --random ~/fondos/NASA"
 myBrowser      = "brave-browser"
