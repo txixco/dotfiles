@@ -103,7 +103,7 @@ altGrMask  = mod5Mask
 --
 termIcon            = "\xf120"
 chatIcon             = "\xf086"
-browserIcon     = "\xf269"
+browserIcon     = "\xf14e"
 documentIcon = "\xf15c"
 codingIcon        = "\xf121"
 remoteIcon       = "\xe066"
