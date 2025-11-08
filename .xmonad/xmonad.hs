@@ -103,7 +103,7 @@ altGrMask  = mod5Mask
 --
 termIcon            = "\xf120"
 chatIcon             = "\xf086"
-browserIcon     = "\xf269"
+browserIcon     = "\xf14e"
 documentIcon = "\xf15c"
 codingIcon        = "\xf121"
 remoteIcon       = "\xe066"
@@ -328,7 +328,7 @@ partyLayout = avoidStruts (tiled ||| Full)
   where
     tiled = Tall nmaster delta ratio
     nmaster = 1
-    ratio   = 75/100
+    ratio   = 80/100
     delta   = 5/100
 
 defLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)

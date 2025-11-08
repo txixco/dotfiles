@@ -1,14 +1,14 @@
-Config { font = "FreeMono Bold 9"
-       , additionalFonts = [ "Font Awesome 5 Brands 9",
-                             "Font Awesome 5 Free Solid 9"]
+Config { font = "FreeMono Bold 10"
+       , additionalFonts = [ "Font Awesome 5 Brands 10",
+                             "Font Awesome 5 Free Solid 10"]
        , borderColor = "black"
        , border = NoBorder
-       , bgColor = "#3B4252"
+       , bgColor = "#201742"
        , fgColor = "#E5E9F0"
        , alpha = 200
-       , position = Top
---       , textOffset = -1
---       , iconOffset = -1
+       , position = TopH 25
+       , textOffset = 1
+       , iconOffset = 1
        , lowerOnStart = True
        , hideOnStart = False
        , pickBroadest = False
@@ -22,6 +22,8 @@ Config { font = "FreeMono Bold 9"
                                           "--high","red",
                                           "--low","lightblue"] 36000
                     , Run StdinReader
+                    , Run Network "wlp4s0" ["-L","0","-H","32",
+                                            "--normal","green","--high","red"] 10
                     , Run Network "eth0" ["-L","0","-H","32",
                                           "--normal","green","--high","red"] 10
                     , Run Network "eth1" ["-L","0","-H","32",
