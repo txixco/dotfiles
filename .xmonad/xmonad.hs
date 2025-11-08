@@ -101,15 +101,15 @@ altGrMask  = mod5Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-termIcon            = "\xf120"
-chatIcon             = "\xf086"
-browserIcon     = "\xf14e"
+termIcon     = "\xf120"
+chatIcon     = "\xf086"
+browserIcon  = "\xf14e"
 documentIcon = "\xf15c"
-codingIcon        = "\xf121"
-remoteIcon       = "\xe066"
-noteIcon             = "\xf249"
-syncIcon             = "\xf021"
-musicIcon          = "\xf1bc"
+codingIcon   = "\xf121"
+remoteIcon   = "\xe066"
+noteIcon     = "\xf249"
+syncIcon     = "\xf021"
+musicIcon    = "\xf1bc"
 
 myWorkspaces = [ termIcon,chatIcon,browserIcon,documentIcon,codingIcon,remoteIcon,noteIcon,syncIcon,musicIcon ]
 
@@ -369,8 +369,8 @@ myManageHook = composeAll
     , resource  =? "desktop_window"   --> doIgnore
     , resource  =? "kdesktop"         --> doIgnore
     , className =? "Signal"           --> doShift chatIcon
-    -- , className =? "teams-for-linux"            --> doShift chatIcon
-    , role      =? "browser" <&&> className /=? "Microsoft-edge"          --> doShift browserIcon
+    , role      =? "browser"          --> doShift browserIcon
+    , className /=? "Microsoft-edge" --> doShift remoteIcon
     , className =? "Spotify"          --> doShift musicIcon
     , className =? "Nextcloud"        --> doShift syncIcon
     , className =? "Joplin"           --> doShift noteIcon
