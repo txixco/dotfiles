@@ -3,12 +3,12 @@ Config { font = "FreeMono Bold 10"
                              "Font Awesome 5 Free Solid 10"]
        , borderColor = "black"
        , border = NoBorder
-       , bgColor = "#201742"
-       , fgColor = "#E5E9F0"
+       , bgColor = "#271B85"
+       , fgColor = "#B2C234"
        , alpha = 200
-       , position = TopH 25
-       , textOffset = 1
-       , iconOffset = 1
+       , position = Static { xpos = 5 , ypos = 5, width = 1910, height = 25 }
+       --, textOffset = -1
+       --, iconOffset = -1
        , lowerOnStart = True
        , hideOnStart = False
        , pickBroadest = False
