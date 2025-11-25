@@ -3,8 +3,8 @@ Config { font = "FreeMono Bold 10"
                              "Font Awesome 5 Free Solid 10"]
        , borderColor = "black"
        , border = NoBorder
-       , bgColor = "#271B85"
-       , fgColor = "#B2C234"
+       , bgColor = "#23284D"
+       , fgColor = "#CED1E9"
        , alpha = 200
        , position = Static { xpos = 5 , ypos = 5, width = 1910, height = 25 }
        --, textOffset = -1
