@@ -1,6 +1,6 @@
 module MyVariables where
 
-myTerminal     = "terminator"
+myTerminal     = "alacritty"
 myMenu         = "rofi -modi run,drun -show drun -lines 3"
 myPowerMenu    = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Inconsolata Medium 12'"
 myWindowsMenu  = "rofi -show window"
