@@ -97,8 +97,7 @@ source $ZSH/oh-my-zsh.sh
 export MINISHIFT_USERNAME=txixco
 export MINISHIFT_PASSWORD=RDHT101cm
 
-# Neofetch
-neofetch
+fastfetch
 
 # Path
 path+=('~/.local/bin')
