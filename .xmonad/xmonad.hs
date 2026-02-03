@@ -81,7 +81,7 @@ myClickJustFocuses = False
 
 -- Width of the window border in pixels.
 --
-myBorderWidth   = 1
+myBorderWidth   = 3
 
 -- modMask lets you specify which modkey you want to use. The default
 -- is mod1Mask ("left alt").  You may also consider using mod3Mask
@@ -101,22 +101,22 @@ altGrMask  = mod5Mask
 --
 -- > workspaces = ["web", "irc", "code" ] ++ map show [4..9]
 --
-termIcon            = "\xf120"
-chatIcon             = "\xf086"
-browserIcon     = "\xf269"
+termIcon     = "\xf120"
+chatIcon     = "\xf086"
+browserIcon  = "\xf14e"
 documentIcon = "\xf15c"
-codingIcon        = "\xf121"
-remoteIcon       = "\xe066"
-noteIcon             = "\xf249"
-syncIcon             = "\xf021"
-musicIcon          = "\xf1bc"
+codingIcon   = "\xf121"
+remoteIcon   = "\xe066"
+noteIcon     = "\xf249"
+syncIcon     = "\xf021"
+musicIcon    = "\xf1bc"
 
 myWorkspaces = [ termIcon,chatIcon,browserIcon,documentIcon,codingIcon,remoteIcon,noteIcon,syncIcon,musicIcon ]
 
 -- Border colors for unfocused and focused windows, respectively.
 --
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#ff0000"
+myNormalBorderColor  = "#CED1E9"
+myFocusedBorderColor = "#7079BD"
 
 ------------------------------------------------------------------------
 -- Key bindings. Add, modify or remove key bindings here.
@@ -328,7 +328,7 @@ partyLayout = avoidStruts (tiled ||| Full)
   where
     tiled = Tall nmaster delta ratio
     nmaster = 1
-    ratio   = 75/100
+    ratio   = 80/100
     delta   = 5/100
 
 defLayout = avoidStruts (tiled ||| Mirror tiled ||| Full)
@@ -369,8 +369,8 @@ myManageHook = composeAll
     , resource  =? "desktop_window"   --> doIgnore
     , resource  =? "kdesktop"         --> doIgnore
     , className =? "Signal"           --> doShift chatIcon
-    -- , className =? "teams-for-linux"            --> doShift chatIcon
-    , role      =? "browser" <&&> className /=? "Microsoft-edge"          --> doShift browserIcon
+    , role      =? "browser"          --> doShift browserIcon
+    , className =? "Microsoft-edge"   --> doShift remoteIcon
     , className =? "Spotify"          --> doShift musicIcon
     , className =? "Nextcloud"        --> doShift syncIcon
     , className =? "Joplin"           --> doShift noteIcon
