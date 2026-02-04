@@ -6,3 +6,4 @@ alias scrum="python3 -c 'import random; persons = [ \"Bo\", \"Chantal\", \"Raúl
 alias upgrade="sudo dnf upgrade -y"
 alias install="sudo dnf install -y"
 alias shutdown="sudo shutdown -h now"
+alias scratch='[[ -z $TMUX ]] && { tmux attach -t scratchpad || exec tmux new -s scratchpad && exit; }'
