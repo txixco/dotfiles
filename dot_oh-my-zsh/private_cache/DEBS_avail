@@ -1,0 +1,4 @@
+_deb_packages_cache_avail=( ${(Q)"${(z)$(<<\EO:_deb_packages_cache_avail
+
+EO:_deb_packages_cache_avail
+)}"} )

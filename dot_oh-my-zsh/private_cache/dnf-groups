@@ -1,0 +1,4 @@
+package_groups=( ${(Q)"${(z)$(<<\EO:package_groups
+
+EO:package_groups
+)}"} )
