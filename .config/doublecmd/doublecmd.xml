@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<doublecmd DCVersion="1.0.11" ConfigVersion="13">
+<doublecmd DCVersion="1.1.31 gamma" ConfigVersion="15">
   <Toolbars>
     <MainToolbar>
       <Row>
@@ -153,259 +153,16 @@
   </Toolbars>
   <MainWindow>
     <Position Save="True">
-      <Left>288</Left>
-      <Top>75</Top>
-      <Width>1344</Width>
-      <Height>918</Height>
+      <Left>11</Left>
+      <Top>35</Top>
+      <Width>1898</Width>
+      <Height>1007</Height>
       <PixelsPerInch>96</PixelsPerInch>
       <Maximized>False</Maximized>
       <Splitter>50</Splitter>
     </Position>
   </MainWindow>
   <Tabs>
-    <OpenedTabs>
-      <Left>
-        <ActiveTab>0</ActiveTab>
-        <Tab>
-          <FileView Type="columns">
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="doublecmd">/usr/lib64/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/lib64/</Path>
-                  <Path Filename="lib64">/usr/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="imagenes">/home/txixco/Documents/TFC-LaTeX/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="Religious Sacred Desktop High Quality Nice Wallpapers Widescreen.jpg">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="Documents">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Downloads/</Path>
-                  <Path Filename="Nextcloud2">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Nextcloud2/</Path>
-                  <Path Filename="Nueva Carpeta">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Nueva Carpeta/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="lyrics.pdf">/home/txixco/Downloads/</Path>
-                  <Path Filename="Imágenes">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Imágenes/</Path>
-                  <Path Filename="fondos">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/fondos/</Path>
-                  <Path Filename="fondos">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/fondos/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="josuruedamolina_20230627031558_152.pdf">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="lyrics.pdf">/home/txixco/Downloads/</Path>
-                  <Path Filename="Descargas">/home/txixco/</Path>
-                  <Path Filename="Documentacion.pdf">/home/txixco/Descargas/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="Documentacion.pdf">/home/txixco/Downloads/</Path>
-                  <Path Filename="Downloads">/home/txixco/</Path>
-                  <Path Filename="Part_1_Interview_Success_Journal.pdf">/home/txixco/Downloads/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-      </Left>
-      <Right>
-        <ActiveTab>2</ActiveTab>
-        <Tab>
-          <FileView Type="columns">
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="doublecmd">/usr/lib64/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/lib64/</Path>
-                  <Path Filename="lib64">/usr/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="imagenes">/home/txixco/Documents/TFC-LaTeX/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="series">/home/txixco/</Path>
-                  <Path Filename="DrWho">/home/txixco/series/</Path>
-                  <Path Filename="doctor-who-2005-s11e01-lat-720p.mkv">/home/txixco/series/DrWho/</Path>
-                  <Path Filename="..">/home/txixco/series/</Path>
-                  <Path Filename="datos">/home/txixco/</Path>
-                  <Path Filename="laboral">/home/txixco/datos/</Path>
-                  <Path Filename="Pictures">/home/txixco/datos/laboral/</Path>
-                  <Path Filename="Fondos">/home/txixco/datos/laboral/Pictures/</Path>
-                  <Path Filename="Madrid">/home/txixco/datos/laboral/Pictures/Fondos/</Path>
-                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/Fondos/Madrid/</Path>
-                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/Fondos/</Path>
-                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/</Path>
-                  <Path Filename="Pictures">/home/txixco/datos/laboral/</Path>
-                  <Path Filename="laboral">/home/txixco/datos/</Path>
-                  <Path Filename="datos">/home/txixco/</Path>
-                  <Path Filename="ebooks">/home/txixco/datos/</Path>
-                  <Path Filename="..">/home/txixco/datos/ebooks/</Path>
-                  <Path Filename="Notas">/home/txixco/datos/</Path>
-                  <Path Filename="Nextcloud">/home/txixco/</Path>
-                  <Path Filename="Documents">/home/txixco/Nextcloud/</Path>
-                  <Path Filename="manuales">/home/txixco/Nextcloud/Documents/</Path>
-                  <Path Filename="electronica">/home/txixco/Nextcloud/Documents/manuales/</Path>
-                  <Path Filename="Placa madre">/home/txixco/Nextcloud/Documents/manuales/electronica/</Path>
-                  <Path Filename="E11864_PRIME_Z270-K_UM_web.pdf">/home/txixco/Nextcloud/Documents/manuales/electronica/Placa madre/</Path>
-                  <Path Filename="Placa madre">/home/txixco/Nextcloud/Documents/manuales/electronica/</Path>
-                  <Path Filename="electronica">/home/txixco/Nextcloud/Documents/manuales/</Path>
-                  <Path Filename="manuales">/home/txixco/Nextcloud/Documents/</Path>
-                  <Path Filename="Documents">/home/txixco/Nextcloud/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="QuickNote">/home/txixco/Documents/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="doublecmd">/usr/lib64/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/lib64/</Path>
-                  <Path Filename="lib64">/usr/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="imagenes">/home/txixco/Documents/TFC-LaTeX/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="series">/home/txixco/</Path>
-                  <Path Filename="DrWho">/home/txixco/series/</Path>
-                  <Path Filename="doctor-who-2005-s11e01-lat-720p.mkv">/home/txixco/series/DrWho/</Path>
-                  <Path Filename="..">/home/txixco/series/</Path>
-                  <Path Filename="datos">/home/txixco/</Path>
-                  <Path Filename="laboral">/home/txixco/datos/</Path>
-                  <Path Filename="Pictures">/home/txixco/datos/laboral/</Path>
-                  <Path Filename="Fondos">/home/txixco/datos/laboral/Pictures/</Path>
-                  <Path Filename="Madrid">/home/txixco/datos/laboral/Pictures/Fondos/</Path>
-                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/Fondos/Madrid/</Path>
-                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/Fondos/</Path>
-                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/</Path>
-                  <Path Filename="Pictures">/home/txixco/datos/laboral/</Path>
-                  <Path Filename="laboral">/home/txixco/datos/</Path>
-                  <Path Filename="datos">/home/txixco/</Path>
-                  <Path Filename="ebooks">/home/txixco/datos/</Path>
-                  <Path Filename="..">/home/txixco/datos/ebooks/</Path>
-                  <Path Filename="Notas">/home/txixco/datos/</Path>
-                  <Path Filename="Nextcloud">/home/txixco/</Path>
-                  <Path Filename="Documents">/home/txixco/Nextcloud/</Path>
-                  <Path Filename="manuales">/home/txixco/Nextcloud/Documents/</Path>
-                  <Path Filename="electronica">/home/txixco/Nextcloud/Documents/manuales/</Path>
-                  <Path Filename="Placa madre">/home/txixco/Nextcloud/Documents/manuales/electronica/</Path>
-                  <Path Filename="E11864_PRIME_Z270-K_UM_web.pdf">/home/txixco/Nextcloud/Documents/manuales/electronica/Placa madre/</Path>
-                  <Path Filename="Placa madre">/home/txixco/Nextcloud/Documents/manuales/electronica/</Path>
-                  <Path Filename="electronica">/home/txixco/Nextcloud/Documents/manuales/</Path>
-                  <Path Filename="manuales">/home/txixco/Nextcloud/Documents/</Path>
-                  <Path Filename="Documents">/home/txixco/Nextcloud/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Documents/</Path>
-                  <Path Filename="Fotos">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Fotos/</Path>
-                  <Path Filename="datos">/home/txixco/</Path>
-                  <Path Filename="Nextcloud">/home/txixco/datos/</Path>
-                  <Path Filename="..">/home/txixco/datos/Nextcloud/</Path>
-                  <Path Filename="Nextcloud">/home/txixco/datos/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-        <Tab>
-          <FileView Type="columns">
-            <History>
-              <Entry Active="True">
-                <FileSource Type="FileSystem"/>
-                <Paths>
-                  <Path Filename="doublecmd">/usr/lib64/doublecmd/</Path>
-                  <Path Filename="doublecmd">/usr/lib64/</Path>
-                  <Path Filename="lib64">/usr/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="imagenes">/home/txixco/Documents/TFC-LaTeX/</Path>
-                  <Path Filename="TFC-LaTeX">/home/txixco/Documents/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="txixco">/home/</Path>
-                  <Path Filename="series">/home/txixco/</Path>
-                  <Path Filename="DrWho">/home/txixco/series/</Path>
-                  <Path Filename="doctor-who-2005-s11e01-lat-720p.mkv">/home/txixco/series/DrWho/</Path>
-                  <Path Filename="..">/home/txixco/series/</Path>
-                  <Path Filename="datos">/home/txixco/</Path>
-                  <Path Filename="laboral">/home/txixco/datos/</Path>
-                  <Path Filename="Pictures">/home/txixco/datos/laboral/</Path>
-                  <Path Filename="Fondos">/home/txixco/datos/laboral/Pictures/</Path>
-                  <Path Filename="Madrid">/home/txixco/datos/laboral/Pictures/Fondos/</Path>
-                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/Fondos/Madrid/</Path>
-                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/Fondos/</Path>
-                  <Path Filename="..">/home/txixco/datos/laboral/Pictures/</Path>
-                  <Path Filename="Pictures">/home/txixco/datos/laboral/</Path>
-                  <Path Filename="laboral">/home/txixco/datos/</Path>
-                  <Path Filename="datos">/home/txixco/</Path>
-                  <Path Filename="ebooks">/home/txixco/datos/</Path>
-                  <Path Filename="..">/home/txixco/datos/ebooks/</Path>
-                  <Path Filename="Notas">/home/txixco/datos/</Path>
-                  <Path Filename="Nextcloud">/home/txixco/</Path>
-                  <Path Filename="Documents">/home/txixco/Nextcloud/</Path>
-                  <Path Filename="manuales">/home/txixco/Nextcloud/Documents/</Path>
-                  <Path Filename="electronica">/home/txixco/Nextcloud/Documents/manuales/</Path>
-                  <Path Filename="Placa madre">/home/txixco/Nextcloud/Documents/manuales/electronica/</Path>
-                  <Path Filename="E11864_PRIME_Z270-K_UM_web.pdf">/home/txixco/Nextcloud/Documents/manuales/electronica/Placa madre/</Path>
-                  <Path Filename="Placa madre">/home/txixco/Nextcloud/Documents/manuales/electronica/</Path>
-                  <Path Filename="electronica">/home/txixco/Nextcloud/Documents/manuales/</Path>
-                  <Path Filename="manuales">/home/txixco/Nextcloud/Documents/</Path>
-                  <Path Filename="Documents">/home/txixco/Nextcloud/</Path>
-                  <Path Filename="Documents">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Documents/</Path>
-                  <Path Filename="Fotos">/home/txixco/</Path>
-                  <Path Filename="..">/home/txixco/Fotos/</Path>
-                  <Path Filename="datos">/home/txixco/</Path>
-                  <Path Filename="Nextcloud">/home/txixco/datos/</Path>
-                  <Path Filename="..">/home/txixco/datos/Nextcloud/</Path>
-                  <Path Filename="Nextcloud">/home/txixco/datos/</Path>
-                  <Path Filename="15082010109.jpg">/run/media/txixco/1366-D849/</Path>
-                </Paths>
-              </Entry>
-            </History>
-            <ColumnsView>
-              <ColumnsSet>Default</ColumnsSet>
-            </ColumnsView>
-          </FileView>
-        </Tab>
-      </Right>
-    </OpenedTabs>
     <Options>54033</Options>
     <CharacterLimit>32</CharacterLimit>
     <Position>0</Position>
@@ -442,6 +199,7 @@
     <PersonalizedMega>MB</PersonalizedMega>
     <PersonalizedGiga>GB</PersonalizedGiga>
     <PersonalizedTera>TB</PersonalizedTera>
+    <ConfirmQuit>False</ConfirmQuit>
     <MinimizeToTray>False</MinimizeToTray>
     <AlwaysShowTrayIcon>False</AlwaysShowTrayIcon>
     <Mouse>
@@ -458,6 +216,7 @@
     <CustomColumnsChangeAllColumns>False</CustomColumnsChangeAllColumns>
     <BriefViewFileExtAligned>False</BriefViewFileExtAligned>
     <DateTimeFormat>dd/mm/yy hh:nn:ss</DateTimeFormat>
+    <ColumnsTitleLikeValues>False</ColumnsTitleLikeValues>
     <CutTextToColumnWidth>True</CutTextToColumnWidth>
     <ExtendCellWidth>False</ExtendCellWidth>
     <ShowSystemFiles>False</ShowSystemFiles>
@@ -550,6 +309,12 @@
       <Style>0</Style>
       <Quality>0</Quality>
     </TreeViewMenu>
+    <StatusBar>
+      <Name>default</Name>
+      <Size>0</Size>
+      <Style>0</Style>
+      <Quality>0</Quality>
+    </StatusBar>
   </Fonts>
   <Colors>
     <UseCursorBorder>False</UseCursorBorder>
@@ -584,7 +349,6 @@
       <Error>255</Error>
       <Success>32768</Success>
     </LogWindow>
-    <FileFilters/>
   </Colors>
   <ToolTips>
     <ShowToolTipMode>True</ShowToolTipMode>
@@ -650,6 +414,7 @@
     <ColumnsView>
       <AutoSaveWidth>True</AutoSaveWidth>
       <TitleStyle>2</TitleStyle>
+      <LongInStatus>False</LongInStatus>
     </ColumnsView>
     <BriefView>
       <FileExtAligned>False</FileExtAligned>
@@ -662,6 +427,7 @@
     <ExtraLineSpan>2</ExtraLineSpan>
     <FolderPrefix>[</FolderPrefix>
     <FolderPostfix>]</FolderPostfix>
+    <RenameConfirmMouse>False</RenameConfirmMouse>
   </FilesViews>
   <Keyboard>
     <Typing>
@@ -733,6 +499,7 @@
       <MulRenFilenameWithFullPathInLog>False</MulRenFilenameWithFullPathInLog>
       <MulRenPathRangeSeparator>- </MulRenPathRangeSeparator>
     </MultiRename>
+    <DefaultDropEffect>True</DefaultDropEffect>
   </FileOperations>
   <Log Enabled="False" Count="0" LogFileWithDateInName="False">
     <FileName>%DC_CONFIG_PATH%/doublecmd.log</FileName>
@@ -740,9 +507,11 @@
   </Log>
   <History>
     <SearchReplaceHistory Save="True"/>
-    <DirHistory Save="True"/>
+    <DirHistory Save="True" Count="30"/>
     <CmdLineHistory Save="True"/>
     <FileMaskHistory Save="True"/>
+    <VolumeSizeHistory Save="True"/>
+    <CreateDirectoriesHistory Save="True"/>
   </History>
   <QuickSearch>
     <MatchBeginning>True</MatchBeginning>
@@ -772,6 +541,9 @@
     <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
     <PathModifierElements>0</PathModifierElements>
     <DefaultTextEncoding>none</DefaultTextEncoding>
+    <SystemItemProperties>False</SystemItemProperties>
+    <DoubleClickEditPath>False</DoubleClickEditPath>
+    <DecimalSeparator>�</DecimalSeparator>
   </Miscellaneous>
   <Thumbnails Save="True">
     <Width>128</Width>
@@ -839,12 +611,20 @@
     <BackgroundColor>0</BackgroundColor>
     <FontColor>16777215</FontColor>
     <TextPosition>0</TextPosition>
+    <ImageShowTransparency>False</ImageShowTransparency>
+    <WrapText>False</WrapText>
+    <AutoCopy>True</AutoCopy>
+    <SynEditMask>*</SynEditMask>
+    <JpegQuality>80</JpegQuality>
+    <MaxCodeSize>128</MaxCodeSize>
   </Viewer>
   <Editor>
     <EditWaitTime>2000</EditWaitTime>
     <SynEditOptions>856075</SynEditOptions>
     <SynEditTabWidth>8</SynEditTabWidth>
     <SynEditRightEdge>80</SynEditRightEdge>
+    <SynEditBlockIndent>2</SynEditBlockIndent>
+    <FindWordAtCursor>True</FindWordAtCursor>
   </Editor>
   <Differ>
     <IgnoreCase>False</IgnoreCase>
@@ -873,12 +653,14 @@
     <FilterCopyLeft>True</FilterCopyLeft>
     <FilterDuplicates>True</FilterDuplicates>
     <FilterSingles>True</FilterSingles>
-    <FileMask>*</FileMask>
+    <FileMask Save="True">*</FileMask>
     <Colors>
       <Left>32768</Left>
       <Right>16711680</Right>
       <Unknown>255</Unknown>
     </Colors>
+    <DateTimeFormat>yyyy.mm.dd hh:nn:ss</DateTimeFormat>
+    <FilterUnknown>True</FilterUnknown>
   </SyncDirs>
   <InternalAssociations>
     <OfferToAddNewFileType>False</OfferToAddNewFileType>
@@ -891,6 +673,7 @@
     <FilenameStyle>0</FilenameStyle>
     <PathToBeRelativeTo>%COMMANDER_PATH%</PathToBeRelativeTo>
     <PathModifierElements>0</PathModifierElements>
+    <DefaultContextActions>True</DefaultContextActions>
   </InternalAssociations>
   <TreeViewMenu>
     <UseTVMDirectoryHotlistFMC>False</UseTVMDirectoryHotlistFMC>
@@ -982,17 +765,17 @@
   <ColumnsSets DefaultTitleHash="1477829820">
     <ColumnsSet UseFrameCursor="False">
       <Name>Default</Name>
+      <Unique>F8B92E44-9CFE-4D06-AFDF-48413C61BA9D</Unique>
       <CustomView>False</CustomView>
       <FileSystem>&lt;General&gt;</FileSystem>
       <PixelsPerInch>96</PixelsPerInch>
-      <CursorBorder Enabled="False">
-        <Color>0</Color>
-      </CursorBorder>
+      <CursorBorder Enabled="False"/>
       <Columns>
         <Column>
           <Title>Nombre</Title>
+          <Unique>5856F564-DB15-4DA7-893A-CD5D7C772DE6</Unique>
           <FuncString>[DC().GETFILENAMENOEXT{}]</FuncString>
-          <Width>250</Width>
+          <Width>418</Width>
           <Align>0</Align>
           <Font>
             <Name>default</Name>
@@ -1000,20 +783,13 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
-          <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
           <Title>Ext</Title>
+          <Unique>D4DCA14C-0239-45D1-9438-FDC8A431A23A</Unique>
           <FuncString>[DC().GETFILEEXT{}]</FuncString>
           <Width>50</Width>
           <Align>0</Align>
@@ -1023,20 +799,13 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
-          <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
           <Title>Tamaño</Title>
+          <Unique>1AE89E78-F073-44D2-842C-05546976ADA6</Unique>
           <FuncString>[DC().GETFILESIZE{}]</FuncString>
           <Width>70</Width>
           <Align>1</Align>
@@ -1046,20 +815,13 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
-          <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
           <Title>Fecha</Title>
+          <Unique>9C8FBF9E-5D9D-4010-9BCC-C0C8B6745A89</Unique>
           <FuncString>[DC().GETFILETIME{}]</FuncString>
           <Width>140</Width>
           <Align>1</Align>
@@ -1069,20 +831,13 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
-          <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
         </Column>
         <Column>
           <Title>Atributos</Title>
+          <Unique>521768BA-1C36-421D-A72F-9161DEA46AD2</Unique>
           <FuncString>[DC().GETFILEATTR{}]</FuncString>
           <Width>100</Width>
           <Align>0</Align>
@@ -1092,14 +847,6 @@
             <Style>1</Style>
             <Quality>0</Quality>
           </Font>
-          <TextColor>-2147483640</TextColor>
-          <Background>-2147483643</Background>
-          <Background2>-2147483643</Background2>
-          <MarkColor>255</MarkColor>
-          <CursorColor>-2147483635</CursorColor>
-          <CursorText>-2147483634</CursorText>
-          <InactiveCursorColor>-2147483645</InactiveCursorColor>
-          <InactiveMarkColor>128</InactiveMarkColor>
           <UseInvertedSelection>False</UseInvertedSelection>
           <UseInactiveSelColor>False</UseInactiveSelColor>
           <Overcolor>True</Overcolor>
@@ -1195,6 +942,26 @@
         <Path>%commander_path%/plugins/wcx/unrar/unrar.wcx</Path>
         <Flags>607</Flags>
       </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>b64</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/base64/base64.wcx</Path>
+        <Flags>1</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>b64</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/base64/base64.wcx</Path>
+        <Flags>1</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>b64</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/base64/base64.wcx</Path>
+        <Flags>1</Flags>
+      </WcxPlugin>
+      <WcxPlugin Enabled="True">
+        <ArchiveExt>b64</ArchiveExt>
+        <Path>%commander_path%/plugins/wcx/base64/base64.wcx</Path>
+        <Flags>1</Flags>
+      </WcxPlugin>
     </WcxPlugins>
     <WdxPlugins>
       <WdxPlugin>
@@ -1218,7 +985,7 @@
         <Name>FTP</Name>
         <Path>%commander_path%/plugins/wfx/ftp/ftp.wfx</Path>
       </WfxPlugin>
-      <WfxPlugin Enabled="True">
+      <WfxPlugin Enabled="False">
         <Name>Windows Network</Name>
         <Path>%commander_path%/plugins/wfx/samba/samba.wfx</Path>
       </WfxPlugin>
@@ -1244,21 +1011,23 @@
     <Presets>
       <Preset>
         <Name>{BC322BF1-2185-47F6-9F99-D27ED1E23E53}</Name>
-        <Filename>factura-1</Filename>
+        <Filename>[N]</Filename>
         <Extension>[E]</Extension>
         <FilenameStyle>0</FilenameStyle>
         <ExtensionStyle>0</ExtensionStyle>
-        <Find/>
-        <Replace/>
-        <RegExp>False</RegExp>
-        <UseSubs>False</UseSubs>
+        <Find>S01E(.{3})</Find>
+        <Replace>S01E$1.avi</Replace>
+        <RegExp>True</RegExp>
+        <UseSubs>True</UseSubs>
+        <CaseSensitive>False</CaseSensitive>
+        <OnlyFirst>False</OnlyFirst>
         <Counter>1</Counter>
         <Interval>1</Interval>
-        <Width>1</Width>
+        <Width>0</Width>
         <Log>
           <Enabled>False</Enabled>
           <Append>False</Append>
-          <File/>
+          <File>/home/txixco/series/bigbang/S11/default.log</File>
         </Log>
       </Preset>
     </Presets>

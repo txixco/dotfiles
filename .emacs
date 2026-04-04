@@ -15,7 +15,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 98 :width normal :family "DejaVu Sans Mono" :foundry "outline"))))
+ '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight medium :height 98 :width normal :family "Inconsolata" :foundry "PfEd"))))
  '(cperl-array-face ((t (:foreground "yellow4" :background "black"))) t)
  '(cperl-hash-face ((t (:foreground "yellow3" :background "black"))) t))
 
@@ -35,10 +35,27 @@
  '(current-language-environment "UTF-8")
  '(custom-enabled-themes '(misterioso))
  '(custom-safe-themes
-   '("3805a89afc4703132666650ca9f375ce445621cb8fde9c415ed59dcbd93733dd" "9962040a8c85f07b5030a9342763e34fa2e349570043fbde78e8ac56eb38c9d3" default))
+   '("3805a89afc4703132666650ca9f375ce445621cb8fde9c415ed59dcbd93733dd"
+     "9962040a8c85f07b5030a9342763e34fa2e349570043fbde78e8ac56eb38c9d3" default))
  '(display-line-numbers-type 'relative)
  '(exec-path
-   '("C:/Program Files/Aspell/bin/" "c:/Program Files (x86)/Common Files/Oracle/Java/javapath" "C:/ProgramData/Oracle/Java/javapath" "C:/windows/system32" "C:/windows" "C:/windows/System32/Wbem" "C:/windows/System32/WindowsPowerShell/v1.0/" "C:/Program Files/Cloud Foundry" "C:/Program Files/Git/cmd" "C:/Program Files/PuTTY/" "C:/Program Files/TortoiseGit/bin" "C:/Thanga/apache-maven-3.5.4/bin" "C:/Program Files/Java/jdk1.8.0_181/bin" "C:/Thanga/apache-maven-3.5.4/bin" "C:/Users/Thanga01/Downloads/spring-boot-cli-2.0.4.RELEASE-bin/spring-2.0.4.RELEASE/bin" "." "C:/Program Files/Microsoft VS Code/bin" "C:/Program Files/WinMerge" "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/Scripts/" "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/" "C:/Users/frueda/AppData/Local/Microsoft/WindowsApps" "C:/Users/frueda/AppData/Local/atom/bin" "C:/Users/frueda/AppData/Local/Pandoc/" "C:/Program Files/Salesforce CLI/bin" "c:/Programs/emacs/libexec/emacs/26.1/x86_64-w64-mingw32" "C:/Programs"))
+   '("C:/Program Files/Aspell/bin/"
+     "c:/Program Files (x86)/Common Files/Oracle/Java/javapath"
+     "C:/ProgramData/Oracle/Java/javapath" "C:/windows/system32" "C:/windows"
+     "C:/windows/System32/Wbem" "C:/windows/System32/WindowsPowerShell/v1.0/"
+     "C:/Program Files/Cloud Foundry" "C:/Program Files/Git/cmd"
+     "C:/Program Files/PuTTY/" "C:/Program Files/TortoiseGit/bin"
+     "C:/Thanga/apache-maven-3.5.4/bin" "C:/Program Files/Java/jdk1.8.0_181/bin"
+     "C:/Thanga/apache-maven-3.5.4/bin"
+     "C:/Users/Thanga01/Downloads/spring-boot-cli-2.0.4.RELEASE-bin/spring-2.0.4.RELEASE/bin"
+     "." "C:/Program Files/Microsoft VS Code/bin" "C:/Program Files/WinMerge"
+     "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/Scripts/"
+     "C:/Users/frueda/AppData/Local/Programs/Python/Python37-32/"
+     "C:/Users/frueda/AppData/Local/Microsoft/WindowsApps"
+     "C:/Users/frueda/AppData/Local/atom/bin"
+     "C:/Users/frueda/AppData/Local/Pandoc/"
+     "C:/Program Files/Salesforce CLI/bin"
+     "c:/Programs/emacs/libexec/emacs/26.1/x86_64-w64-mingw32" "C:/Programs"))
  '(fill-column 80)
  '(indent-tabs-mode nil)
  '(inhibit-startup-screen t)
