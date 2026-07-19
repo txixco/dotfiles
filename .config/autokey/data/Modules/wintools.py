@@ -25,6 +25,15 @@ class WinTools:
                 
         # Calculate the geometry
         command = "xrandr | grep '*' | awk '{print $1}'"
+        output = self.system.exec_command(command)
+        if not output:
+            dialog.info_dialog(
+                "Error",
+                "Fallo al calcular la geometría. Verifica que esté instalado xrandr."
+            )
+            
+            raise SystemExit
+
         (scr_width, scr_height) = map(int, (self.system.exec_command(command)).split("x"))
         width = int(scr_width * width_percent / 100)
         height = int(scr_height * 0.80)
