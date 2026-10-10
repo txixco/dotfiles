@@ -28,6 +28,7 @@ local editor      = "emacs-gtk-x11"
 local wallpaper   = "swaybg -i ~/fondos/carpintero-lofi.png"
 local menu        = "rofi -modi run,drun -show drun -lines 3"
 local powerMenu   = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Inconsolata Medium 12'"
+local calendar    = "brave-browser --app=https://nx15083.your-storageshare.de/apps/calendar"
 
 
 -------------------
@@ -54,7 +55,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("nextcloud")
     hl.exec_cmd("AppImageLauncher ~/Applications/Joplin.AppImage")
     hl.exec_cmd(terminal, { workspace = "special:terminal silent" })
-    hl.exec_cmd("gnome-calendar", { workspace = "special:calendar silent" })
+    hl.exec_cmd(calendar, { tag = "calendar", workspace = "special:calendar silent" })
 end)
 
 
@@ -286,11 +287,13 @@ hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = tr
 hl.bind(mainMod .. "+ XF86AudioPlay",  hl.dsp.exec_cmd("~/scripts/audio-device-switch.sh"))
 hl.bind("XF86HomePage",  hl.dsp.exec_cmd("qutebrowser"))
 
--- Launch the menus
+-- Launch the menus & misc
 hl.bind("MOD5 + Space", hl.dsp.exec_cmd(menu))
 hl.bind("MOD5 + mouse:272", hl.dsp.exec_cmd(menu))
 hl.bind("MOD5 + SHIFT + Space", hl.dsp.exec_cmd(powerMenu))
 hl.bind("MOD5 + SHIFT + mouse:272", hl.dsp.exec_cmd(powerMenu))
+
+hl.bind("MOD5 + C", hl.dsp.exec_cmd("xdg-open ~/Documents/notas/Compras-$(date +%Y).ods"))
 
 -- Terminal
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
@@ -411,10 +414,14 @@ hl.window_rule({
 hl.window_rule({ match = { title = "Qalculate!" }, float = true })
 
 -- Windows' default location
+
+
 hl.window_rule({ match = { title = "^(Signal)$" }, workspace = "2" })
 hl.window_rule({ match = { class = "^(microsoft-edge)$" }, workspace = "6" })
 hl.window_rule({ match = { title = "^(Joplin)$" }, workspace = "7" })
 hl.window_rule({ match = { class = "^(spotify)$" }, workspace = "9" })
+
+hl.window_rule({ match = { tag = "^(calendar)$" }, workspace = "special:calendar silent" })
 
 -- Browsers' default location (but Edge)
 hl.window_rule({ match = { class = "^(brave|vivaldi|org.qutebrowser).*$" }, workspace = "3" })
