@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+dir="${XDG_DATA_HOME:-$HOME/.local/share}/qutebrowser/sessions"
+
+echo -e "\0prompt\x1fSesión de Qutebrowser"
+
+if [ -z "$1" ]; then
+    for f in "$dir"/*.yml; do
+        [ -e "$f" ] || continue
+        nombre=${f##*/}      # quita la ruta (equivale a basename)
+        nombre=${nombre%.yml} # quita la extensión
+        [ "$nombre" = "_autosave" ] || echo "$nombre"
+    done
+else
+    setsid -f qutebrowser -r "$1" >/dev/null 2>&1
+fi

@@ -28,7 +28,9 @@ local editor      = "emacs-gtk-x11"
 local wallpaper   = "swaybg -i ~/fondos/carpintero-lofi.png"
 local menu        = "rofi -modi run,drun -show drun -lines 3"
 local powerMenu   = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Inconsolata Medium 12'"
-local calendar    = "brave-browser --app=https://nx15083.your-storageshare.de/apps/calendar"
+local qbMenu      = "rofi -modi q:~/.local/bin/rofi-qutebrowser-menu -show q -font 'Inconsolata Medium 12'"
+-- local calendar    = "brave-browser --app=https://nx15083.your-storageshare.de/apps/calendar"
+local calendar    = "gnome-calendar"
 
 
 -------------------
@@ -53,9 +55,9 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("flatpak run com.spotify.Client")
     hl.exec_cmd("syncthing --no-browser")
     hl.exec_cmd("nextcloud")
-    hl.exec_cmd("AppImageLauncher ~/Applications/Joplin.AppImage")
+    hl.exec_cmd("flatpak run net.cozic.joplin_desktop")
     hl.exec_cmd(terminal, { workspace = "special:terminal silent" })
-    hl.exec_cmd(calendar, { tag = "calendar", workspace = "special:calendar silent" })
+    hl.exec_cmd(calendar, { workspace = "special:calendar" })
 end)
 
 
@@ -292,6 +294,7 @@ hl.bind("MOD5 + Space", hl.dsp.exec_cmd(menu))
 hl.bind("MOD5 + mouse:272", hl.dsp.exec_cmd(menu))
 hl.bind("MOD5 + SHIFT + Space", hl.dsp.exec_cmd(powerMenu))
 hl.bind("MOD5 + SHIFT + mouse:272", hl.dsp.exec_cmd(powerMenu))
+hl.bind("MOD5 + Q", hl.dsp.exec_cmd(qbMenu))
 
 hl.bind("MOD5 + C", hl.dsp.exec_cmd("xdg-open ~/Documents/notas/Compras-$(date +%Y).ods"))
 
@@ -420,8 +423,6 @@ hl.window_rule({ match = { title = "^(Signal)$" }, workspace = "2" })
 hl.window_rule({ match = { class = "^(microsoft-edge)$" }, workspace = "6" })
 hl.window_rule({ match = { title = "^(Joplin)$" }, workspace = "7" })
 hl.window_rule({ match = { class = "^(spotify)$" }, workspace = "9" })
-
-hl.window_rule({ match = { tag = "^(calendar)$" }, workspace = "special:calendar silent" })
 
 -- Browsers' default location (but Edge)
 hl.window_rule({ match = { class = "^(brave|vivaldi|org.qutebrowser).*$" }, workspace = "3" })
