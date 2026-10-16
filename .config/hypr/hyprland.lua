@@ -16,9 +16,9 @@ hl.monitor({
 })
 
 
----------------------
----- MY PROGRAMS ----
----------------------
+----------------------
+---- MY VARIABLES ----
+----------------------
 
 -- Set programs that you use
 local terminal    = "terminator"
@@ -29,9 +29,38 @@ local wallpaper   = "swaybg -i ~/fondos/carpintero-lofi.png"
 local menu        = "rofi -modi run,drun -show drun -lines 3"
 local powerMenu   = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Inconsolata Medium 12'"
 local qbMenu      = "rofi -modi q:~/.local/bin/rofi-qutebrowser-menu -show q -font 'Inconsolata Medium 12'"
--- local calendar    = "brave-browser --app=https://nx15083.your-storageshare.de/apps/calendar"
-local calendar    = "gnome-calendar"
+local calendar    = "brave-browser --app=https://nx15083.your-storageshare.de/apps/calendar"
+-- local calendar    = "gnome-calendar"
 
+-- Other variables
+local original_sizes = {}  -- tamaño original por ventana
+
+
+----------------------
+---- MY FUNCTIONS ----
+----------------------
+
+function resize_window(perc)
+    local m = hl.get_active_monitor()
+    local w = hl.get_active_window()
+    local p = perc / 100
+
+    if w and not original_sizes[w.address] then
+        original_sizes[w.address] = { x = w.size.x, y = w.size.y }
+    end
+
+    hl.dispatch(hl.dsp.window.resize({ x = math.floor(m.width * p), y = m.height, relative = false }))
+end
+
+function reset_window()
+    local w = hl.get_active_window()
+    local s = w and original_sizes[w.address]
+
+    if s then
+        hl.dispatch(hl.dsp.window.resize({ x = s.x, y = s.y, relative = false }))
+        original_sizes[w.address] = nil
+    end
+end
 
 -------------------
 ---- AUTOSTART ----
@@ -57,7 +86,7 @@ hl.on("hyprland.start", function ()
     hl.exec_cmd("nextcloud")
     hl.exec_cmd("flatpak run net.cozic.joplin_desktop")
     hl.exec_cmd(terminal, { workspace = "special:terminal silent" })
-    hl.exec_cmd(calendar, { workspace = "special:calendar" })
+    -- hl.exec_cmd(calendar, { workspace = "special:calendar" })
 end)
 
 
@@ -315,7 +344,7 @@ local closeWindowBind = hl.bind(mainMod .. " + C", hl.dsp.window.close())
 -- Hyprland bindings
 hl.bind(mainMod .. " + Q", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 hl.bind(mainMod .. " + CTRL + Q", hl.dsp.exec_cmd("nvim-qt ~/.config/hypr/hyprland.lua"))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("loginctl lock-session"))
 
 -- Window commands
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
@@ -336,19 +365,10 @@ hl.bind(mainMod .. " + SHIFT + right", hl.dsp.window.move({ direction = "right" 
 hl.bind(mainMod .. " + SHIFT + up",    hl.dsp.window.move({ direction = "up" }))
 hl.bind(mainMod .. " + SHIFT + down",  hl.dsp.window.move({ direction = "down" }))
 
--- Resize the active window
-hl.bind(mainMod .. " + R",  hl.dsp.window.resize())
-
 -- Promote to Master
 hl.bind(mainMod .. " + TAB", hl.dsp.layout("rollnext"))
 hl.bind(mainMod .. " + SHIFT + TAB", hl.dsp.layout("rollprev"))
 hl.bind(mainMod .. " + RETURN", hl.dsp.layout("swapwithmaster"))
-
--- Teleparty mode
-hl.bind(mainMod .. " + P", function()
-    local m = hl.get_active_monitor()
-    hl.dispatch(hl.dsp.window.resize({ x = math.floor(m.width * 0.75), y = m.height, relative = false }))
-end)
 
 -- Switch workspaces with mainMod + [0-9]
 -- Move active window to a workspace with mainMod + SHIFT + [0-9]
@@ -364,7 +384,9 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:mag
 
 -- Other special workspaces
 hl.bind(mainMod .. " + CTRL + SHIFT + T", hl.dsp.workspace.toggle_special("terminal"))
-hl.bind(mainMod .. " + CTRL + SHIFT + C", hl.dsp.workspace.toggle_special("calendar"))
+-- hl.bind(mainMod .. " + CTRL + SHIFT + C", hl.dsp.workspace.toggle_special("calendar"))
+hl.bind(mainMod .. " + CTRL + SHIFT + C", hl.dsp.exec_cmd(calendar, { workspace = "special:calendar" }))
+
 
 -- Scroll through existing workspaces with mainMod + scroll
 hl.bind(mainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
@@ -373,6 +395,15 @@ hl.bind(mainMod .. " + mouse_up",   hl.dsp.focus({ workspace = "e-1" }))
 -- Move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(),   { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- Teleparty mode
+hl.bind(mainMod .. " + P", function() resize_window(75) end)
+
+-- Reading mode
+hl.bind(mainMod .. " + R", function() resize_window(40) end)
+
+-- Reset the current window
+hl.bind(mainMod .. " + SHIFT + Space", function() reset_window() end)
 
 
 --------------------------------
