@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+file="$HOME/.config/rofi/favorites.tsv"
+
+index=$(cut -f1 "$file" | rofi -dmenu -i -p "Favoritos" -format i) || exit 0
+fav=$(sed -n "$((index + 1))p" "$file" | cut -f2-)
+
+setsid -f sh -c "xdg-open $fav" >/dev/null 2>&1

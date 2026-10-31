@@ -26,9 +26,10 @@ local fileManager = "nemo"
 local browser     = "brave-browser"
 local editor      = "emacs-gtk-x11"
 local wallpaper   = "swaybg -i ~/fondos/carpintero-lofi.png"
-local menu        = "rofi -modi run,drun -show drun -lines 3"
+local menu        = "rofi -modi drun,run -show drun -lines 3"
 local powerMenu   = "rofi -modi p:~/.local/bin/rofi-power-menu -show p -font 'Inconsolata Medium 12'"
 local qbMenu      = "rofi -modi q:~/.local/bin/rofi-qutebrowser-menu -show q -font 'Inconsolata Medium 12'"
+local favMenu     = "~/.local/bin/rofi-favorites-menu"
 local calendar    = "brave-browser --app=https://nx15083.your-storageshare.de/apps/calendar"
 -- local calendar    = "gnome-calendar"
 
@@ -325,8 +326,7 @@ hl.bind("MOD5 + mouse:272", hl.dsp.exec_cmd(menu))
 hl.bind("MOD5 + SHIFT + Space", hl.dsp.exec_cmd(powerMenu))
 hl.bind("MOD5 + SHIFT + mouse:272", hl.dsp.exec_cmd(powerMenu))
 hl.bind("MOD5 + Q", hl.dsp.exec_cmd(qbMenu))
-
-hl.bind("MOD5 + C", hl.dsp.exec_cmd("xdg-open ~/Documents/notas/Compras-$(date +%Y).ods"))
+hl.bind("MOD5 + F", hl.dsp.exec_cmd(favMenu))
 
 -- Terminal
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))

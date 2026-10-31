@@ -7,9 +7,9 @@ echo -e "\0prompt\x1fSesión de Qutebrowser"
 if [ -z "$1" ]; then
     for f in "$dir"/*.yml; do
         [ -e "$f" ] || continue
-        nombre=${f##*/}      # quita la ruta (equivale a basename)
-        nombre=${nombre%.yml} # quita la extensión
-        [ "$nombre" = "_autosave" ] || echo "$nombre"
+        name=${f##*/}      # quita la ruta (equivale a basename)
+        name=${name%.yml} # quita la extensión
+        [ "$name" = "_autosave" ] || echo "$name"
     done
 else
     setsid -f qutebrowser -r "$1" >/dev/null 2>&1
